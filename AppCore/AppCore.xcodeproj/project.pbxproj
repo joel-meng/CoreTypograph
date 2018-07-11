@@ -16,6 +16,7 @@
 		F3618E2A20E9FC2C00B95F5B /* AppCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E2920E9FC2C00B95F5B /* AppCoreTests.swift */; };
 		F3618E5A20E9FD4C00B95F5B /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */; };
 		F3618E5B20E9FD4C00B95F5B /* CoreTypography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3C6785320F5BEBC006F222C /* Taviraj-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3C6785220F5BEBC006F222C /* Taviraj-BoldItalic.ttf */; };
 		F3F4C2D320F43C0500BD76C8 /* Taviraj-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */; };
 		F3F4C2D420F43C0500BD76C8 /* Taviraj-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */; };
 		F3F4C2D520F43C0500BD76C8 /* Taviraj-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D220F43C0500BD76C8 /* Taviraj-Regular.ttf */; };
@@ -59,6 +60,7 @@
 		F3618E2920E9FC2C00B95F5B /* AppCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreTests.swift; sourceTree = "<group>"; };
 		F3618E2B20E9FC2C00B95F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C6785220F5BEBC006F222C /* Taviraj-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Bold.ttf"; sourceTree = "<group>"; };
 		F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Light.ttf"; sourceTree = "<group>"; };
 		F3F4C2D220F43C0500BD76C8 /* Taviraj-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Regular.ttf"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		F3F4C2CF20F43BD600BD76C8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F3C6785220F5BEBC006F222C /* Taviraj-BoldItalic.ttf */,
 				F3F4C2D620F44A3E00BD76C8 /* Taviraj-Italic.ttf */,
 				F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */,
 				F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */,
@@ -237,6 +240,7 @@
 				F3618E1A20E9FC2C00B95F5B /* Main.storyboard in Resources */,
 				F3F4C2D320F43C0500BD76C8 /* Taviraj-Bold.ttf in Resources */,
 				F3F4C2D520F43C0500BD76C8 /* Taviraj-Regular.ttf in Resources */,
+				F3C6785320F5BEBC006F222C /* Taviraj-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

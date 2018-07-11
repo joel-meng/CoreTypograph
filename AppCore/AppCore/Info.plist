@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Taviraj-BoldItalic.ttf</string>
 		<string>Taviraj-Bold.ttf</string>
 		<string>Taviraj-Italic.ttf</string>
 		<string>Taviraj-Light.ttf</string>
