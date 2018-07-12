@@ -14,7 +14,7 @@ import UIKit
  */
 
 /// A struct that facilitates the sizing rules for a `UIFont` and can return the ideal font point size for a given `UIContentSizeCategory`
-struct FontMetrics {
+public struct FontMetrics {
     
     /// The default font point size. This is equal to the `UIContentSizeCategory.large`
     let baseSize: CGFloat
@@ -34,7 +34,6 @@ struct FontMetrics {
     /// Will initialize a new instance for the given text style
     ///
     /// - Parameters:
-    ///   - style: The `UIFontTextStyle` the metric is for
     ///   - baseSize: The base point size when rendering for the content size category `.large`
     ///   - minimumPointSize: The minimum point size the font can be regardless of the scale applied.
     ///   - maximumPointSize: The maximum point size the font can be regardless of the scale applied.
@@ -42,13 +41,12 @@ struct FontMetrics {
     init(baseSize: CGFloat,
          minimumPointSize: CGFloat = 12,
          maximumPointSize: CGFloat? = nil,
-         maximumFontScale: CGFloat = 200,
-         shouldRoundSizes: Bool = true) {
+         maximumFontScale: CGFloat = 200) {
         self.baseSize = baseSize
         self.minimumPointSize = minimumPointSize
         self.maximumPointSize = maximumPointSize
         self.maximumFontScale = maximumFontScale
-        self.shouldRoundSizes = shouldRoundSizes
+        self.shouldRoundSizes = true
     }
     
     // swiftlint:disable cyclomatic_complexity
@@ -99,8 +97,11 @@ struct FontMetrics {
     // MARK: - Private helpers
     
     private var increaseStepDelta: CGFloat {
-        let maximumFontScale = (maximumPointSize! / minimumPointSize) * 100
-        return ((maximumFontScale - 100) / 6) / 100
+        guard let maximumPointSize = maximumPointSize else {
+            return ((maximumFontScale - 100) / 6) / 100
+        }
+        let calculatedMaximumFontScale = (maximumPointSize / minimumPointSize) * 100
+        return ((calculatedMaximumFontScale - 100) / 6) / 100
     }
     
     private var decreaseStepDelta: CGFloat {

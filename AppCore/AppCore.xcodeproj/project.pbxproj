@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F31C47FC20F46F6800F97CED /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31C47FB20F46F6800F97CED /* FontMetrics.swift */; };
 		F3618E1520E9FC2C00B95F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */; };
 		F3618E1720E9FC2C00B95F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E1620E9FC2C00B95F5B /* ViewController.swift */; };
 		F3618E1A20E9FC2C00B95F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3618E1820E9FC2C00B95F5B /* Main.storyboard */; };
@@ -48,7 +47,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F31C47FB20F46F6800F97CED /* FontMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetrics.swift; sourceTree = "<group>"; };
 		F3618E1120E9FC2C00B95F5B /* AppCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3618E1620E9FC2C00B95F5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				F3F4C2CF20F43BD600BD76C8 /* Fonts */,
 				F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */,
 				F3618E1620E9FC2C00B95F5B /* ViewController.swift */,
-				F31C47FB20F46F6800F97CED /* FontMetrics.swift */,
 				F3618E1820E9FC2C00B95F5B /* Main.storyboard */,
 				F3618E1B20E9FC2C00B95F5B /* Assets.xcassets */,
 				F3618E1D20E9FC2C00B95F5B /* LaunchScreen.storyboard */,
@@ -258,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F31C47FC20F46F6800F97CED /* FontMetrics.swift in Sources */,
 				F3618E1720E9FC2C00B95F5B /* ViewController.swift in Sources */,
 				F3618E1520E9FC2C00B95F5B /* AppDelegate.swift in Sources */,
 			);

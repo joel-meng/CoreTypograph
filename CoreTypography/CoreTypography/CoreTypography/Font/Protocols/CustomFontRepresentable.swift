@@ -37,7 +37,7 @@ public extension CustomFontRepresentable {
         }
         
         if fontFace == .regular {
-            return "\(familyName)-\(trait)"
+            return "\(familyName)-\(trait.rawValue)"
         }
         return defaultFontName + trait.rawValue
     }
