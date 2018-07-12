@@ -20,7 +20,7 @@
 		F3F4C2D320F43C0500BD76C8 /* Taviraj-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */; };
 		F3F4C2D420F43C0500BD76C8 /* Taviraj-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */; };
 		F3F4C2D520F43C0500BD76C8 /* Taviraj-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D220F43C0500BD76C8 /* Taviraj-Regular.ttf */; };
-		F3F4C2D720F44A3E00BD76C8 /* Taviraj-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D620F44A3E00BD76C8 /* Taviraj-Italic.ttf */; };
+		F3F4C2D720F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D620F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Bold.ttf"; sourceTree = "<group>"; };
 		F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Light.ttf"; sourceTree = "<group>"; };
 		F3F4C2D220F43C0500BD76C8 /* Taviraj-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Regular.ttf"; sourceTree = "<group>"; };
-		F3F4C2D620F44A3E00BD76C8 /* Taviraj-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Italic.ttf"; sourceTree = "<group>"; };
+		F3F4C2D620F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-RegularItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				F3C6785220F5BEBC006F222C /* Taviraj-BoldItalic.ttf */,
-				F3F4C2D620F44A3E00BD76C8 /* Taviraj-Italic.ttf */,
+				F3F4C2D620F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf */,
 				F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */,
 				F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */,
 				F3F4C2D220F43C0500BD76C8 /* Taviraj-Regular.ttf */,
@@ -236,7 +236,7 @@
 				F3618E1F20E9FC2C00B95F5B /* LaunchScreen.storyboard in Resources */,
 				F3618E1C20E9FC2C00B95F5B /* Assets.xcassets in Resources */,
 				F3F4C2D420F43C0500BD76C8 /* Taviraj-Light.ttf in Resources */,
-				F3F4C2D720F44A3E00BD76C8 /* Taviraj-Italic.ttf in Resources */,
+				F3F4C2D720F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf in Resources */,
 				F3618E1A20E9FC2C00B95F5B /* Main.storyboard in Resources */,
 				F3F4C2D320F43C0500BD76C8 /* Taviraj-Bold.ttf in Resources */,
 				F3F4C2D520F43C0500BD76C8 /* Taviraj-Regular.ttf in Resources */,

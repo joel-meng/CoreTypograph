@@ -9,7 +9,7 @@
 import UIKit
 import CoreTypography
 
-class ViewController: UIViewController, FontBook {
+class ViewController: UIViewController {
     
 
     @IBOutlet private var label1: UILabel!
@@ -23,11 +23,12 @@ class ViewController: UIViewController, FontBook {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
 
 //        let font = UIFont(descriptor: fontDescriptor(fromFontDescribing: fontBook, withTextStyle: .body), size: fontBook.)
         
-        
+//        DispatchQueue.global(qos: .default).async {
+//            self.configureLabel()
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,121 +38,66 @@ class ViewController: UIViewController, FontBook {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
+//        for family in UIFont.familyNames.sorted() {
+//            let names = UIFont.fontNames(forFamilyName: family)
+//            print("Family: \(family) Font names: \(names)")
+//        }
         DispatchQueue.global(qos: .default).async {
             self.configureLabel()
         }
     }
     
     private func configureLabel() {
-        let bodyFont = font(for: Taviraj(), withTextStyle: .body, contentSizeCategory: traitCollection.preferredContentSizeCategory)
-        let calloutFont = font(for: Taviraj(), withTextStyle: .callout, contentSizeCategory: traitCollection.preferredContentSizeCategory)
-        let headlineFont = font(for: Taviraj(), withTextStyle: .headline, contentSizeCategory: traitCollection.preferredContentSizeCategory)
+        
+        let taviraj = Taviraj()
+        let bodyFont = taviraj.font(forTextStyle: .body, contentSizeCategory: traitCollection.preferredContentSizeCategory)
+        let calloutFont = taviraj.font(forTextStyle: .callout, contentSizeCategory: traitCollection.preferredContentSizeCategory)
+        let headlineFont = taviraj.font(forTextStyle: .headline, contentSizeCategory: traitCollection.preferredContentSizeCategory)
+        
         DispatchQueue.main.async {
             self.label1.font = bodyFont
             self.label1.text = "AAA Font size: \(bodyFont.pointSize) Taviraj.Body"
 
             self.label2.font = calloutFont
             self.label2.text = "AAA Font size: \(calloutFont.pointSize) Taviraj.Callout"
-            
+
             self.label3.font = headlineFont
             self.label3.text = "AAA Font size:\(headlineFont.pointSize) Taviraj.Headline"
         }
     }
 }
 
-protocol FontRepresentable {
+struct Taviraj: CustomFontContentSizeCategoryAware {
     
-    var fontName: String { get }
+    var familyName: String { return "Taviraj" }
     
-//    func fontFileName(forFontFace: String, trait: UIFontDescriptorSymbolicTraits)
-    
-    var fontMetrics: [UIFontTextStyle: FontMetrics] { get }
-    
-    func fontFace(forTextStyle textStyle: UIFontTextStyle) -> String
-    
-    func fontTraits(forTextStyle textStyle: UIFontTextStyle) -> UIFontDescriptorSymbolicTraits?
-}
-
-public protocol ContentSizeCategoryAware {
-    
-    var contentSizeCategory: UIContentSizeCategory { get }
-}
-
-protocol FontBook {
-    
-    func font(for font: FontRepresentable, withTextStyle textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> UIFont
-}
-
-extension FontBook {
-    
-    func font(for font: FontRepresentable, withTextStyle textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> UIFont {
-        let descriptor = fontDescriptor(forFontDescribing: font, textStyle: textStyle)
-        let size = fontSize(forFont: font, textStyle: textStyle, contentSizeCategory: contentSizeCategory)
-        return UIFont(descriptor: descriptor, size: size)
-    }
-    
-    private func fontDescriptor(forFontDescribing fontDescribing: FontRepresentable, textStyle: UIFontTextStyle) -> UIFontDescriptor {
-        let fontDescriptorAttributes: [UIFontDescriptor.AttributeName: Any] = [
-            .name: fontDescribing.fontName,
-            .face: fontDescribing.fontFace(forTextStyle: textStyle),
-            ]
-        
-        if let traits = fontDescribing.fontTraits(forTextStyle: textStyle) {
-            if let traitedFontDescriptor = UIFontDescriptor(fontAttributes: fontDescriptorAttributes).withSymbolicTraits(traits) {
-                let fontDescriptorAttributes: [UIFontDescriptor.AttributeName: Any] = [
-                    .name: traitedFontDescriptor.fontAttributes[.name]!,
-                    ]
-
-                return UIFontDescriptor(fontAttributes: fontDescriptorAttributes)
-            }
-            assertionFailure("Error: Unable to create font descriptor with \(fontDescribing.fontName) and trait \(traits)")
-        }
-        
-        return UIFontDescriptor(fontAttributes: fontDescriptorAttributes)
-    }
-    
-    private func fontSize(forFont fontDescribing: FontRepresentable, textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> CGFloat {
-        return fontDescribing.fontMetrics[textStyle]!.fontPointSize(forCategory: contentSizeCategory)
-    }
-}
-
-struct Taviraj:  FontRepresentable {
-    
-    var fontName: String { return "Taviraj" }
-    
-    func fontFace(forTextStyle textStyle: UIFontTextStyle) -> String {
+    func face(forTextStyle textStyle: UIFontTextStyle) -> FontFace {
         switch textStyle {
         case .headline:
-            return "Bold"
+            return .bold
         case .footnote:
-            return "Light"
+            return .light
         default:
-            return "Regular"
+            return .regular
         }
     }
     
-    func fontTraits(forTextStyle textStyle: UIFontTextStyle) -> UIFontDescriptorSymbolicTraits? {
+    func trait(forTextStyle textStyle: UIFontTextStyle) -> FontTrait? {
         switch textStyle {
-        case .callout:
-            return .traitItalic
+        case .callout, .headline:
+            return .italic
         default:
             return nil
         }
     }
-
-    var fontMetrics: [UIFontTextStyle: FontMetrics] = [
+    
+    func fontPointSize(forTextStyle textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> CGFloat {
+        return Taviraj.fontMetrics[textStyle]!.fontPointSize(forCategory: contentSizeCategory)
+    }
+    
+    private static var fontMetrics: [UIFontTextStyle: FontMetrics] = [
         .body: FontMetrics(baseSize: 17, minimumPointSize: 14, maximumPointSize: 53, maximumFontScale: 200, shouldRoundSizes: true),
         .callout: FontMetrics(baseSize: 16, minimumPointSize: 13, maximumPointSize: 51, maximumFontScale: 200, shouldRoundSizes: true),
         .headline: FontMetrics(baseSize: 17, minimumPointSize: 14, maximumPointSize: 53, maximumFontScale: 200, shouldRoundSizes: true),
     ]
-}
-
-public extension UIFontDescriptor {
-    
-//    public class func preferredFontDescriptor(withTextStyle style: UIFontTextStyle) -> UIFontDescriptor {
-//        var fontDescriptorAttributes: [UIFontDescriptor.AttributeName: Any] = [
-//
-//        ]
-//        UIFontDescriptor(fontAttributes: <#T##[UIFontDescriptor.AttributeName : Any]#>)
-//    }
 }
