@@ -109,6 +109,13 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		F356194320F72A6B000D20CD /* Text */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		F3618E3520E9FCE100B95F5B = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +138,7 @@
 		F3618E4120E9FCE100B95F5B /* CoreTypography */ = {
 			isa = PBXGroup;
 			children = (
+				F356194320F72A6B000D20CD /* Text */,
 				F387D51020F7002400FF9333 /* Font */,
 				F3618E4220E9FCE100B95F5B /* CoreTypography.h */,
 				F3618E4320E9FCE100B95F5B /* Info.plist */,

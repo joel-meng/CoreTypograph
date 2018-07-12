@@ -38,7 +38,7 @@ public struct FontMetrics {
     ///   - minimumPointSize: The minimum point size the font can be regardless of the scale applied.
     ///   - maximumPointSize: The maximum point size the font can be regardless of the scale applied.
     ///   - maximumFontScale: The maximum font scale that can be applied
-    init(baseSize: CGFloat,
+    public init(baseSize: CGFloat,
          minimumPointSize: CGFloat = 12,
          maximumPointSize: CGFloat? = nil,
          maximumFontScale: CGFloat = 200) {
@@ -54,7 +54,7 @@ public struct FontMetrics {
     ///
     /// - Parameter category: The category being rendered for
     /// - Returns: CGFloat
-    func fontPointSize(forCategory category: UIContentSizeCategory) -> CGFloat {
+    public func fontPointSize(forCategory category: UIContentSizeCategory) -> CGFloat {
         var scaleFactor: CGFloat = 1
         switch category {
         case .extraSmall:
