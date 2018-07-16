@@ -42,9 +42,51 @@ class ViewController: UIViewController {
 //            let names = UIFont.fontNames(forFamilyName: family)
 //            print("Family: \(family) Font names: \(names)")
 //        }
-        DispatchQueue.global(qos: .default).async {
-            self.configureLabel()
-        }
+//        DispatchQueue.global(qos: .default).async {
+//            self.configureLabel()
+//        }
+        configureBuildinFont()
+    }
+    
+    func configureBuildinFont() {
+        let fontAttributes: [UIFontDescriptor.AttributeName: Any] = [
+            UIFontDescriptor.AttributeName.family: "Helvetica Neue",
+//            UIFontDescriptor.AttributeName.traits: UIFontDescriptorSymbolicTraits.traitBold,
+        ]
+        let fontDescriptor = UIFontDescriptor(fontAttributes: fontAttributes)
+        let availableFonts = fontDescriptor.matchingFontDescriptors(withMandatoryKeys: nil)
+
+        
+        let timeFeaturesSetting = [
+            [
+                UIFontDescriptor.FeatureKey.featureIdentifier: kNumberSpacingType,
+                UIFontDescriptor.FeatureKey.typeIdentifier: kProportionalNumbersSelector
+            ],
+            [
+                UIFontDescriptor.FeatureKey.featureIdentifier: kCharacterAlternativesType,
+                UIFontDescriptor.FeatureKey.typeIdentifier: 2
+            ],
+            [
+                UIFontDescriptor.FeatureKey.featureIdentifier: kCaseSensitiveLayoutType,
+                UIFontDescriptor.FeatureKey.typeIdentifier: kCaseSensitiveLayoutOnSelector
+            ],
+        ]
+        
+        print(availableFonts)
+        let theFont = UIFont(descriptor: fontDescriptor, size: 16)
+        let fontCopyFeatures =
+        print("Features \(CTFontCopyFeatures(theFont))")
+        print("char set \(CTFontCopyCharacterSet(theFont))")
+        print("descriptor \(CTFontCopyFontDescriptor(theFont))")
+        print("char set \(CTFontCopySupportedLanguages(theFont))")
+        
+        label1.font = UIFont(descriptor: fontDescriptor, size: 16)
+        label1.text = "Helvetica Neue, 111111111111111111111111111111111234567890"
+        
+        label2.font = UIFont(descriptor: fontDescriptor.addingAttributes([
+            UIFontDescriptor.AttributeName.featureSettings: timeFeaturesSetting
+        ]), size: 16)
+        label2.text = "Helvetica Neue, 111111111111111111111111111111111234567890"
     }
     
     private func configureLabel() {
@@ -67,37 +109,3 @@ class ViewController: UIViewController {
     }
 }
 
-struct Taviraj: CustomFontContentSizeCategoryAware {
-    
-    var familyName: String { return "Taviraj" }
-    
-    func face(forTextStyle textStyle: UIFontTextStyle) -> FontFace {
-        switch textStyle {
-        case .headline:
-            return .bold
-        case .footnote:
-            return .light
-        default:
-            return .regular
-        }
-    }
-    
-    func trait(forTextStyle textStyle: UIFontTextStyle) -> FontTrait? {
-        switch textStyle {
-        case .callout, .headline:
-            return .italic
-        default:
-            return nil
-        }
-    }
-    
-    func fontPointSize(forTextStyle textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> CGFloat {
-        return Taviraj.fontMetrics[textStyle]!.fontPointSize(forCategory: contentSizeCategory)
-    }
-    
-    private static var fontMetrics: [UIFontTextStyle: FontMetrics] = [
-        .body: FontMetrics(baseSize: 17, minimumPointSize: 14, maximumPointSize: 53, maximumFontScale: 200),
-        .callout: FontMetrics(baseSize: 16, minimumPointSize: 13, maximumPointSize: 51, maximumFontScale: 200),
-        .headline: FontMetrics(baseSize: 17, minimumPointSize: 14, maximumPointSize: 53, maximumFontScale: 200),
-    ]
-}
