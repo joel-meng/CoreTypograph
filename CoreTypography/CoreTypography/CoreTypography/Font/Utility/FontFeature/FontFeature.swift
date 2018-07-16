@@ -7,26 +7,36 @@
 //
 
 import Foundation
+import UIKit
 
 public struct FontFeature {
     public let featureName: String
+    public let featureIdentifier: Int
     public let exclusive: Bool
     public let options: [Option]
 
-    public init(featureName: String, exclusive: Bool, options: [Option]) {
+    public init(featureName: String, featureIdentifier: Int, exclusive: Bool, options: [Option]) {
         self.featureName = featureName
+        self.featureIdentifier = featureIdentifier
         self.exclusive = exclusive
         self.options = options
     }
     
+    public func setting(forOption option: Option) -> [UIFontDescriptor.FeatureKey: Int] {
+        return [
+            UIFontDescriptor.FeatureKey.featureIdentifier: featureIdentifier,
+            UIFontDescriptor.FeatureKey.typeIdentifier: option.identifier,
+        ]
+    }
+    
     public struct Option {
-        public let key: String
-        public let value: Int
+        public let name: String
+        public let identifier: Int
         public let isDefault: Bool
         
         public init(key: String, value: Int, isDefault: Bool) {
-            self.key = key
-            self.value = value
+            self.name = key
+            self.identifier = value
             self.isDefault = isDefault
         }
     }

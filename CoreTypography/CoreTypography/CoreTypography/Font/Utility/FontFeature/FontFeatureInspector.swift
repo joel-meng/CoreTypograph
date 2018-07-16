@@ -31,16 +31,34 @@ fileprivate func fontFeatureName(from fontFeatureDictionary: (FontFeatureDiction
     return fontFeatureDictionary[kCTFontFeatureTypeNameKey as String] as? String
 }
 
+fileprivate func fontFeatureIdentifier(from fontFeatureDictionary: (FontFeatureDictionary)) -> Int? {
+    return fontFeatureDictionary[kCTFontFeatureTypeIdentifierKey as String] as? Int
+}
+
 fileprivate func fontFeatureExclusive(from fontFeatureDictionary: (FontFeatureDictionary)) -> Bool? {
     return fontFeatureDictionary[kCTFontFeatureTypeExclusiveKey as String] as? Bool
 }
 
-fileprivate func fontFeatureOptions(from fontFeatureDictionary: (FontFeatureDictionary)) -> [FontFeatureDictionary]? {
-    return fontFeatureDictionary[kCTFontFeatureTypeSelectorsKey as String] as? [FontFeatureDictionary]
-}
-
-fileprivate func fontFeatureOptionKey(from fontFeatureDictionary: (FontFeatureDictionary)) -> Int? {
-    return fontFeatureDictionary[kCTFontFeatureTypeIdentifierKey as String] as? Int
+fileprivate func fontFeatureOptions(from fontFeatureDictionary: (FontFeatureDictionary)) -> [FontFeature.Option] {
+    guard let options = fontFeatureDictionary[kCTFontFeatureTypeSelectorsKey as String] as? [FontFeatureDictionary] else {
+        print("There is no available font options for font feature \(fontFeatureDictionary)")
+        return []
+    }
+    
+    return options.flatMap({ (option) -> FontFeature.Option? in
+        guard let name = option[kCTFontFeatureSelectorNameKey as String] as? String else {
+            print("unable to get font feature option key")
+            return nil
+        }
+        
+        guard let value = option[kCTFontFeatureSelectorIdentifierKey as String] as? Int else {
+            print("unable to get font feature option value")
+            return nil
+        }
+        
+        let isDefault = option[kCTFontFeatureSelectorDefaultKey as String] as? Bool
+        return FontFeature.Option(key: name, value: value, isDefault: isDefault ?? false)
+    })
 }
 
 public func availableFontFeatures(forFont fontName: String) -> [FontFeature]? {
@@ -48,25 +66,21 @@ public func availableFontFeatures(forFont fontName: String) -> [FontFeature]? {
 }
 
 public func availableFontFeatures(forFont font: UIFont) -> [FontFeature] {
-    return availableFeatures(forFont: font).map { (fontFeatureDictionary) -> FontFeature in
-        let featureName = fontFeatureName(from: fontFeatureDictionary) ?? "Unknown feature name"
-        let exclusive = fontFeatureExclusive(from: fontFeatureDictionary) ?? false
+    return availableFeatures(forFont: font).flatMap { (fontFeatureDictionary) -> FontFeature? in
+        guard let featureName = fontFeatureName(from: fontFeatureDictionary) else {
+            print("Unable to extract feature name from font \(font)")
+            return nil
+        }
         
-        let options = fontFeatureOptions(from: fontFeatureDictionary)?.flatMap({ (option) -> FontFeature.Option? in
-            guard let key = option[kCTFontFeatureSelectorNameKey as String] as? String else {
-                print("unable to get font feature option key")
-                return nil
-            }
-            guard let value = option[kCTFontFeatureSelectorIdentifierKey as String] as? Int else {
-                print("unable to get font feature option value")
-                return nil
-            }
-            let isDefault = option[kCTFontFeatureSelectorDefaultKey as String] as? Bool
-            return FontFeature.Option(key: key, value: value, isDefault: isDefault ?? false)
-        })
-        return FontFeature(featureName: featureName, exclusive: exclusive, options: options ?? [])
+        guard let featureIdentifier = fontFeatureIdentifier(from: fontFeatureDictionary) else {
+            print("Unable to extract feature featureIdentifier from font \(font)")
+            return nil
+        }
+        
+        let options = fontFeatureOptions(from: fontFeatureDictionary)
+        return FontFeature(featureName: featureName,
+                           featureIdentifier: featureIdentifier,
+                           exclusive: fontFeatureExclusive(from: fontFeatureDictionary) ?? true,
+                           options: options)
     }
 }
-
-
-
