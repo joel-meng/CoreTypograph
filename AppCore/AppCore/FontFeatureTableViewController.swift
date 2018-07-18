@@ -28,6 +28,7 @@ class FontFeatureTableViewController: UITableViewController {
             showCaseLabel.lineBreakMode = .byWordWrapping
             
             showCaseLabel.text = """
+            ffi, ffl for ligature
             Quick brown fox jumps over the lazy dog.
             123,456,789
             1/2 and 1st
@@ -42,7 +43,8 @@ class FontFeatureTableViewController: UITableViewController {
         print(systemFont.fontName + " - " + systemFont.familyName)
         fontFeatures = CoreTypography.availableFontFeatures(forFont: font.faceName) ?? []
         fontFeaturesDataSet = presentationModel(for: fontFeatures)
-        updateShowCaseLabel(withFontFeature: fontFeaturesDataSet)
+        
+        updateShowCaseLabelWithSelectedOptions()
     }
 
     // MARK: - Table view data source
@@ -61,15 +63,13 @@ class FontFeatureTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fontFeatureOption", for: indexPath)
-        let fontFeature: FontFeaturePresentationModel = fontFeaturesDataSet[indexPath.section]
-        let fontFeatureOption: FontFeaturePresentationModel.FontFeatureOption = fontFeature.options[indexPath.row]
-        cell.textLabel?.text = fontFeatureOption.optionName
-        cell.textLabel?.font = fontWithFeatures([fontFeature])
+        let fontFeature = fontFeaturesDataSet[indexPath.section]
+        let fontFeatureOption = fontFeature.options[indexPath.row]
         
-        cell.detailTextLabel?.text = fontFeatureOption.optionName
-        if let selectedFeatureOption = fontFeature.selectedOptioin {
-            cell.accessoryType = (selectedFeatureOption == fontFeatureOption) ? .checkmark : .none
-        }
+        cell.textLabel?.text = fontFeatureOption.name
+        cell.detailTextLabel?.text = fontFeatureOption.name
+        
+        cell.accessoryType = (fontFeatureOption.isSelected) ? .checkmark : .none
         return cell
     }
     
@@ -77,14 +77,22 @@ class FontFeatureTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         var fontFeature = fontFeaturesDataSet[indexPath.section]
         let featureOption = fontFeature.options[indexPath.row]
-        fontFeature.selectedOptioin = featureOption
+        if fontFeature.exclusive {
+            fontFeature.options = fontFeature.options.map({ (option) -> FontFeatureOptionPresentationModel in
+                FontFeatureOptionPresentationModel(name: option.name,
+                                                   identifier: option.identifier,
+                                                   isSelected: (option.identifier == featureOption.identifier),
+                                                   feature: option.feature)
+            })
+        } else {
+            fontFeature.options[indexPath.row] = FontFeatureOptionPresentationModel(name: featureOption.name,
+                                                                                    identifier: featureOption.identifier,
+                                                                                    isSelected: true,
+                                                                                    feature: featureOption.feature)
+        }
         fontFeaturesDataSet[indexPath.section] = fontFeature
         
-        // Do selection
-        let fontFeatureSelection = fontFeatureModel(for: fontFeaturesDataSet)
-        self.fontFeatureSelection?(fontFeatureSelection)
-        
-        updateShowCaseLabel(withFontFeature: fontFeaturesDataSet)
+        updateShowCaseLabelWithSelectedOptions()
         
         tableView.reloadData()
     }
@@ -93,72 +101,66 @@ class FontFeatureTableViewController: UITableViewController {
     
     // MARK: - Creating font from selected font feature
     
-    fileprivate func updateShowCaseLabel(withFontFeature fontFeatures: [FontFeaturePresentationModel]) {
-        let font = fontWithFeatures(fontFeatures)
-        showCaseLabel.font = font
+    fileprivate func updateShowCaseLabelWithSelectedOptions() {
+        let selectedOptions = fontFeaturesDataSet.flatMap { (feature) in
+            feature.options.filter {$0.isSelected}
+        }
+        updateShowCaseLabel(withFontFeature: selectedOptions)
     }
     
-    fileprivate func fontWithFeatures(_ fontFeatures: [FontFeaturePresentationModel]) -> UIFont {
-        
-        let selectedFeaturesAndOption = fontFeatureModel(for: fontFeatures)
-        let fontFeatureSetting = selectedFeaturesAndOption.flatMap { (selection) -> [UIFontDescriptor.FeatureKey: Int]? in
-            guard let selectedOption = selection.selectedOption else {
-                return nil
-            }
-            return selection.feature.setting(forOption: selectedOption)
+    fileprivate func updateShowCaseLabel(withFontFeature fontFeatureOptions: [FontFeatureOptionPresentationModel]) {
+        showCaseLabel.font = self.font(for: fontFeatureOptions)
+    }
+    
+    fileprivate func featureSetting(for fontFeatureOptions: [FontFeatureOptionPresentationModel]) -> [[UIFontDescriptor.FeatureKey: Int]] {
+        return fontFeatureOptions.map { (featureOption) -> [UIFontDescriptor.FeatureKey: Int] in
+            featureSetting(for: featureOption)
         }
+    }
+    
+    fileprivate func featureSetting(for fontFeatureOption: FontFeatureOptionPresentationModel) -> [UIFontDescriptor.FeatureKey: Int] {
+        return [
+            UIFontDescriptor.FeatureKey.featureIdentifier: fontFeatureOption.feature.identifier,
+            UIFontDescriptor.FeatureKey.typeIdentifier: fontFeatureOption.identifier,
+        ]
+    }
+    
+    fileprivate func font(for fontFeatureOptions: [FontFeatureOptionPresentationModel]) -> UIFont {
+        let featureSettings = featureSetting(for: fontFeatureOptions)
+        let font = UIFont(descriptor: fontDescriptor(with: featureSettings), size: 16)
+        return font
+    }
+    
+    fileprivate func fontDescriptor(with featureSetting: [[UIFontDescriptor.FeatureKey: Int]]) -> UIFontDescriptor {
+        print("expected:  \(featureSetting)")
         
         let fontAttributes: [UIFontDescriptor.AttributeName: Any] = [
             UIFontDescriptor.AttributeName.name: self.font.faceName,
-            UIFontDescriptor.AttributeName.featureSettings: fontFeatureSetting,
+            UIFontDescriptor.AttributeName.featureSettings: featureSetting,
         ]
-        
-        print(fontAttributes)
-        
         let fontDescriptor = UIFontDescriptor(fontAttributes: fontAttributes)
-        
-        print("in the middle: \(fontDescriptor.fontAttributes)")
-        
-        let font = UIFont(descriptor: fontDescriptor, size: 16)
-        
-        print("actual:  \(font.fontDescriptor.fontAttributes)")
-        
-        return font
+        print("actual:  \(fontDescriptor.fontAttributes)")
+        return fontDescriptor
     }
     
     // MARK: - Mapper
     
     fileprivate func presentationModel(for fontFeatures: [FontFeature]) -> [FontFeatureTableViewController.FontFeaturePresentationModel] {
         return fontFeatures.map { (fontFeature) -> FontFeaturePresentationModel in
-            let options = fontFeature.options.map({ (option) -> FontFeaturePresentationModel.FontFeatureOption in
-                return FontFeaturePresentationModel.FontFeatureOption(optionName: option.name, optionIdentifier: option.identifier, isDefault: option.isDefault)
-            })
-            let defaultFeature = fontFeature.options.filter{ $0.isDefault }.first.map { option in
-                return FontFeaturePresentationModel.FontFeatureOption(optionName: option.name, optionIdentifier: option.identifier, isDefault: option.isDefault)
-            }
-            return FontFeaturePresentationModel(name: fontFeature.featureName,
-                                                exclusive: fontFeature.exclusive,
-                                                identifier: fontFeature.featureIdentifier,
-                                                options: options,
-                                                selectedOptioin: defaultFeature)
-        }
-    }
-    
-    fileprivate func fontFeatureModel(for fontFeaturePresentationModels: [FontFeaturePresentationModel]) -> [FontFeatureOptionSelection] {
-        return fontFeaturePresentationModels.map { (fontFeaturePresentationModel) -> FontFeatureOptionSelection in
-            let options = fontFeaturePresentationModel.options.map({ (featureOption) -> FontFeature.Option in
-                return FontFeature.Option(key: featureOption.optionName, value: featureOption.optionIdentifier, isDefault: featureOption.isDefault )
+            
+            var feature = FontFeaturePresentationModel(name: fontFeature.featureName,
+                                                       exclusive: fontFeature.exclusive,
+                                                       identifier: fontFeature.featureIdentifier)
+            
+            let options = fontFeature.options.map({ (option) -> FontFeatureOptionPresentationModel in
+                return FontFeatureOptionPresentationModel(name: option.name,
+                                                          identifier: option.identifier,
+                                                          isSelected: option.isDefault,
+                                                          feature: feature)
             })
             
-            let selectedOption = fontFeaturePresentationModel.selectedOptioin.map({ (option) -> FontFeature.Option in
-                return FontFeature.Option(key: option.optionName, value: option.optionIdentifier, isDefault: option.isDefault)
-            })
-            
-            let fontFeatures = FontFeature(featureName: fontFeaturePresentationModel.name,
-                                          featureIdentifier: fontFeaturePresentationModel.identifier,
-                                          exclusive: fontFeaturePresentationModel.exclusive,
-                                          options: options)
-            return FontFeatureOptionSelection(feature: fontFeatures, selectedOption: selectedOption)
+            feature.options = options
+            return feature
         }
     }
     
@@ -168,17 +170,30 @@ class FontFeatureTableViewController: UITableViewController {
         let name: String
         let exclusive: Bool
         let identifier: Int
-        let options: [FontFeatureOption]
-        var selectedOptioin: FontFeatureOption?
+        var options: [FontFeatureOptionPresentationModel]!
         
-        struct FontFeatureOption: Equatable {
-            let optionName: String
-            let optionIdentifier: Int
-            let isDefault: Bool
-            
-            static func ==(lhs: FontFeatureOption, rhs: FontFeatureOption) -> Bool {
-                return lhs.optionIdentifier == rhs.optionIdentifier
-            }
+        init(name: String, exclusive: Bool, identifier: Int) {
+            self.name = name
+            self.exclusive = exclusive
+            self.identifier = identifier
+        }
+    }
+    
+    fileprivate struct FontFeatureOptionPresentationModel: Equatable {
+        let name: String
+        let identifier: Int
+        let isSelected: Bool
+        var feature: FontFeaturePresentationModel
+        
+        init(name: String, identifier: Int, isSelected: Bool, feature: FontFeaturePresentationModel) {
+            self.name = name
+            self.identifier = identifier
+            self.isSelected = isSelected
+            self.feature = feature
+        }
+        
+        static func ==(lhs: FontFeatureOptionPresentationModel, rhs: FontFeatureOptionPresentationModel) -> Bool {
+            return lhs.identifier == rhs.identifier
         }
     }
     
