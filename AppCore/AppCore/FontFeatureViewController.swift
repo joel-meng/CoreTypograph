@@ -9,38 +9,43 @@
 import UIKit
 import CoreTypography
 
-class FontFeatureTableViewController: UITableViewController {
+class FontFeatureViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     typealias FontFeatureSelection = ([FontFeatureOptionSelection]) -> Void
     
-    var font: FontTableViewController.FontFace!
+    @IBOutlet var textView: UITextView! {
+        didSet {
+            
+            textView.textAlignment = .center
+            textView.isScrollEnabled = false
+            
+            textView.text = """
+            AV Ta for kerning
+            ffi, ffl for ligature
+            Quick brown fox jumps over the lazy dog.
+            123,456,789.49
+            1/2 and 1st, 2nd, 3rd, 4th, 5th
+            """
+        }
+    }
+    
+    @IBOutlet var tableView: UITableView!
     
     private var fontFeatures: [FontFeature] = []
     
     private var fontFeaturesDataSet: [FontFeaturePresentationModel] = []
     
-    var fontFeatureSelection: (FontFeatureSelection)?
+    var font: FontTableViewController.FontFace!
     
-    @IBOutlet var showCaseLabel: UILabel! {
-        didSet {
-            showCaseLabel.textAlignment = .center
-            showCaseLabel.numberOfLines = 0
-            showCaseLabel.lineBreakMode = .byWordWrapping
-            
-            showCaseLabel.text = """
-            ffi, ffl for ligature
-            Quick brown fox jumps over the lazy dog.
-            123,456,789
-            1/2 and 1st
-            """
-        }
-    }
+    var fontFeatureSelection: (FontFeatureSelection)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = font.faceName
-        let systemFont = UIFont.systemFont(ofSize: 12)
-        print(systemFont.fontName + " - " + systemFont.familyName)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         fontFeatures = CoreTypography.availableFontFeatures(forFont: font.faceName) ?? []
         fontFeaturesDataSet = presentationModel(for: fontFeatures)
         
@@ -49,19 +54,19 @@ class FontFeatureTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return fontFeaturesDataSet.count
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fontFeaturesDataSet[section].options.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return fontFeaturesDataSet[section].name
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fontFeatureOption", for: indexPath)
         let fontFeature = fontFeaturesDataSet[indexPath.section]
         let fontFeatureOption = fontFeature.options[indexPath.row]
@@ -73,7 +78,7 @@ class FontFeatureTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         var fontFeature = fontFeaturesDataSet[indexPath.section]
         let featureOption = fontFeature.options[indexPath.row]
@@ -109,7 +114,7 @@ class FontFeatureTableViewController: UITableViewController {
     }
     
     fileprivate func updateShowCaseLabel(withFontFeature fontFeatureOptions: [FontFeatureOptionPresentationModel]) {
-        showCaseLabel.font = self.font(for: fontFeatureOptions)
+        textView.font = self.font(for: fontFeatureOptions)
     }
     
     fileprivate func featureSetting(for fontFeatureOptions: [FontFeatureOptionPresentationModel]) -> [[UIFontDescriptor.FeatureKey: Int]] {
@@ -145,7 +150,7 @@ class FontFeatureTableViewController: UITableViewController {
     
     // MARK: - Mapper
     
-    fileprivate func presentationModel(for fontFeatures: [FontFeature]) -> [FontFeatureTableViewController.FontFeaturePresentationModel] {
+    fileprivate func presentationModel(for fontFeatures: [FontFeature]) -> [FontFeatureViewController.FontFeaturePresentationModel] {
         return fontFeatures.map { (fontFeature) -> FontFeaturePresentationModel in
             
             var feature = FontFeaturePresentationModel(name: fontFeature.featureName,
