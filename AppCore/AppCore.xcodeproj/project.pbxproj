@@ -10,6 +10,7 @@
 		F31FE0D120F8592F006ABC52 /* FontTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */; };
 		F354843F20FED5AF005E136C /* FontFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354843E20FED5AF005E136C /* FontFeatureViewController.swift */; };
 		F356194520F81B4D000D20CD /* Taviraj.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356194420F81B4D000D20CD /* Taviraj.swift */; };
+		F360A0F72100BF5500EFFCF7 /* FontFeatureSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */; };
 		F3618E1520E9FC2C00B95F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */; };
 		F3618E1720E9FC2C00B95F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E1620E9FC2C00B95F5B /* ViewController.swift */; };
 		F3618E1A20E9FC2C00B95F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3618E1820E9FC2C00B95F5B /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewController.swift; sourceTree = "<group>"; };
 		F354843E20FED5AF005E136C /* FontFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFeatureViewController.swift; sourceTree = "<group>"; };
 		F356194420F81B4D000D20CD /* Taviraj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taviraj.swift; sourceTree = "<group>"; };
+		F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureSettingViewController.swift; sourceTree = "<group>"; };
 		F3618E1120E9FC2C00B95F5B /* AppCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3618E1620E9FC2C00B95F5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F354843E20FED5AF005E136C /* FontFeatureViewController.swift */,
+				F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */,
 				F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */,
 			);
 			name = ViewControllers;
@@ -277,6 +280,7 @@
 				F31FE0D120F8592F006ABC52 /* FontTableViewController.swift in Sources */,
 				F354843F20FED5AF005E136C /* FontFeatureViewController.swift in Sources */,
 				F3618E1520E9FC2C00B95F5B /* AppDelegate.swift in Sources */,
+				F360A0F72100BF5500EFFCF7 /* FontFeatureSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 		F321089920F7164F008516F7 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F318E3BB20F712ED00DD75FF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F321089A20F7164F008516F7 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F318E3BA20F712ED00DD75FF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321089B20F71AFB008516F7 /* FontMetrics.swift */; };
+		F360A0F52100AE1C00EFFCF7 /* FontFeatureBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */; };
 		F3618E4920E9FCE100B95F5B /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E3F20E9FCE100B95F5B /* CoreTypography.framework */; };
 		F3618E4E20E9FCE100B95F5B /* CoreTypographyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E4D20E9FCE100B95F5B /* CoreTypographyTests.swift */; };
 		F3618E5020E9FCE100B95F5B /* CoreTypography.h in Headers */ = {isa = PBXBuildFile; fileRef = F3618E4220E9FCE100B95F5B /* CoreTypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +57,7 @@
 		F318E3BB20F712ED00DD75FF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F318E3BE20F713C500DD75FF /* FontTextStyleAwareSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTextStyleAwareSpec.swift; sourceTree = "<group>"; };
 		F321089B20F71AFB008516F7 /* FontMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetrics.swift; sourceTree = "<group>"; };
+		F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureBuild.swift; sourceTree = "<group>"; };
 		F3618E3F20E9FCE100B95F5B /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E4220E9FCE100B95F5B /* CoreTypography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTypography.h; sourceTree = "<group>"; };
 		F3618E4320E9FCE100B95F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				F3B11F3320FC1E33001990D0 /* FontFeature.swift */,
 				F3B11F3520FC1E6B001990D0 /* FontFeatureInspector.swift */,
+				F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */,
 			);
 			path = FontFeature;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				F3D855A220F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift in Sources */,
 				F3D8559C20F705B000FBEC4C /* FontFace.swift in Sources */,
 				F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */,
+				F360A0F52100AE1C00EFFCF7 /* FontFeatureBuild.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
