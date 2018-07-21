@@ -25,20 +25,20 @@ public class FontFeatureBuilder {
     }
     
     @discardableResult
-    public func numberSpacing(_ setting: NumberSpacing) -> FontFeatureBuilder {
-        fontFeatureAttributes.append(setting.fontFeature())
+    public func numberSpacing(_ numberSpacing: NumberSpacing) -> FontFeatureBuilder {
+        fontFeatureAttributes.append(numberSpacing.fontFeature())
         return self
     }
     
     @discardableResult
-    public func upperCase(_ setting: UpperCase) -> FontFeatureBuilder {
-        fontFeatureAttributes.append(setting.fontFeature())
+    public func upperCase(_ upperCase: UpperCase) -> FontFeatureBuilder {
+        fontFeatureAttributes.append(upperCase.fontFeature())
         return self
     }
     
     @discardableResult
-    public func requiredLigature(_ setting: RequiredLigatures) -> FontFeatureBuilder {
-        fontFeatureAttributes.append(setting.fontFeature())
+    public func requiredLigature(_ requiredLigatures: RequiredLigatures) -> FontFeatureBuilder {
+        fontFeatureAttributes.append(requiredLigatures.fontFeature())
         return self
     }
     
@@ -56,6 +56,10 @@ public class FontFeatureBuilder {
 }
 
 fileprivate typealias FontFeatureAttributeSet = Set<FontFeatureAttribute>
+
+func attribute(feature: FeatureTypeIdentifier, selector: FeatureSelectorIdentifier) -> FontFeatureAttribute {
+    return FontFeatureAttribute(featureIdentifier: feature, selectorIdentifier: selector)
+}
 
 public final class FontFeatureBuildingNampeSpace {
     

@@ -20,6 +20,7 @@
 		F360A1002101A38400EFFCF7 /* VerticalPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0FF2101A38400EFFCF7 /* VerticalPosition.swift */; };
 		F360A1022101A3E900EFFCF7 /* UpperCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A1012101A3E900EFFCF7 /* UpperCase.swift */; };
 		F360A1042101A41900EFFCF7 /* FontFeatureAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A1032101A41900EFFCF7 /* FontFeatureAttribute.swift */; };
+		F360A1062102BBFA00EFFCF7 /* TextSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A1052102BBFA00EFFCF7 /* TextSpacing.swift */; };
 		F3618E4920E9FCE100B95F5B /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E3F20E9FCE100B95F5B /* CoreTypography.framework */; };
 		F3618E4E20E9FCE100B95F5B /* CoreTypographyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E4D20E9FCE100B95F5B /* CoreTypographyTests.swift */; };
 		F3618E5020E9FCE100B95F5B /* CoreTypography.h in Headers */ = {isa = PBXBuildFile; fileRef = F3618E4220E9FCE100B95F5B /* CoreTypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +71,7 @@
 		F360A0FF2101A38400EFFCF7 /* VerticalPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPosition.swift; sourceTree = "<group>"; };
 		F360A1012101A3E900EFFCF7 /* UpperCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperCase.swift; sourceTree = "<group>"; };
 		F360A1032101A41900EFFCF7 /* FontFeatureAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureAttribute.swift; sourceTree = "<group>"; };
+		F360A1052102BBFA00EFFCF7 /* TextSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpacing.swift; sourceTree = "<group>"; };
 		F3618E3F20E9FCE100B95F5B /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E4220E9FCE100B95F5B /* CoreTypography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTypography.h; sourceTree = "<group>"; };
 		F3618E4320E9FCE100B95F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				F360A0F92101A1DC00EFFCF7 /* FontFeatureProviding.swift */,
 				F360A0FB2101A24E00EFFCF7 /* Ligature.swift */,
 				F360A1032101A41900EFFCF7 /* FontFeatureAttribute.swift */,
+				F360A1052102BBFA00EFFCF7 /* TextSpacing.swift */,
 			);
 			path = Buiding;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */,
 				F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */,
 				F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */,
+				F360A1062102BBFA00EFFCF7 /* TextSpacing.swift in Sources */,
 				F3D8559E20F705C100FBEC4C /* FontTrait.swift in Sources */,
 				F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */,
 				F3D855A220F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift in Sources */,
