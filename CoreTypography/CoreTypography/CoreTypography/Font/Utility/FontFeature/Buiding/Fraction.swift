@@ -9,7 +9,8 @@
 import UIKit
 
 /// The Fractions feature type controls the selection and/or generation of fractions.
-///
+/// Exclusive feature.
+/// 
 /// - no: This means fractions should not be formed automatically.
 /// - vertical: Form vertical (pre-drawn) fractions present in the font.
 /// - diagonal: Acts like the Vertical Fractions selector, but fractions will be synthesized
