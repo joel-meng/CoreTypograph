@@ -21,6 +21,7 @@
 		F360A1022101A3E900EFFCF7 /* UpperCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A1012101A3E900EFFCF7 /* UpperCase.swift */; };
 		F360A1042101A41900EFFCF7 /* FontFeatureAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A1032101A41900EFFCF7 /* FontFeatureAttribute.swift */; };
 		F360A1062102BBFA00EFFCF7 /* TextSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A1052102BBFA00EFFCF7 /* TextSpacing.swift */; };
+		F360A1082102C0DB00EFFCF7 /* Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A1072102C0DB00EFFCF7 /* Fraction.swift */; };
 		F3618E4920E9FCE100B95F5B /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E3F20E9FCE100B95F5B /* CoreTypography.framework */; };
 		F3618E4E20E9FCE100B95F5B /* CoreTypographyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E4D20E9FCE100B95F5B /* CoreTypographyTests.swift */; };
 		F3618E5020E9FCE100B95F5B /* CoreTypography.h in Headers */ = {isa = PBXBuildFile; fileRef = F3618E4220E9FCE100B95F5B /* CoreTypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,6 +73,7 @@
 		F360A1012101A3E900EFFCF7 /* UpperCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperCase.swift; sourceTree = "<group>"; };
 		F360A1032101A41900EFFCF7 /* FontFeatureAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureAttribute.swift; sourceTree = "<group>"; };
 		F360A1052102BBFA00EFFCF7 /* TextSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpacing.swift; sourceTree = "<group>"; };
+		F360A1072102C0DB00EFFCF7 /* Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fraction.swift; sourceTree = "<group>"; };
 		F3618E3F20E9FCE100B95F5B /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E4220E9FCE100B95F5B /* CoreTypography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTypography.h; sourceTree = "<group>"; };
 		F3618E4320E9FCE100B95F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				F360A0FB2101A24E00EFFCF7 /* Ligature.swift */,
 				F360A1032101A41900EFFCF7 /* FontFeatureAttribute.swift */,
 				F360A1052102BBFA00EFFCF7 /* TextSpacing.swift */,
+				F360A1072102C0DB00EFFCF7 /* Fraction.swift */,
 			);
 			path = Buiding;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F360A1002101A38400EFFCF7 /* VerticalPosition.swift in Sources */,
+				F360A1082102C0DB00EFFCF7 /* Fraction.swift in Sources */,
 				F3D855A020F708CD00FBEC4C /* FontTextStyleAware.swift in Sources */,
 				F360A1022101A3E900EFFCF7 /* UpperCase.swift in Sources */,
 				F387D51220F7002E00FF9333 /* CustomFontRepresentable.swift in Sources */,

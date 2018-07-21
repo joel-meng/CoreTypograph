@@ -8,8 +8,10 @@
 
 import UIKit
 
-/// The Text Spacing feature type is used to select between the proportional, monospaced and half-width forms of characters in a font.
-/// Use of this feature type is optional; for more precise control see the Kana Spacing and Ideographic Spacing feature types.
+/// The Text Spacing feature type is used to select between the proportional,
+/// monospaced and half-width forms of characters in a font.
+/// Use of this feature type is optional; for more precise control see the Kana
+/// Spacing and Ideographic Spacing feature types.
 /// Exclusive feature.
 ///
 /// - proportional: Selects the proportional forms of letters.
