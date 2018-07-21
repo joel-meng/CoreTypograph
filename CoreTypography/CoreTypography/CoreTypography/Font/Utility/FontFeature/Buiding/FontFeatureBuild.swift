@@ -37,11 +37,8 @@ public class FontFeatureBuilder {
     }
     
     @discardableResult
-    public func ligature(required `switch`: Switch) -> FontFeatureBuilder {
-        let selector = `switch`.isOn ? kRequiredLigaturesOnSelector : kRequiredLigaturesOffSelector
-        let feature = FontFeatureAttribute(featureIdentifier: kLigaturesType,
-                                           selectorIdentifier: selector)
-        fontFeatureAttributes.append(feature)
+    public func requiredLigature(_ setting: RequiredLigatures) -> FontFeatureBuilder {
+        fontFeatureAttributes.append(setting.fontFeature())
         return self
     }
     

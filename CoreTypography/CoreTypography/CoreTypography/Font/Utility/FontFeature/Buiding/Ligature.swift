@@ -6,65 +6,9 @@
 //  Copyright © 2018 MENG, Joel. All rights reserved.
 //
 
-import Foundation
 import UIKit
-/*
-public struct Ligature: OptionSet, FontFeatureProviding {
-    func fontFeature() -> FontFeatureAttribute {
-        switch self {
-        case .requiredLigaturesOn:
-            return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kRequiredLigaturesOnSelector)
-        case .requiredLigaturesOff:
-            return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kRequiredLigaturesOffSelector)
-        case .commonLigaturesOn:
-            return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kCommonLigaturesOnSelector)
-        case .commonLigaturesOff:
-            return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kCommonLigaturesOffSelector)
-        case .rareLigaturesOn:
-            return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kRareLigaturesOnSelector)
-        case .rareLigaturesOff:
-            return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kRareLigaturesOffSelector)
-        default:
-            return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kRequiredLigaturesOffSelector)
-        }
-    }
-    
-    public let rawValue: Int
-    
-    public init(rawValue: Int) {
-        self.rawValue = rawValue
-    }
-    
-    public static let requiredLigaturesOn  = Ligature(rawValue: 1 << 0)
-    public static let requiredLigaturesOff = Ligature(rawValue: 1 << 1)
-    
-    public static let commonLigaturesOn    = Ligature(rawValue: 1 << 2)
-    public static let commonLigaturesOff   = Ligature(rawValue: 1 << 3)
-    
-    public static let rareLigaturesOn      = Ligature(rawValue: 1 << 4)
-    public static let rareLigaturesOff     = Ligature(rawValue: 1 << 5)
-}
-*/
 
 /// The Ligatures feature type permits selection from different kinds of ligatures. It is a non-exclusive feature type.
-
-public enum Switch {
-    case on
-    case off
-    
-    var isOn: Bool {
-        switch self {
-        case .on:
-            return true
-        case .off:
-            return false
-        }
-    }
-    
-    var isOff: Bool {
-        return !isOn
-    }
-}
 
 /// Required Ligatures. Those ligatures that are linguistically required, such as occur in Arabic or Hindi.
 /// This should generally not be visible in the UI.

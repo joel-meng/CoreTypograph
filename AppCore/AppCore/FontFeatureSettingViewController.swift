@@ -36,7 +36,7 @@ class FontFeatureSettingViewController: UIViewController {
 
 fileprivate func generateFontFeature() -> UIFont {
     let featureSetting = FontFeatureBuilder { (builder) in
-        builder.ligature(required: .on).numberSpacing(.mono).upperCase(.smallCaps).verticalPosition(.superior)
+        builder.numberSpacing(.mono).upperCase(.smallCaps).verticalPosition(.superior).requiredLigature(.on)
     }.build()
     
     print(featureSetting)
