@@ -9,6 +9,64 @@
 import UIKit
 
 /// The Ligatures feature type permits selection from different kinds of ligatures. It is a non-exclusive feature type.
+public struct Ligature: OptionSet {
+    
+    public var rawValue: Int
+    
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+    
+    public static let requiredOn = Ligature(rawValue: 1 << 0)
+    public static let requiredOff = Ligature(rawValue: 1 << 1)
+    public static let commonOn = Ligature(rawValue: 1 << 2)
+    public static let commonOff = Ligature(rawValue: 1 << 3)
+    public static let rareOn = Ligature(rawValue: 1 << 4)
+    public static let rareOff = Ligature(rawValue: 1 << 5)
+    public static let historicalOn = Ligature(rawValue: 1 << 10)
+    public static let historicalOff = Ligature(rawValue: 1 << 11)
+}
+
+extension Ligature: FontFeaturesProviding {
+    
+    func fontFeatures() -> [FontFeatureAttribute] {
+        var fontFeatureAttributes: [FontFeatureAttribute] = []
+        
+        if contains(.requiredOn) {
+            fontFeatureAttributes.append(RequiredLigatures.on.fontFeature())
+        }
+        
+        if contains(.requiredOff) {
+            fontFeatureAttributes.append(RequiredLigatures.off.fontFeature())
+        }
+        
+        if contains(.commonOn) {
+            fontFeatureAttributes.append(CommonLigatures.on.fontFeature())
+        }
+        
+        if contains(.commonOff) {
+            fontFeatureAttributes.append(CommonLigatures.off.fontFeature())
+        }
+        
+        if contains(.rareOn) {
+            fontFeatureAttributes.append(RareLigatures.on.fontFeature())
+        }
+        
+        if contains(.rareOff) {
+            fontFeatureAttributes.append(RareLigatures.off.fontFeature())
+        }
+        
+        if contains(.historicalOn) {
+            fontFeatureAttributes.append(HistoricalLigatures.on.fontFeature())
+        }
+        
+        if contains(.historicalOff) {
+            fontFeatureAttributes.append(HistoricalLigatures.off.fontFeature())
+        }
+        
+        return fontFeatureAttributes
+    }
+}
 
 /// Required Ligatures. Those ligatures that are linguistically required, such as occur in Arabic or Hindi.
 /// This should generally not be visible in the UI.

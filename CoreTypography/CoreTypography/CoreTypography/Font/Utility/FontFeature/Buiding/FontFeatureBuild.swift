@@ -37,6 +37,12 @@ public class FontFeatureBuilder {
     }
     
     @discardableResult
+    public func lowerCase(_ lowerCase: LowerCase) -> FontFeatureBuilder {
+        fontFeatureAttributes.append(lowerCase.fontFeature())
+        return self
+    }
+    
+    @discardableResult
     public func requiredLigature(_ requiredLigatures: RequiredLigatures) -> FontFeatureBuilder {
         fontFeatureAttributes.append(requiredLigatures.fontFeature())
         return self
@@ -45,6 +51,12 @@ public class FontFeatureBuilder {
     @discardableResult
     public func verticalPosition(_ verticalPosition: VerticalPosition) -> FontFeatureBuilder {
         fontFeatureAttributes.append(verticalPosition.fontFeature())
+        return self
+    }
+    
+    @discardableResult
+    public func ligatures(_ ligatures: Ligature) -> FontFeatureBuilder {
+        fontFeatureAttributes += ligatures.fontFeatures()
         return self
     }
     
