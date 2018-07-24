@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF252106B3DB0077B88A /* FontDemoView.swift */; };
+		F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */; };
 		F318E3BC20F712ED00DD75FF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E3BA20F712ED00DD75FF /* Quick.framework */; };
 		F318E3BD20F712ED00DD75FF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E3BB20F712ED00DD75FF /* Nimble.framework */; };
 		F318E3BF20F713C500DD75FF /* FontTextStyleAwareSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318E3BE20F713C500DD75FF /* FontTextStyleAwareSpec.swift */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		F306AF252106B3DB0077B88A /* FontDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDemoView.swift; sourceTree = "<group>"; };
+		F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontLoader.swift; sourceTree = "<group>"; };
 		F318E3BA20F712ED00DD75FF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F318E3BB20F712ED00DD75FF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F318E3BE20F713C500DD75FF /* FontTextStyleAwareSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTextStyleAwareSpec.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				F3D8559B20F705B000FBEC4C /* FontFace.swift */,
 				F3D8559D20F705C100FBEC4C /* FontTrait.swift */,
 				F321089B20F71AFB008516F7 /* FontMetrics.swift */,
+				F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				F360A0FA2101A1DC00EFFCF7 /* FontFeatureProviding.swift in Sources */,
 				F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */,
 				F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */,
+				F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */,
 				F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */,
 				F360A1062102BBFA00EFFCF7 /* TextSpacing.swift in Sources */,
 				F3D8559E20F705C100FBEC4C /* FontTrait.swift in Sources */,

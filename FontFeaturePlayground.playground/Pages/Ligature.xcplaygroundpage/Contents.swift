@@ -4,9 +4,6 @@ import CoreTypography
 import UIKit
 import PlaygroundSupport
 
-let fontURL = Bundle.main.url(forResource: "Taviraj-Regular", withExtension: ".ttf") as! CFURL
-CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
-
 //: ##### Ligature Common
 
 let commonLigatureTitle = "Common Ligature"
@@ -28,9 +25,7 @@ let commonLigatureView = textComparisonView(text: commonLigatureText, font1: lig
 
 //: ##### Ligature Rare
 
-let rareLigatureText = """
-st, ct
-"""
+let rareLigatureText = "st, ct"
 let rareLigatureFontName = "HoeflerText-Regular"
 let rareLigatureTitle = "Rare Ligature"
 
