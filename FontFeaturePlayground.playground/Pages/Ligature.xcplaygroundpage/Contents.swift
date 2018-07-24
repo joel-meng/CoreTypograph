@@ -39,3 +39,22 @@ let ligatureRareOff = FontBuilder { builder in
 
 
 let rareLigatureView = textComparisonView(text: rareLigatureText, font1: ligatureRareOn, font2: ligatureRareOff, title: rareLigatureTitle)
+
+
+//: ##### Ligature Historical
+
+let historicalLigatureText = "st, ct, Muestfurst"
+let historicalLigatureFontName = "Baskerville"
+let historicalLigatureTitle = "Historical Ligature"
+
+let historicalOn = FontBuilder { builder in
+    builder.ligatures([Ligature.commonOff, Ligature.rareOff, Ligature.historicalOn]).name(historicalLigatureFontName)
+}.build()
+
+let historicalOff = FontBuilder { builder in
+    builder.ligatures([Ligature.commonOn, Ligature.rareOn, Ligature.historicalOff]).name(historicalLigatureFontName)
+}.build()
+
+
+let historicalLigatureView = textComparisonView(text: historicalLigatureText, font1: historicalOn, font2: historicalOff, title: historicalLigatureTitle)
+

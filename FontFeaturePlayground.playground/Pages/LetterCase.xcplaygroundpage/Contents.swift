@@ -16,7 +16,7 @@ let smallCapsOn = FontBuilder { builder in
 }.build()
 
 let smallCapsOff = FontBuilder { builder in
-    builder.name(smallCapsFontName).name(smallCapsFontName)
+    builder.name(smallCapsFontName)
 }.build()
 
 let smallCapsView = textComparisonView(text: smallCapsText, font1: smallCapsOn, font2: smallCapsOff, title: smallCapsTitle)
