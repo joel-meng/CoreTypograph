@@ -10,7 +10,7 @@ import UIKit
 
 public func textComparisonView(text: String, font1: UIFont, font2: UIFont, title: String) -> UIView {
     let stackView = demoStackView(text: text, font1: font1, font2: font2, title: title)
-    let demoView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 1))
+    let demoView = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 1))
     demoView.translatesAutoresizingMaskIntoConstraints = false
     
     demoView.backgroundColor = .white
@@ -65,7 +65,7 @@ private func typographyLable(withText text: String, font: UIFont) -> UILabel {
     resultLabel.layer.borderWidth = 1
     resultLabel.backgroundColor = .white
     
-    resultLabel.preferredMaxLayoutWidth = 200
+    resultLabel.preferredMaxLayoutWidth = 400
     resultLabel.numberOfLines = 0
     resultLabel.lineBreakMode = .byWordWrapping
     

@@ -4,15 +4,15 @@ import CoreTypography
 import UIKit
 import PlaygroundSupport
 
-
-//let fontName = "Hiragino"
-
+let fontURL = Bundle.main.url(forResource: "Taviraj-Regular", withExtension: ".ttf") as! CFURL
+CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
 
 //: ##### Ligature Common
 
 let commonLigatureTitle = "Common Ligature"
-let commonLigatureText = "affordable filial"
-let commonLigatureFontName = "HiraginoSans-W3"
+let commonLigatureText = "ff, ffi, ffl, fi, fj"
+let commonLigatureFontName = "HoeflerText-Regular"
+
 let ligatureCommonOn = FontBuilder { builder in
     builder.ligatures([Ligature.commonOn]).name(commonLigatureFontName)
 }.build()
@@ -21,29 +21,25 @@ let ligatureCommonOff = FontBuilder { builder in
     builder.ligatures([Ligature.commonOff]).name(commonLigatureFontName)
 }.build()
 
+ligatureCommonOff.fontName
+
 let commonLigatureView = textComparisonView(text: commonLigatureText, font1: ligatureCommonOn, font2: ligatureCommonOff, title: commonLigatureTitle)
 
 
 //: ##### Ligature Rare
 
 let rareLigatureText = """
-ö á â ä æ ã å ā for Diacritcs
-AV Ta for kerning
-ffi, ffl for ligature
-Quick brown fox jumps over the lazy dog.
-123,456,789.49
-1/2 and 1st, 2nd, 3rd, 4th, 5th
+st, ct
 """
-let rareLigatureFontName = "HiraginoSans-W3"
+let rareLigatureFontName = "HoeflerText-Regular"
 let rareLigatureTitle = "Rare Ligature"
 
-
 let ligatureRareOn = FontBuilder { builder in
-    builder.ligatures([Ligature.rareOff]).name(rareLigatureFontName)
+    builder.ligatures([Ligature.commonOff, Ligature.rareOff]).name(rareLigatureFontName)
 }.build()
 
 let ligatureRareOff = FontBuilder { builder in
-    builder.ligatures([Ligature.rareOn]).name(rareLigatureFontName)
+    builder.ligatures([Ligature.commonOff, Ligature.rareOn]).name(rareLigatureFontName)
 }.build()
 
 

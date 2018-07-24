@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>AtlasGrotesk-Regular-App.ttf</string>
 		<string>Taviraj-BoldItalic.ttf</string>
 		<string>Taviraj-Bold.ttf</string>
 		<string>Taviraj-RegularItalic.ttf</string>
