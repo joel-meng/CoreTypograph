@@ -94,6 +94,8 @@ let scentificVerticalPositionTitle = "Scentific Vertical Position"
 let scentificVerticalPositionText = """
 1/2 4.3 123th/223
 1st 2nd 3rd 4th 5th
+H2O Fe3O4
+H25 + 89.58 = 34
 """
 let scentificVerticalPositionFontName = "InputSans-Regular"
 

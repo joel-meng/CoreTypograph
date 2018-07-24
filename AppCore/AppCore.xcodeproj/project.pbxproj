@@ -12,6 +12,8 @@
 		F306AF4F2106F6F40077B88A /* InputSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */; };
 		F306AF512106F7350077B88A /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */; };
 		F31FE0D120F8592F006ABC52 /* FontTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */; };
+		F344AD2F2107EC3500CBCC41 /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F344AD2E2107EC3500CBCC41 /* CoreTypography.framework */; };
+		F344AD302107EC3500CBCC41 /* CoreTypography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F344AD2E2107EC3500CBCC41 /* CoreTypography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F354843F20FED5AF005E136C /* FontFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354843E20FED5AF005E136C /* FontFeatureViewController.swift */; };
 		F356194520F81B4D000D20CD /* Taviraj.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356194420F81B4D000D20CD /* Taviraj.swift */; };
 		F360A0F72100BF5500EFFCF7 /* FontFeatureSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */; };
@@ -21,8 +23,6 @@
 		F3618E1C20E9FC2C00B95F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3618E1B20E9FC2C00B95F5B /* Assets.xcassets */; };
 		F3618E1F20E9FC2C00B95F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3618E1D20E9FC2C00B95F5B /* LaunchScreen.storyboard */; };
 		F3618E2A20E9FC2C00B95F5B /* AppCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E2920E9FC2C00B95F5B /* AppCoreTests.swift */; };
-		F3618E5A20E9FD4C00B95F5B /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */; };
-		F3618E5B20E9FD4C00B95F5B /* CoreTypography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F3618E5B20E9FD4C00B95F5B /* CoreTypography.framework in Embed Frameworks */,
+				F344AD302107EC3500CBCC41 /* CoreTypography.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +55,8 @@
 		F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InputSans-Regular.ttf"; sourceTree = "<group>"; };
 		F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewController.swift; sourceTree = "<group>"; };
+		F344AD2E2107EC3500CBCC41 /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F344AD312107EC3E00CBCC41 /* CoreTypography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTypography.framework; path = "../../../../Library/Developer/Xcode/DerivedData/AppCore-fiitcltmrzanfvhfalzfpwdoasdb/Build/Products/Debug-iphoneos/CoreTypography.framework"; sourceTree = "<group>"; };
 		F354843E20FED5AF005E136C /* FontFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFeatureViewController.swift; sourceTree = "<group>"; };
 		F356194420F81B4D000D20CD /* Taviraj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taviraj.swift; sourceTree = "<group>"; };
 		F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureSettingViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +71,6 @@
 		F3618E2520E9FC2C00B95F5B /* AppCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E2920E9FC2C00B95F5B /* AppCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreTests.swift; sourceTree = "<group>"; };
 		F3618E2B20E9FC2C00B95F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3618E5A20E9FD4C00B95F5B /* CoreTypography.framework in Frameworks */,
+				F344AD2F2107EC3500CBCC41 /* CoreTypography.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +105,7 @@
 		F3618E0820E9FC2C00B95F5B = {
 			isa = PBXGroup;
 			children = (
+				F344AD2E2107EC3500CBCC41 /* CoreTypography.framework */,
 				F3618E5D20E9FD5900B95F5B /* Frameworks */,
 				F3618E1320E9FC2C00B95F5B /* AppCore */,
 				F3618E2820E9FC2C00B95F5B /* AppCoreTests */,
@@ -149,7 +151,7 @@
 		F3618E5D20E9FD5900B95F5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */,
+				F344AD312107EC3E00CBCC41 /* CoreTypography.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
