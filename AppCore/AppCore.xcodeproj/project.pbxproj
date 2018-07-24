@@ -55,7 +55,7 @@
 		F354843E20FED5AF005E136C /* FontFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFeatureViewController.swift; sourceTree = "<group>"; };
 		F356194420F81B4D000D20CD /* Taviraj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taviraj.swift; sourceTree = "<group>"; };
 		F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureSettingViewController.swift; sourceTree = "<group>"; };
-		F360A10F2102DA9500EFFCF7 /* FontFeaturePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FontFeaturePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F360A10F2102DA9500EFFCF7 /* FontFeaturePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FontFeaturePlayground.playground; path = ../../FontFeaturePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F3618E1120E9FC2C00B95F5B /* AppCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3618E1620E9FC2C00B95F5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };

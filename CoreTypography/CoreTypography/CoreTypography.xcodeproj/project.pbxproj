@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF252106B3DB0077B88A /* FontDemoView.swift */; };
 		F318E3BC20F712ED00DD75FF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E3BA20F712ED00DD75FF /* Quick.framework */; };
 		F318E3BD20F712ED00DD75FF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E3BB20F712ED00DD75FF /* Nimble.framework */; };
 		F318E3BF20F713C500DD75FF /* FontTextStyleAwareSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318E3BE20F713C500DD75FF /* FontTextStyleAwareSpec.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F306AF252106B3DB0077B88A /* FontDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDemoView.swift; sourceTree = "<group>"; };
 		F318E3BA20F712ED00DD75FF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F318E3BB20F712ED00DD75FF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F318E3BE20F713C500DD75FF /* FontTextStyleAwareSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTextStyleAwareSpec.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F306AF242106B3C00077B88A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F306AF252106B3DB0077B88A /* FontDemoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F318E3B920F712EC00DD75FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +217,7 @@
 		F387D51020F7002400FF9333 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				F306AF242106B3C00077B88A /* View */,
 				F321089D20F71AFD008516F7 /* Utility */,
 				F3D855A820F70C8900FBEC4C /* Protocols */,
 				F3D855A720F70B8300FBEC4C /* CustomResolving */,
@@ -370,6 +381,7 @@
 				F3D8559E20F705C100FBEC4C /* FontTrait.swift in Sources */,
 				F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */,
 				F3D855A220F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift in Sources */,
+				F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */,
 				F360A0FC2101A24E00EFFCF7 /* Ligature.swift in Sources */,
 				F360A10E2102D62200EFFCF7 /* Diacritic.swift in Sources */,
 				F3D8559C20F705B000FBEC4C /* FontFace.swift in Sources */,

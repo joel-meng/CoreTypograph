@@ -26,7 +26,7 @@ class FontFeatureSettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.font = generateFontFeature()
+//        textView.font = generateFontFeature()
         print(textView.font)
         print(textView.font?.fontDescriptor.fontAttributes)
     }
@@ -34,26 +34,27 @@ class FontFeatureSettingViewController: UIViewController {
 
 // MARK: - Pure functions
 
-fileprivate func generateFontFeature() -> UIFont {
-    let featureSetting = FontFeatureBuilder { (builder) in
-        builder.numberSpacing(.mono)
-            .upperCase(.smallCaps)
-            .verticalPosition(.superior)
-            .requiredLigature(.on)
-    }.build()
-    
-    print(featureSetting)
-    
-    let fontAttributes: [UIFontDescriptor.AttributeName : Any] = [
+//fileprivate func generateFontFeature() -> UIFont {
+//    let featureSetting = FontFeatureBuilder { (builder) in
+//        builder.numberSpacing(.mono)
+//            .upperCase(.smallCaps)
+//            .verticalPosition(.superior)
+//            .requiredLigature(.on)
+//    }.build()
+//
+//    print(featureSetting)
+//
+//    let fontAttributes: [UIFontDescriptor.AttributeName : Any] = [
 //        UIFontDescriptor.AttributeName.name: "Taviraj",
-        UIFontDescriptor.AttributeName.name: "AvenirNext-Regular",
-        UIFontDescriptor.AttributeName.featureSettings: featureSetting
-    ]
-    
-    let descriptor = UIFontDescriptor(fontAttributes: fontAttributes)
-    
-    print(descriptor.fontAttributes)
-    
-    let font = UIFont(descriptor: descriptor, size: 16)
-    return font
-}
+//        UIFontDescriptor.AttributeName.name: "AvenirNext-Regular",
+//        UIFontDescriptor.AttributeName.featureSettings: featureSetting
+//    ]
+//
+//    let descriptor = UIFontDescriptor(fontAttributes: fontAttributes)
+//
+//    print(descriptor.fontAttributes)
+//
+//    let font = UIFont(descriptor: descriptor, size: 16)
+//    return font
+//}
+

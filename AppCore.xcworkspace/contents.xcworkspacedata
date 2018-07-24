@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AppCore/AppCore/../../FontFeaturePlayground.playground">
+   </FileRef>
+   <FileRef
       location = "group:CoreTypography/CoreTypography/CoreTypography.xcodeproj">
    </FileRef>
    <FileRef
