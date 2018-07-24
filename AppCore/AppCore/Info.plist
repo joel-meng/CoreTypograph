@@ -4,11 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>InputSans-Regular.ttf</string>
+		<string>SourceCodePro-Regular.ttf</string>
 		<string>AtlasGrotesk-Regular-App.ttf</string>
-		<string>Taviraj-BoldItalic.ttf</string>
-		<string>Taviraj-Bold.ttf</string>
-		<string>Taviraj-RegularItalic.ttf</string>
-		<string>Taviraj-Light.ttf</string>
 		<string>Taviraj-Regular.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

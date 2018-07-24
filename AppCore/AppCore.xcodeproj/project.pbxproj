@@ -7,23 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F306AF332106B9100077B88A /* AtlasGrotesk-Black-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF272106B9070077B88A /* AtlasGrotesk-Black-App.ttf */; };
-		F306AF342106B9100077B88A /* AtlasGrotesk-BlackItalic-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF282106B9080077B88A /* AtlasGrotesk-BlackItalic-App.ttf */; };
-		F306AF352106B9100077B88A /* AtlasGrotesk-RegularItalic-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF292106B9090077B88A /* AtlasGrotesk-RegularItalic-App.ttf */; };
-		F306AF362106B9100077B88A /* AtlasGrotesk-Thin-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2A2106B9090077B88A /* AtlasGrotesk-Thin-App.ttf */; };
 		F306AF372106B9100077B88A /* AtlasGrotesk-Regular-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */; };
-		F306AF382106B9100077B88A /* AtlasGrotesk-Bold-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2C2106B90B0077B88A /* AtlasGrotesk-Bold-App.ttf */; };
-		F306AF392106B9100077B88A /* AtlasGrotesk-Medium-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2D2106B90B0077B88A /* AtlasGrotesk-Medium-App.ttf */; };
-		F306AF3A2106B9100077B88A /* AtlasGrotesk-MediumItalic-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2E2106B90C0077B88A /* AtlasGrotesk-MediumItalic-App.ttf */; };
-		F306AF3B2106B9100077B88A /* AtlasGrotesk-Light-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2F2106B90D0077B88A /* AtlasGrotesk-Light-App.ttf */; };
-		F306AF3C2106B9100077B88A /* AtlasGrotesk-BoldItalic-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF302106B90E0077B88A /* AtlasGrotesk-BoldItalic-App.ttf */; };
-		F306AF3D2106B9100077B88A /* AtlasGrotesk-LightItalic-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF312106B90F0077B88A /* AtlasGrotesk-LightItalic-App.ttf */; };
-		F306AF3E2106B9100077B88A /* AtlasGrotesk-ThinItalic-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF322106B9100077B88A /* AtlasGrotesk-ThinItalic-App.ttf */; };
-		F306AF472106D34C0077B88A /* Taviraj-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF422106D3490077B88A /* Taviraj-Bold.ttf */; };
-		F306AF482106D34C0077B88A /* Taviraj-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF432106D34A0077B88A /* Taviraj-Light.ttf */; };
 		F306AF492106D34C0077B88A /* Taviraj-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */; };
-		F306AF4A2106D34C0077B88A /* Taviraj-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF452106D34B0077B88A /* Taviraj-BoldItalic.ttf */; };
-		F306AF4B2106D34C0077B88A /* Taviraj-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF462106D34B0077B88A /* Taviraj-RegularItalic.ttf */; };
+		F306AF4F2106F6F40077B88A /* InputSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */; };
+		F306AF512106F7350077B88A /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */; };
 		F31FE0D120F8592F006ABC52 /* FontTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */; };
 		F354843F20FED5AF005E136C /* FontFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354843E20FED5AF005E136C /* FontFeatureViewController.swift */; };
 		F356194520F81B4D000D20CD /* Taviraj.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356194420F81B4D000D20CD /* Taviraj.swift */; };
@@ -63,23 +50,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F306AF272106B9070077B88A /* AtlasGrotesk-Black-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Black-App.ttf"; sourceTree = "<group>"; };
-		F306AF282106B9080077B88A /* AtlasGrotesk-BlackItalic-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-BlackItalic-App.ttf"; sourceTree = "<group>"; };
-		F306AF292106B9090077B88A /* AtlasGrotesk-RegularItalic-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-RegularItalic-App.ttf"; sourceTree = "<group>"; };
-		F306AF2A2106B9090077B88A /* AtlasGrotesk-Thin-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Thin-App.ttf"; sourceTree = "<group>"; };
 		F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Regular-App.ttf"; sourceTree = "<group>"; };
-		F306AF2C2106B90B0077B88A /* AtlasGrotesk-Bold-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Bold-App.ttf"; sourceTree = "<group>"; };
-		F306AF2D2106B90B0077B88A /* AtlasGrotesk-Medium-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Medium-App.ttf"; sourceTree = "<group>"; };
-		F306AF2E2106B90C0077B88A /* AtlasGrotesk-MediumItalic-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-MediumItalic-App.ttf"; sourceTree = "<group>"; };
-		F306AF2F2106B90D0077B88A /* AtlasGrotesk-Light-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Light-App.ttf"; sourceTree = "<group>"; };
-		F306AF302106B90E0077B88A /* AtlasGrotesk-BoldItalic-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-BoldItalic-App.ttf"; sourceTree = "<group>"; };
-		F306AF312106B90F0077B88A /* AtlasGrotesk-LightItalic-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-LightItalic-App.ttf"; sourceTree = "<group>"; };
-		F306AF322106B9100077B88A /* AtlasGrotesk-ThinItalic-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-ThinItalic-App.ttf"; sourceTree = "<group>"; };
-		F306AF422106D3490077B88A /* Taviraj-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Bold.ttf"; sourceTree = "<group>"; };
-		F306AF432106D34A0077B88A /* Taviraj-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Light.ttf"; sourceTree = "<group>"; };
 		F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Regular.ttf"; sourceTree = "<group>"; };
-		F306AF452106D34B0077B88A /* Taviraj-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-BoldItalic.ttf"; sourceTree = "<group>"; };
-		F306AF462106D34B0077B88A /* Taviraj-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-RegularItalic.ttf"; sourceTree = "<group>"; };
+		F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InputSans-Regular.ttf"; sourceTree = "<group>"; };
+		F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewController.swift; sourceTree = "<group>"; };
 		F354843E20FED5AF005E136C /* FontFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFeatureViewController.swift; sourceTree = "<group>"; };
 		F356194420F81B4D000D20CD /* Taviraj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taviraj.swift; sourceTree = "<group>"; };
@@ -183,23 +157,10 @@
 		F3F4C2CF20F43BD600BD76C8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				F306AF422106D3490077B88A /* Taviraj-Bold.ttf */,
-				F306AF452106D34B0077B88A /* Taviraj-BoldItalic.ttf */,
-				F306AF432106D34A0077B88A /* Taviraj-Light.ttf */,
+				F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */,
+				F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */,
 				F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */,
-				F306AF462106D34B0077B88A /* Taviraj-RegularItalic.ttf */,
-				F306AF272106B9070077B88A /* AtlasGrotesk-Black-App.ttf */,
-				F306AF282106B9080077B88A /* AtlasGrotesk-BlackItalic-App.ttf */,
-				F306AF2C2106B90B0077B88A /* AtlasGrotesk-Bold-App.ttf */,
-				F306AF302106B90E0077B88A /* AtlasGrotesk-BoldItalic-App.ttf */,
-				F306AF2F2106B90D0077B88A /* AtlasGrotesk-Light-App.ttf */,
-				F306AF312106B90F0077B88A /* AtlasGrotesk-LightItalic-App.ttf */,
-				F306AF2D2106B90B0077B88A /* AtlasGrotesk-Medium-App.ttf */,
-				F306AF2E2106B90C0077B88A /* AtlasGrotesk-MediumItalic-App.ttf */,
 				F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */,
-				F306AF292106B9090077B88A /* AtlasGrotesk-RegularItalic-App.ttf */,
-				F306AF2A2106B9090077B88A /* AtlasGrotesk-Thin-App.ttf */,
-				F306AF322106B9100077B88A /* AtlasGrotesk-ThinItalic-App.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -288,26 +249,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F306AF392106B9100077B88A /* AtlasGrotesk-Medium-App.ttf in Resources */,
 				F3618E1F20E9FC2C00B95F5B /* LaunchScreen.storyboard in Resources */,
-				F306AF482106D34C0077B88A /* Taviraj-Light.ttf in Resources */,
-				F306AF4B2106D34C0077B88A /* Taviraj-RegularItalic.ttf in Resources */,
 				F3618E1C20E9FC2C00B95F5B /* Assets.xcassets in Resources */,
-				F306AF3E2106B9100077B88A /* AtlasGrotesk-ThinItalic-App.ttf in Resources */,
 				F306AF492106D34C0077B88A /* Taviraj-Regular.ttf in Resources */,
-				F306AF382106B9100077B88A /* AtlasGrotesk-Bold-App.ttf in Resources */,
-				F306AF362106B9100077B88A /* AtlasGrotesk-Thin-App.ttf in Resources */,
-				F306AF352106B9100077B88A /* AtlasGrotesk-RegularItalic-App.ttf in Resources */,
+				F306AF4F2106F6F40077B88A /* InputSans-Regular.ttf in Resources */,
 				F3618E1A20E9FC2C00B95F5B /* Main.storyboard in Resources */,
-				F306AF3A2106B9100077B88A /* AtlasGrotesk-MediumItalic-App.ttf in Resources */,
-				F306AF332106B9100077B88A /* AtlasGrotesk-Black-App.ttf in Resources */,
-				F306AF342106B9100077B88A /* AtlasGrotesk-BlackItalic-App.ttf in Resources */,
-				F306AF472106D34C0077B88A /* Taviraj-Bold.ttf in Resources */,
+				F306AF512106F7350077B88A /* SourceCodePro-Regular.ttf in Resources */,
 				F306AF372106B9100077B88A /* AtlasGrotesk-Regular-App.ttf in Resources */,
-				F306AF3B2106B9100077B88A /* AtlasGrotesk-Light-App.ttf in Resources */,
-				F306AF4A2106D34C0077B88A /* Taviraj-BoldItalic.ttf in Resources */,
-				F306AF3C2106B9100077B88A /* AtlasGrotesk-BoldItalic-App.ttf in Resources */,
-				F306AF3D2106B9100077B88A /* AtlasGrotesk-LightItalic-App.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
