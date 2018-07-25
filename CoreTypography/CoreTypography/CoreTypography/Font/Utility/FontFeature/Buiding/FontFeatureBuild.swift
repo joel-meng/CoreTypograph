@@ -99,6 +99,12 @@ public class FontFeatureBuilder {
         return self
     }
     
+    @discardableResult
+    public func contextualAlternates(_ contextualAlternates: ContextualAlternates) -> FontFeatureBuilder {
+        fontFeatureAttributes += contextualAlternates.fontFeatures()
+        return self
+    }
+    
     // MARK: - Building
     
     private func buildFeatures() -> [UIFontDescriptor.AttributeName: Any]? {

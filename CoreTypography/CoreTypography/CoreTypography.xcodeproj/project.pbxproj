@@ -15,6 +15,7 @@
 		F321089920F7164F008516F7 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F318E3BB20F712ED00DD75FF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F321089A20F7164F008516F7 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F318E3BA20F712ED00DD75FF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321089B20F71AFB008516F7 /* FontMetrics.swift */; };
+		F344AD332107F65A00CBCC41 /* ContextualAlternates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */; };
 		F360A0F52100AE1C00EFFCF7 /* FontFeatureBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */; };
 		F360A0FA2101A1DC00EFFCF7 /* FontFeatureProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F92101A1DC00EFFCF7 /* FontFeatureProviding.swift */; };
 		F360A0FC2101A24E00EFFCF7 /* Ligature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0FB2101A24E00EFFCF7 /* Ligature.swift */; };
@@ -72,6 +73,7 @@
 		F318E3BB20F712ED00DD75FF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F318E3BE20F713C500DD75FF /* FontTextStyleAwareSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTextStyleAwareSpec.swift; sourceTree = "<group>"; };
 		F321089B20F71AFB008516F7 /* FontMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetrics.swift; sourceTree = "<group>"; };
+		F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualAlternates.swift; sourceTree = "<group>"; };
 		F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureBuild.swift; sourceTree = "<group>"; };
 		F360A0F92101A1DC00EFFCF7 /* FontFeatureProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureProviding.swift; sourceTree = "<group>"; };
 		F360A0FB2101A24E00EFFCF7 /* Ligature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ligature.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				F360A1092102C21C00EFFCF7 /* SmartSwash.swift */,
 				F360A10B2102C8F100EFFCF7 /* LowerCase.swift */,
 				F360A10D2102D62200EFFCF7 /* Diacritic.swift */,
+				F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */,
 			);
 			path = Buiding;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				F360A1042101A41900EFFCF7 /* FontFeatureAttribute.swift in Sources */,
 				F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */,
 				F360A0FE2101A36D00EFFCF7 /* NumberSpacing.swift in Sources */,
+				F344AD332107F65A00CBCC41 /* ContextualAlternates.swift in Sources */,
 				F360A0F52100AE1C00EFFCF7 /* FontFeatureBuild.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
