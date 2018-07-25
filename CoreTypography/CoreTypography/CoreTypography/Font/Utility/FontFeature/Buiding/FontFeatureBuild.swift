@@ -58,6 +58,12 @@ public class FontFeatureBuilder {
     }
     
     @discardableResult
+    public func textSpacing(_ textSpacing: TextSpacing) -> FontFeatureBuilder {
+        fontFeatureAttributes.append(textSpacing.fontFeature())
+        return self
+    }
+    
+    @discardableResult
     public func numberSpacing(_ numberSpacing: NumberSpacing) -> FontFeatureBuilder {
         fontFeatureAttributes.append(numberSpacing.fontFeature())
         return self

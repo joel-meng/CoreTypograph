@@ -21,7 +21,7 @@ import UIKit
 /// - quarterWidth: Selects the quarter-width forms of letters.
 /// - altProportional: Selects alternate proportional forms of letters.
 /// - altHalfWidth: Selects alternate half-width forms of letters.
-public enum TextSpacingType: FontFeatureProviding {
+public enum TextSpacing: FontFeatureProviding {
     
     func fontFeature() -> FontFeatureAttribute {
         switch self {

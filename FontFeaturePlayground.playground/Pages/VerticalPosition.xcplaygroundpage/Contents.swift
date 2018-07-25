@@ -102,7 +102,7 @@ let scentificVerticalPositionFontName = "InputSans-Regular"
 let scentificVerticalPositionOn = FontBuilder { builder in
     builder.verticalPosition(VerticalPosition.scientificInferior).name(scentificVerticalPositionFontName)
 }.build()
-ordinalVerticalPositionOn.fontName
+
 
 let scentificVerticalPositionOff = FontBuilder { builder in
     builder.name(scentificVerticalPositionFontName)
