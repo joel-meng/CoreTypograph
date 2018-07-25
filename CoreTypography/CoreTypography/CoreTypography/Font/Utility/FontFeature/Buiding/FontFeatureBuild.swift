@@ -82,8 +82,8 @@ public class FontFeatureBuilder {
     }
     
     @discardableResult
-    public func requiredLigature(_ requiredLigatures: RequiredLigatures) -> FontFeatureBuilder {
-        fontFeatureAttributes.append(requiredLigatures.fontFeature())
+    public func fraction(_ fraction: Fraction) -> FontFeatureBuilder {
+        fontFeatureAttributes.append(fraction.fontFeature())
         return self
     }
     

@@ -7,5 +7,6 @@
         <page name='VerticalPosition'/>
         <page name='TextSpacing'/>
         <page name='LowerCaseAndUpperCase'/>
+        <page name='Fraction'/>
     </pages>
 </playground>
