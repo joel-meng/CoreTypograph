@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SourceSansPro-Regular.ttf</string>
 		<string>InputSans-Regular.ttf</string>
 		<string>SourceCodePro-Regular.ttf</string>
 		<string>AtlasGrotesk-Regular-App.ttf</string>

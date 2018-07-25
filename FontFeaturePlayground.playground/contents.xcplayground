@@ -6,5 +6,6 @@
         <page name='LetterCase'/>
         <page name='VerticalPosition'/>
         <page name='TextSpacing'/>
+        <page name='LowerCaseAndUpperCase'/>
     </pages>
 </playground>
