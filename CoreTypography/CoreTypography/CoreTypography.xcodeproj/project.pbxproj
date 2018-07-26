@@ -37,6 +37,7 @@
 		F38A618B21097E260027F1D5 /* VerticalPositionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A618A21097E260027F1D5 /* VerticalPositionTestCase.swift */; };
 		F38A61982109A1CB0027F1D5 /* NumberSpacingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A61972109A1CB0027F1D5 /* NumberSpacingTestCase.swift */; };
 		F38A619A2109A36D0027F1D5 /* TextSpacingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A61992109A36D0027F1D5 /* TextSpacingTestCase.swift */; };
+		F38A619C2109A4670027F1D5 /* FractionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A619B2109A4670027F1D5 /* FractionTestCase.swift */; };
 		F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B11F3320FC1E33001990D0 /* FontFeature.swift */; };
 		F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B11F3520FC1E6B001990D0 /* FontFeatureInspector.swift */; };
 		F3D8559C20F705B000FBEC4C /* FontFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8559B20F705B000FBEC4C /* FontFace.swift */; };
@@ -103,6 +104,7 @@
 		F38A618A21097E260027F1D5 /* VerticalPositionTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPositionTestCase.swift; sourceTree = "<group>"; };
 		F38A61972109A1CB0027F1D5 /* NumberSpacingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSpacingTestCase.swift; sourceTree = "<group>"; };
 		F38A61992109A36D0027F1D5 /* TextSpacingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpacingTestCase.swift; sourceTree = "<group>"; };
+		F38A619B2109A4670027F1D5 /* FractionTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractionTestCase.swift; sourceTree = "<group>"; };
 		F3B11F3320FC1E33001990D0 /* FontFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeature.swift; sourceTree = "<group>"; };
 		F3B11F3520FC1E6B001990D0 /* FontFeatureInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureInspector.swift; sourceTree = "<group>"; };
 		F3D8559B20F705B000FBEC4C /* FontFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFace.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				F32E670821097A9100F6BC0D /* UppercaseTestCase.swift */,
+				F38A619B2109A4670027F1D5 /* FractionTestCase.swift */,
 				F38A618A21097E260027F1D5 /* VerticalPositionTestCase.swift */,
 				F38A61972109A1CB0027F1D5 /* NumberSpacingTestCase.swift */,
 				F38A61992109A36D0027F1D5 /* TextSpacingTestCase.swift */,
@@ -470,6 +473,7 @@
 			files = (
 				F38A619A2109A36D0027F1D5 /* TextSpacingTestCase.swift in Sources */,
 				F38A618B21097E260027F1D5 /* VerticalPositionTestCase.swift in Sources */,
+				F38A619C2109A4670027F1D5 /* FractionTestCase.swift in Sources */,
 				F318E3BF20F713C500DD75FF /* FontTextStyleAwareSpec.swift in Sources */,
 				F38A61982109A1CB0027F1D5 /* NumberSpacingTestCase.swift in Sources */,
 				F3618E4E20E9FCE100B95F5B /* CoreTypographyTests.swift in Sources */,
