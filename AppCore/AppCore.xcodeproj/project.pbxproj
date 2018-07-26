@@ -12,8 +12,8 @@
 		F306AF4F2106F6F40077B88A /* InputSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */; };
 		F306AF512106F7350077B88A /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */; };
 		F31FE0D120F8592F006ABC52 /* FontTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */; };
-		F344AD2F2107EC3500CBCC41 /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F344AD2E2107EC3500CBCC41 /* CoreTypography.framework */; };
-		F344AD302107EC3500CBCC41 /* CoreTypography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F344AD2E2107EC3500CBCC41 /* CoreTypography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F32E670021095E9A00F6BC0D /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32E66FF21095E9A00F6BC0D /* CoreTypography.framework */; };
+		F32E670121095E9A00F6BC0D /* CoreTypography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F32E66FF21095E9A00F6BC0D /* CoreTypography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F344AD352107FDF400CBCC41 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F344AD342107FDF400CBCC41 /* SourceSansPro-Regular.ttf */; };
 		F354843F20FED5AF005E136C /* FontFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354843E20FED5AF005E136C /* FontFeatureViewController.swift */; };
 		F356194520F81B4D000D20CD /* Taviraj.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356194420F81B4D000D20CD /* Taviraj.swift */; };
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F344AD302107EC3500CBCC41 /* CoreTypography.framework in Embed Frameworks */,
+				F32E670121095E9A00F6BC0D /* CoreTypography.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +56,7 @@
 		F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InputSans-Regular.ttf"; sourceTree = "<group>"; };
 		F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewController.swift; sourceTree = "<group>"; };
-		F344AD2E2107EC3500CBCC41 /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F32E66FF21095E9A00F6BC0D /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F344AD312107EC3E00CBCC41 /* CoreTypography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTypography.framework; path = "../../../../Library/Developer/Xcode/DerivedData/AppCore-fiitcltmrzanfvhfalzfpwdoasdb/Build/Products/Debug-iphoneos/CoreTypography.framework"; sourceTree = "<group>"; };
 		F344AD342107FDF400CBCC41 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 		F354843E20FED5AF005E136C /* FontFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFeatureViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F344AD2F2107EC3500CBCC41 /* CoreTypography.framework in Frameworks */,
+				F32E670021095E9A00F6BC0D /* CoreTypography.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 		F3618E0820E9FC2C00B95F5B = {
 			isa = PBXGroup;
 			children = (
-				F344AD2E2107EC3500CBCC41 /* CoreTypography.framework */,
+				F32E66FF21095E9A00F6BC0D /* CoreTypography.framework */,
 				F3618E5D20E9FD5900B95F5B /* Frameworks */,
 				F3618E1320E9FC2C00B95F5B /* AppCore */,
 				F3618E2820E9FC2C00B95F5B /* AppCoreTests */,

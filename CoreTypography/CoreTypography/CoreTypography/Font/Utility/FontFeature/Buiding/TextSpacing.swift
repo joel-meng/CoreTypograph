@@ -29,7 +29,7 @@ public enum TextSpacing: FontFeatureProviding {
             return attribute(feature: kTextSpacingType, selector: kProportionalTextSelector)
         case .mono:
             return attribute(feature: kTextSpacingType, selector: kMonospacedTextSelector)
-        case .halfThirdWidth:
+        case .halfWidth:
             return attribute(feature: kTextSpacingType, selector: kHalfWidthTextSelector)
         case .thirdWidth:
             return attribute(feature: kTextSpacingType, selector: kThirdWidthTextSelector)
@@ -44,7 +44,7 @@ public enum TextSpacing: FontFeatureProviding {
     
     case proportional
     case mono
-    case halfThirdWidth
+    case halfWidth
     case thirdWidth
     case quarterWidth
     case altProportional

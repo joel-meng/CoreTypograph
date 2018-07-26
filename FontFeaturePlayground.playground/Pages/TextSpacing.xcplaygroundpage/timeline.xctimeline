@@ -3,17 +3,67 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=21&amp;CharacterRangeLoc=661&amp;EndingColumnNumber=98&amp;EndingLineNumber=23&amp;StartingColumnNumber=77&amp;StartingLineNumber=23&amp;Timestamp=554204819.242205"
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=21&amp;CharacterRangeLoc=661&amp;EndingColumnNumber=98&amp;EndingLineNumber=23&amp;StartingColumnNumber=77&amp;StartingLineNumber=23&amp;Timestamp=554268612.538245"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=19&amp;CharacterRangeLoc=1262&amp;EndingColumnNumber=96&amp;EndingLineNumber=41&amp;StartingColumnNumber=77&amp;StartingLineNumber=41&amp;Timestamp=554204819.242346"
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=19&amp;CharacterRangeLoc=1258&amp;EndingColumnNumber=96&amp;EndingLineNumber=41&amp;StartingColumnNumber=77&amp;StartingLineNumber=41&amp;Timestamp=554268612.538371"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=19&amp;CharacterRangeLoc=1190&amp;EndingColumnNumber=24&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=554204819.242439"
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=19&amp;CharacterRangeLoc=1186&amp;EndingColumnNumber=24&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=554268612.538465"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=19&amp;CharacterRangeLoc=1807&amp;EndingColumnNumber=23&amp;EndingLineNumber=62&amp;StartingColumnNumber=4&amp;StartingLineNumber=62&amp;Timestamp=554268612.53856"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=19&amp;CharacterRangeLoc=1808&amp;EndingColumnNumber=24&amp;EndingLineNumber=62&amp;StartingColumnNumber=5&amp;StartingLineNumber=62&amp;Timestamp=554268612.538646"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=25&amp;CharacterRangeLoc=2475&amp;EndingColumnNumber=30&amp;EndingLineNumber=83&amp;StartingColumnNumber=5&amp;StartingLineNumber=83&amp;Timestamp=554268612.538733"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=0&amp;CharacterRangeLoc=3169&amp;EndingColumnNumber=32&amp;EndingLineNumber=103&amp;StartingColumnNumber=32&amp;StartingLineNumber=103&amp;Timestamp=554268612.5388221"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=1719&amp;CharacterRangeLoc=3170&amp;EndingColumnNumber=0&amp;EndingLineNumber=146&amp;StartingColumnNumber=33&amp;StartingLineNumber=103&amp;Timestamp=554268612.538909"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=1731&amp;CharacterRangeLoc=3158&amp;EndingColumnNumber=0&amp;EndingLineNumber=146&amp;StartingColumnNumber=21&amp;StartingLineNumber=103&amp;Timestamp=554268612.538996"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=1730&amp;CharacterRangeLoc=3159&amp;EndingColumnNumber=0&amp;EndingLineNumber=146&amp;StartingColumnNumber=22&amp;StartingLineNumber=103&amp;Timestamp=554268612.539079"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=159&amp;CharacterRangeLoc=3138&amp;EndingColumnNumber=0&amp;EndingLineNumber=104&amp;StartingColumnNumber=1&amp;StartingLineNumber=103&amp;Timestamp=554268612.539162"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=215&amp;CharacterRangeLoc=3918&amp;EndingColumnNumber=0&amp;EndingLineNumber=124&amp;StartingColumnNumber=1&amp;StartingLineNumber=123&amp;Timestamp=554268612.5392489"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/TextSpacing.xcplaygroundpage#CharacterRangeLen=183&amp;CharacterRangeLoc=4687&amp;EndingColumnNumber=0&amp;EndingLineNumber=144&amp;StartingColumnNumber=1&amp;StartingLineNumber=143&amp;Timestamp=554268612.539333"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
