@@ -22,15 +22,15 @@ struct FontFeatureAttribute: Hashable {
         return featureIdentifier.hashValue ^ selectorIdentifier.hashValue
     }
     
-    static func ==(lhs: FontFeatureAttribute, rhs: FontFeatureAttribute) -> Bool {
-        return (lhs.featureIdentifier == rhs.featureIdentifier) &&
-            (lhs.selectorIdentifier == rhs.selectorIdentifier)
-    }
-    
     func featureSetting() -> FontFeatureSetting {
         return [
             UIFontDescriptor.FeatureKey.featureIdentifier: featureIdentifier,
             UIFontDescriptor.FeatureKey.typeIdentifier: selectorIdentifier,
         ]
+    }
+    
+    static func ==(lhs: FontFeatureAttribute, rhs: FontFeatureAttribute) -> Bool {
+        return (lhs.featureIdentifier == rhs.featureIdentifier) &&
+            (lhs.selectorIdentifier == rhs.selectorIdentifier)
     }
 }
