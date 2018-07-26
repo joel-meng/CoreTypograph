@@ -155,6 +155,64 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		F32E670221097A2300F6BC0D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F32E670321097A2900F6BC0D /* Utility */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		F32E670321097A2900F6BC0D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F32E670421097A3300F6BC0D /* FontFeature */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F32E670421097A3300F6BC0D /* FontFeature */ = {
+			isa = PBXGroup;
+			children = (
+				F32E670621097A4A00F6BC0D /* Features */,
+				F32E670521097A3D00F6BC0D /* Builing */,
+			);
+			path = FontFeature;
+			sourceTree = "<group>";
+		};
+		F32E670521097A3D00F6BC0D /* Builing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builing;
+			sourceTree = "<group>";
+		};
+		F32E670621097A4A00F6BC0D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F32E670721097A5200F6BC0D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F360A1012101A3E900EFFCF7 /* UpperCase.swift */,
+				F360A0FF2101A38400EFFCF7 /* VerticalPosition.swift */,
+				F360A0FD2101A36D00EFFCF7 /* NumberSpacing.swift */,
+				F360A0FB2101A24E00EFFCF7 /* Ligature.swift */,
+				F360A1032101A41900EFFCF7 /* FontFeatureAttribute.swift */,
+				F360A1052102BBFA00EFFCF7 /* TextSpacing.swift */,
+				F360A1072102C0DB00EFFCF7 /* Fraction.swift */,
+				F360A1092102C21C00EFFCF7 /* SmartSwash.swift */,
+				F360A10B2102C8F100EFFCF7 /* LowerCase.swift */,
+				F360A10D2102D62200EFFCF7 /* Diacritic.swift */,
+				F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */,
+				F36779672109516B009AE6F4 /* NumberCase.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		F356194320F72A6B000D20CD /* Text */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,19 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */,
-				F360A1012101A3E900EFFCF7 /* UpperCase.swift */,
-				F360A0FF2101A38400EFFCF7 /* VerticalPosition.swift */,
-				F360A0FD2101A36D00EFFCF7 /* NumberSpacing.swift */,
 				F360A0F92101A1DC00EFFCF7 /* FontFeatureProviding.swift */,
-				F360A0FB2101A24E00EFFCF7 /* Ligature.swift */,
-				F360A1032101A41900EFFCF7 /* FontFeatureAttribute.swift */,
-				F360A1052102BBFA00EFFCF7 /* TextSpacing.swift */,
-				F360A1072102C0DB00EFFCF7 /* Fraction.swift */,
-				F360A1092102C21C00EFFCF7 /* SmartSwash.swift */,
-				F360A10B2102C8F100EFFCF7 /* LowerCase.swift */,
-				F360A10D2102D62200EFFCF7 /* Diacritic.swift */,
-				F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */,
-				F36779672109516B009AE6F4 /* NumberCase.swift */,
 			);
 			path = Buiding;
 			sourceTree = "<group>";
@@ -216,6 +262,7 @@
 		F3618E4C20E9FCE100B95F5B /* CoreTypographyTests */ = {
 			isa = PBXGroup;
 			children = (
+				F32E670221097A2300F6BC0D /* Font */,
 				F3618E4D20E9FCE100B95F5B /* CoreTypographyTests.swift */,
 				F3618E4F20E9FCE100B95F5B /* Info.plist */,
 				F318E3BE20F713C500DD75FF /* FontTextStyleAwareSpec.swift */,
@@ -237,6 +284,7 @@
 		F3B11F3220FC1DDF001990D0 /* FontFeature */ = {
 			isa = PBXGroup;
 			children = (
+				F32E670721097A5200F6BC0D /* Features */,
 				F360A0F82101A14300EFFCF7 /* Buiding */,
 				F3B11F3320FC1E33001990D0 /* FontFeature.swift */,
 				F3B11F3520FC1E6B001990D0 /* FontFeatureInspector.swift */,
