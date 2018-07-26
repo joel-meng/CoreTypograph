@@ -70,6 +70,12 @@ public class FontFeatureBuilder {
     }
     
     @discardableResult
+    public func numberCase(_ numberCase: NumberCase) -> FontFeatureBuilder {
+        fontFeatureAttributes.append(numberCase.fontFeature())
+        return self
+    }
+    
+    @discardableResult
     public func upperCase(_ upperCase: UpperCase) -> FontFeatureBuilder {
         fontFeatureAttributes.append(upperCase.fontFeature())
         return self

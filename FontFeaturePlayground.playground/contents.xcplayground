@@ -9,5 +9,6 @@
         <page name='LowerCaseAndUpperCase'/>
         <page name='Fraction'/>
         <page name='NumberSpace'/>
+        <page name='NumberCase'/>
     </pages>
 </playground>
