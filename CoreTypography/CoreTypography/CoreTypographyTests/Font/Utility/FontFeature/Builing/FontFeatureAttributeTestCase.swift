@@ -19,34 +19,34 @@ class FontFeatureAttributeTestCase: XCTestCase {
     }
     
     func testEqual() {
-        let featureSettingOriginal = FontFeatureAttribute(featureIdentifier: 1,
-                                                  selectorIdentifier: 2).featureSetting()
-        let featureSettingCopy = FontFeatureAttribute(featureIdentifier: 1,
-                                                  selectorIdentifier: 2).featureSetting()
-        XCTAssertEqual(featureSettingOriginal, featureSettingCopy)
+        let fontFeatureOriginal = FontFeatureAttribute(featureIdentifier: 1,
+                                                  selectorIdentifier: 2)
+        let fontFeatureCopy = FontFeatureAttribute(featureIdentifier: 1,
+                                                  selectorIdentifier: 2)
+        XCTAssertEqual(fontFeatureOriginal, fontFeatureCopy)
     }
     
     func testNotEqualWhenFeatureIdentifierIsDifferent() {
-        let featureSettingOriginal = FontFeatureAttribute(featureIdentifier: 2,
+        let fontFeatureOriginal = FontFeatureAttribute(featureIdentifier: 2,
                                                           selectorIdentifier: 2).featureSetting()
-        let featureSettingCopy = FontFeatureAttribute(featureIdentifier: 1,
+        let fontFeatureCopy = FontFeatureAttribute(featureIdentifier: 1,
                                                       selectorIdentifier: 2).featureSetting()
-        XCTAssertNotEqual(featureSettingOriginal, featureSettingCopy)
+        XCTAssertNotEqual(fontFeatureOriginal, fontFeatureCopy)
     }
     
     func testNotEqualWhenSelectorIdentifierIsDifferent() {
-        let featureSettingOriginal = FontFeatureAttribute(featureIdentifier: 1,
+        let fontFeatureOriginal = FontFeatureAttribute(featureIdentifier: 1,
                                                           selectorIdentifier: 2).featureSetting()
-        let featureSettingCopy = FontFeatureAttribute(featureIdentifier: 1,
+        let fontFeatureCopy = FontFeatureAttribute(featureIdentifier: 1,
                                                       selectorIdentifier: 1).featureSetting()
-        XCTAssertNotEqual(featureSettingOriginal, featureSettingCopy)
+        XCTAssertNotEqual(fontFeatureOriginal, fontFeatureCopy)
     }
     
     func testNotEqualWhenNeitherSelectorIdentifierorFeatureIdentifierIsDifferent() {
-        let featureSettingOriginal = FontFeatureAttribute(featureIdentifier: 1,
+        let fontFeatureOriginal = FontFeatureAttribute(featureIdentifier: 1,
                                                           selectorIdentifier: 2).featureSetting()
-        let featureSettingCopy = FontFeatureAttribute(featureIdentifier: 3,
+        let fontFeatureCopy = FontFeatureAttribute(featureIdentifier: 3,
                                                       selectorIdentifier: 4).featureSetting()
-        XCTAssertNotEqual(featureSettingOriginal, featureSettingCopy)
+        XCTAssertNotEqual(fontFeatureOriginal, fontFeatureCopy)
     }
 }

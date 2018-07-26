@@ -58,4 +58,10 @@ class LigatureTestCase: XCTestCase {
         XCTAssertEqual(fontFeature[UIFontDescriptor.FeatureKey.featureIdentifier], kLigaturesType)
         XCTAssertEqual(fontFeature[UIFontDescriptor.FeatureKey.typeIdentifier], kHistoricalLigaturesOffSelector)
     }
+    
+    func testCombinations() {
+        let ligatures: Ligature = [Ligature.historicalOn, Ligature.commonOff]
+        let fontFeatures = ligatures.fontFeatures()
+        XCTAssertEqual(fontFeatures.count, 2)
+    }
 }
