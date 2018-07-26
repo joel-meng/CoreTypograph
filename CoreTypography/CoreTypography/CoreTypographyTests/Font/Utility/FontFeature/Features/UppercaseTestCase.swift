@@ -11,14 +11,6 @@ import XCTest
 
 class UppercaseTestCase: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
     func testUpperCaseDefault() {
         let fontFeature = UpperCase.default.fontFeature().featureSetting()
         XCTAssertEqual(fontFeature[UIFontDescriptor.FeatureKey.featureIdentifier], kUpperCaseType)
