@@ -8,5 +8,6 @@
         <page name='TextSpacing'/>
         <page name='LowerCaseAndUpperCase'/>
         <page name='Fraction'/>
+        <page name='NumberSpace'/>
     </pages>
 </playground>
