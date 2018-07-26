@@ -134,11 +134,11 @@ let alternateHalfWidthTextSpacingTitle = "Alternate Half Width Text Spacing"
 
 let alternateHalfWidthTextSpacingOn = FontBuilder { builder in
     builder.name(alternateHalfWidthTextSpacingFontName).textSpacing(TextSpacing.altHalfWidth)
-    }.build()
+}.build()
 
 let alternateHalfWidthTextSpacingOff = FontBuilder { builder in
     builder.name(alternateHalfWidthTextSpacingFontName)
-    }.build()
+}.build()
 
 
 textComparisonView(text: alternateHalfWidthTextSpacingText, font1: alternateHalfWidthTextSpacingOn, font2: alternateHalfWidthTextSpacingOff, title: alternateHalfWidthTextSpacingTitle)
