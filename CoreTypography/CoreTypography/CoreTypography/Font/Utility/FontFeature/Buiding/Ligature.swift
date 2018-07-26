@@ -23,8 +23,8 @@ public struct Ligature: OptionSet {
     public static let commonOff = Ligature(rawValue: 1 << 3)
     public static let rareOn = Ligature(rawValue: 1 << 4)
     public static let rareOff = Ligature(rawValue: 1 << 5)
-    public static let historicalOn = Ligature(rawValue: 1 << 10)
-    public static let historicalOff = Ligature(rawValue: 1 << 11)
+    public static let historicalOn = Ligature(rawValue: 1 << 6)
+    public static let historicalOff = Ligature(rawValue: 1 << 7)
 }
 
 extension Ligature: FontFeaturesProviding {

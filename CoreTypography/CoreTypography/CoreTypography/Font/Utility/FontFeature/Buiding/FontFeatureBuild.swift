@@ -100,6 +100,12 @@ public class FontFeatureBuilder {
     }
     
     @discardableResult
+    public func swash(_ swash: SmartSwash) -> FontFeatureBuilder {
+        fontFeatureAttributes += swash.fontFeatures()
+        return self
+    }
+    
+    @discardableResult
     public func contextualAlternates(_ contextualAlternates: ContextualAlternates) -> FontFeatureBuilder {
         fontFeatureAttributes += contextualAlternates.fontFeatures()
         return self
@@ -164,28 +170,4 @@ fileprivate typealias FontFeatureAttributeSet = Set<FontFeatureAttribute>
 
 func attribute(feature: FeatureTypeIdentifier, selector: FeatureSelectorIdentifier) -> FontFeatureAttribute {
     return FontFeatureAttribute(featureIdentifier: feature, selectorIdentifier: selector)
-}
-
-public final class FontFeatureBuildingNampeSpace {
-    
-    // MARK: -
-    
-    fileprivate static func composite(_ fontFeatureAttribute: FontFeatureAttribute, with fontFeatureAttributeSet: FontFeatureAttributeSet) -> FontFeatureAttributeSet {
-        return fontFeatureAttributeSet.union(Set([fontFeatureAttribute]))
-    }
-    
-//    fileprivate static func addingFeature(featureIdentifier: FeatureTypeIdentifier,
-//                                   selectorIdentifier: FeatureSelectorIdentifier,
-//                                   toFontFeatureAttributeSet fontFeatureAttributeSet: FontFeatureAttributeSet) -> FontFeatureAttributeSet {
-//        let featureAttribute = Set([FontFeatureAttribute(featureIdentifier: featureIdentifier, selectorIdentifier: selectorIdentifier)])
-//        return fontFeatureAttributeSet.union(featureAttribute)
-//    }
-    
-//    fileprivate  static func adding(fontFeatureAttributeSet: FontFeatureAttributeSet) -> (FeatureTypeIdentifier, FeatureSelectorIdentifier)
-//        -> FontFeatureAttributeSet {
-//            return { featureIdentifier, selectorIdentifier in
-//                let featureAttribute = Set([FontFeatureAttribute(featureIdentifier: featureIdentifier, selectorIdentifier: selectorIdentifier)])
-//                return fontFeatureAttributeSet.union(featureAttribute)
-//            }
-//    }
 }
