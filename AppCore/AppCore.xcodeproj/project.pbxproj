@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F306AF372106B9100077B88A /* AtlasGrotesk-Regular-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */; };
+		F306AF492106D34C0077B88A /* Taviraj-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */; };
+		F306AF4F2106F6F40077B88A /* InputSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */; };
+		F306AF512106F7350077B88A /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */; };
 		F31FE0D120F8592F006ABC52 /* FontTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */; };
+		F344AD352107FDF400CBCC41 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F344AD342107FDF400CBCC41 /* SourceSansPro-Regular.ttf */; };
 		F354843F20FED5AF005E136C /* FontFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354843E20FED5AF005E136C /* FontFeatureViewController.swift */; };
 		F356194520F81B4D000D20CD /* Taviraj.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356194420F81B4D000D20CD /* Taviraj.swift */; };
+		F360A0F72100BF5500EFFCF7 /* FontFeatureSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */; };
 		F3618E1520E9FC2C00B95F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */; };
 		F3618E1720E9FC2C00B95F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E1620E9FC2C00B95F5B /* ViewController.swift */; };
 		F3618E1A20E9FC2C00B95F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3618E1820E9FC2C00B95F5B /* Main.storyboard */; };
 		F3618E1C20E9FC2C00B95F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3618E1B20E9FC2C00B95F5B /* Assets.xcassets */; };
 		F3618E1F20E9FC2C00B95F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3618E1D20E9FC2C00B95F5B /* LaunchScreen.storyboard */; };
 		F3618E2A20E9FC2C00B95F5B /* AppCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3618E2920E9FC2C00B95F5B /* AppCoreTests.swift */; };
-		F3618E5A20E9FD4C00B95F5B /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */; };
-		F3618E5B20E9FD4C00B95F5B /* CoreTypography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F3C6785320F5BEBC006F222C /* Taviraj-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3C6785220F5BEBC006F222C /* Taviraj-BoldItalic.ttf */; };
-		F3F4C2D320F43C0500BD76C8 /* Taviraj-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */; };
-		F3F4C2D420F43C0500BD76C8 /* Taviraj-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */; };
-		F3F4C2D520F43C0500BD76C8 /* Taviraj-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D220F43C0500BD76C8 /* Taviraj-Regular.ttf */; };
-		F3F4C2D720F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3F4C2D620F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf */; };
+		F38A61922109A1390027F1D5 /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A61932109A1390027F1D5 /* CoreTypography.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F3618E5B20E9FD4C00B95F5B /* CoreTypography.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,9 +49,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Regular-App.ttf"; sourceTree = "<group>"; };
+		F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Regular.ttf"; sourceTree = "<group>"; };
+		F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InputSans-Regular.ttf"; sourceTree = "<group>"; };
+		F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewController.swift; sourceTree = "<group>"; };
+		F344AD342107FDF400CBCC41 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 		F354843E20FED5AF005E136C /* FontFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFeatureViewController.swift; sourceTree = "<group>"; };
 		F356194420F81B4D000D20CD /* Taviraj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taviraj.swift; sourceTree = "<group>"; };
+		F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureSettingViewController.swift; sourceTree = "<group>"; };
+		F360A10F2102DA9500EFFCF7 /* FontFeaturePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FontFeaturePlayground.playground; path = ../../FontFeaturePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F3618E1120E9FC2C00B95F5B /* AppCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3618E1620E9FC2C00B95F5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,12 +69,7 @@
 		F3618E2520E9FC2C00B95F5B /* AppCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3618E2920E9FC2C00B95F5B /* AppCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreTests.swift; sourceTree = "<group>"; };
 		F3618E2B20E9FC2C00B95F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3C6785220F5BEBC006F222C /* Taviraj-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-BoldItalic.ttf"; sourceTree = "<group>"; };
-		F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Bold.ttf"; sourceTree = "<group>"; };
-		F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Light.ttf"; sourceTree = "<group>"; };
-		F3F4C2D220F43C0500BD76C8 /* Taviraj-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Regular.ttf"; sourceTree = "<group>"; };
-		F3F4C2D620F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-RegularItalic.ttf"; sourceTree = "<group>"; };
+		F38A61932109A1390027F1D5 /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3618E5A20E9FD4C00B95F5B /* CoreTypography.framework in Frameworks */,
+				F38A61922109A1390027F1D5 /* CoreTypography.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F354843E20FED5AF005E136C /* FontFeatureViewController.swift */,
+				F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */,
 				F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */,
 			);
 			name = ViewControllers;
@@ -121,6 +123,7 @@
 		F3618E1320E9FC2C00B95F5B /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
+				F360A10F2102DA9500EFFCF7 /* FontFeaturePlayground.playground */,
 				F31FE0CF20F85903006ABC52 /* ViewControllers */,
 				F3F4C2CF20F43BD600BD76C8 /* Fonts */,
 				F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */,
@@ -146,7 +149,7 @@
 		F3618E5D20E9FD5900B95F5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3618E5920E9FD4C00B95F5B /* CoreTypography.framework */,
+				F38A61932109A1390027F1D5 /* CoreTypography.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -154,11 +157,11 @@
 		F3F4C2CF20F43BD600BD76C8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				F3C6785220F5BEBC006F222C /* Taviraj-BoldItalic.ttf */,
-				F3F4C2D620F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf */,
-				F3F4C2D020F43C0400BD76C8 /* Taviraj-Bold.ttf */,
-				F3F4C2D120F43C0500BD76C8 /* Taviraj-Light.ttf */,
-				F3F4C2D220F43C0500BD76C8 /* Taviraj-Regular.ttf */,
+				F344AD342107FDF400CBCC41 /* SourceSansPro-Regular.ttf */,
+				F306AF502106F7340077B88A /* SourceCodePro-Regular.ttf */,
+				F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */,
+				F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */,
+				F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -249,12 +252,12 @@
 			files = (
 				F3618E1F20E9FC2C00B95F5B /* LaunchScreen.storyboard in Resources */,
 				F3618E1C20E9FC2C00B95F5B /* Assets.xcassets in Resources */,
-				F3F4C2D420F43C0500BD76C8 /* Taviraj-Light.ttf in Resources */,
-				F3F4C2D720F44A3E00BD76C8 /* Taviraj-RegularItalic.ttf in Resources */,
+				F306AF492106D34C0077B88A /* Taviraj-Regular.ttf in Resources */,
+				F344AD352107FDF400CBCC41 /* SourceSansPro-Regular.ttf in Resources */,
+				F306AF4F2106F6F40077B88A /* InputSans-Regular.ttf in Resources */,
 				F3618E1A20E9FC2C00B95F5B /* Main.storyboard in Resources */,
-				F3F4C2D320F43C0500BD76C8 /* Taviraj-Bold.ttf in Resources */,
-				F3F4C2D520F43C0500BD76C8 /* Taviraj-Regular.ttf in Resources */,
-				F3C6785320F5BEBC006F222C /* Taviraj-BoldItalic.ttf in Resources */,
+				F306AF512106F7350077B88A /* SourceCodePro-Regular.ttf in Resources */,
+				F306AF372106B9100077B88A /* AtlasGrotesk-Regular-App.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +280,7 @@
 				F31FE0D120F8592F006ABC52 /* FontTableViewController.swift in Sources */,
 				F354843F20FED5AF005E136C /* FontFeatureViewController.swift in Sources */,
 				F3618E1520E9FC2C00B95F5B /* AppDelegate.swift in Sources */,
+				F360A0F72100BF5500EFFCF7 /* FontFeatureSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
