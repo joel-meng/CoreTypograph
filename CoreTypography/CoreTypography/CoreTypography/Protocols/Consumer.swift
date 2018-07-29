@@ -17,6 +17,15 @@ public protocol Consumer {
     func consume<T>(productsFrom providers: [ProductProvider]) -> T where T: Consumer, T.ProductProvider == ProductProvider
 }
 
+extension Consumer {
+    
+    public func consume<T>(productsFrom providers: [ProductProvider]) -> T where T: Consumer, T.ProductProvider == ProductProvider {
+        return providers.reduce(self) { (result, provider) in
+            result.consume(productFrom: provider)
+        } as! T
+    }
+}
+
 class _AnyConsumerBase<P: Provider>: Consumer {
     
     init() {

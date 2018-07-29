@@ -19,24 +19,18 @@ public struct AnyAttributedStringAttributesProviderConsumer: Consumer {
     public func consume<T>(productFrom provider: AnyProvider<AttributedStringAttributes>) -> T where T : Consumer, AnyProvider<AttributedStringAttributes> == T.ProductProvider {
         return AnyAttributedStringAttributesProviderConsumer(attributes.merging(provider.product) { $1 }) as! T
     }
-    
-    public func consume<T>(productsFrom providers: [AnyProvider<AttributedStringAttributes>]) -> T where T : Consumer, AnyProvider<AttributedStringAttributes> == T.ProductProvider {
-        return providers.reduce(AnyAttributedStringAttributesProviderConsumer()) { (result, provider) in
-            result.consume(productFrom: provider)
-        } as! T
-    }
 }
 
-//public struct PopularAttributedStringStyleConsumer: Consumer {
-//
-//    public let attributes: [NSAttributedStringKey: Any]
-//
-//    public init(attributes: [NSAttributedStringKey: Any] = [:]) {
-//        self.attributes = attributes
-//    }
-//
-//    public func style(with style: PopularAttributedTextStyle) -> PopularAttributedTextStylable {
-//        return PopularAttributedTextStylable(attributes: attributes.merging(style.style) { $1 })
-//    }
-//}
+public struct PopularAttributedStringAttributesConsumer: Consumer {
+
+    public let attributes: [NSAttributedStringKey: Any]
+
+    public init(_ attributes: [NSAttributedStringKey: Any] = [:]) {
+        self.attributes = attributes
+    }
+
+    public func consume<T>(productFrom provider: PopularAttributedStringStyleProvider) -> T where T : Consumer, PopularAttributedStringStyleProvider == T.ProductProvider {
+        return PopularAttributedStringAttributesConsumer(attributes.merging(provider.product) { $1 }) as! T
+    }
+}
 
