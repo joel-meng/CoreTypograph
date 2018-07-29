@@ -8,17 +8,18 @@
 
 import Foundation
 
-public struct PopularAttributedTextStylable: AttributedTextStylable {
-    
-    public let attributes: [NSAttributedStringKey: Any]
-    
-    public init(attributes: [NSAttributedStringKey: Any] = [:]) {
-        self.attributes = attributes
-    }
-    
-    public func style(with style: PopularAttributedTextStyle) -> PopularAttributedTextStylable {
-        return PopularAttributedTextStylable(attributes: attributes.merging(style.style) { $1 })
-    }
-    
-    typealias StyleProvider = PopularAttributedTextStyle
-}
+//public struct PopularAttributedTextStylable: AttributedTextStylable {
+//    
+//    public let attributes: [NSAttributedStringKey: Any]
+//    
+//    public init(attributes: [NSAttributedStringKey: Any] = [:]) {
+//        self.attributes = attributes
+//    }
+//    
+//    public func style(with style: PopularAttributedTextStyle) -> PopularAttributedTextStylable {
+//        return PopularAttributedTextStylable(attributes: attributes.merging(style.style) { $1 })
+//    }
+//    
+//    typealias StyleProvider = PopularAttributedTextStyle
+//}
+

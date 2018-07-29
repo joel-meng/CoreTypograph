@@ -8,4 +8,5 @@
 
 import Foundation
 
-protocol AttributedTextStylable: Stylable where StyleProvider.Style == AttributedStringAttributes {}
+//protocol AttributedTextStylable: ProductConsuming where StyleProvider.Style == AttributedStringAttributes {}
+

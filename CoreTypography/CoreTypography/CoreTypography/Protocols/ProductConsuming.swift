@@ -8,10 +8,9 @@
 
 import Foundation
 
-protocol Stylable {
+protocol ProductConsuming {
     
-    associatedtype StyleProvider: StyleProviding
+    associatedtype ProductProvider: Provider
     
-    func style(with style: StyleProvider) -> Self
+    func consume<T: ProductConsuming>(product: ProductProvider) -> T
 }
-

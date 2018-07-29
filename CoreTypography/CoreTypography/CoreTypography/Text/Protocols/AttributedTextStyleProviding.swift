@@ -8,4 +8,5 @@
 
 import Foundation
 
-protocol AttributedTextStyleProviding: StyleProviding where Style == AttributedStringAttributes {}
+//protocol AttributedTextStyleProviding: ProductProviding where Style == AttributedStringAttributes {}
+

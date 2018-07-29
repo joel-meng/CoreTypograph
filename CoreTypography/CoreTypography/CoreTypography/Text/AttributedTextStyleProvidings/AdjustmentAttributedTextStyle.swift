@@ -6,20 +6,21 @@
 //  Copyright © 2018 MENG, Joel. All rights reserved.
 //
 
-import Foundation
+//import Foundation
+//
+//public typealias Points = Float
+//
+//public enum AdjustmentAttributedTextStyle {
+//    case kern(Points)
+//}
+//
+//extension AdjustmentAttributedTextStyle: ProductProviding {
+//    
+//    var style: AttributedStringAttributes {
+//        switch self {
+//        case .kern(let points):
+//            return [NSAttributedStringKey.kern: points]
+//        }
+//    }
+//}
 
-public typealias Points = Float
-
-public enum AdjustmentAttributedTextStyle {
-    case kern(Points)
-}
-
-extension AdjustmentAttributedTextStyle: StyleProviding {
-    
-    var style: AttributedStringAttributes {
-        switch self {
-        case .kern(let points):
-            return [NSAttributedStringKey.kern: points]
-        }
-    }
-}

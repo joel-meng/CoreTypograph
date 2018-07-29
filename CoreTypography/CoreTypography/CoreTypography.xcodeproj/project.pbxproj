@@ -29,6 +29,7 @@
 		F33A24EF210D8882003AD407 /* PopularAttributedTextStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24EE210D8882003AD407 /* PopularAttributedTextStylable.swift */; };
 		F33A24F1210D8E9D003AD407 /* AdjustmentAttributedTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F0210D8E9D003AD407 /* AdjustmentAttributedTextStyle.swift */; };
 		F33A24F3210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F2210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift */; };
+		F33A24F5210DD41E003AD407 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F4210DD41D003AD407 /* Provider.swift */; };
 		F344AD332107F65A00CBCC41 /* ContextualAlternates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */; };
 		F360A0F52100AE1C00EFFCF7 /* FontFeatureBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */; };
 		F360A0FA2101A1DC00EFFCF7 /* FontFeatureProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F92101A1DC00EFFCF7 /* FontFeatureProviding.swift */; };
@@ -52,8 +53,7 @@
 		F38A619A2109A36D0027F1D5 /* TextSpacingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A61992109A36D0027F1D5 /* TextSpacingTestCase.swift */; };
 		F38A619C2109A4670027F1D5 /* FractionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A619B2109A4670027F1D5 /* FractionTestCase.swift */; };
 		F3A9422F210C9E34001D9CE3 /* ColorTextStyleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9422E210C9E34001D9CE3 /* ColorTextStyleTestCase.swift */; };
-		F3A94236210D8674001D9CE3 /* StyleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A94235210D8674001D9CE3 /* StyleProviding.swift */; };
-		F3A94238210D868B001D9CE3 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A94237210D868B001D9CE3 /* Stylable.swift */; };
+		F3A94238210D868B001D9CE3 /* ProductConsuming.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A94237210D868B001D9CE3 /* ProductConsuming.swift */; };
 		F3A9423B210D86BF001D9CE3 /* AttributedTextStyleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9423A210D86BF001D9CE3 /* AttributedTextStyleProviding.swift */; };
 		F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B11F3320FC1E33001990D0 /* FontFeature.swift */; };
 		F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B11F3520FC1E6B001990D0 /* FontFeatureInspector.swift */; };
@@ -110,6 +110,7 @@
 		F33A24EE210D8882003AD407 /* PopularAttributedTextStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAttributedTextStylable.swift; sourceTree = "<group>"; };
 		F33A24F0210D8E9D003AD407 /* AdjustmentAttributedTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentAttributedTextStyle.swift; sourceTree = "<group>"; };
 		F33A24F2210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentAttributedTextStylable.swift; sourceTree = "<group>"; };
+		F33A24F4210DD41D003AD407 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualAlternates.swift; sourceTree = "<group>"; };
 		F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureBuild.swift; sourceTree = "<group>"; };
 		F360A0F92101A1DC00EFFCF7 /* FontFeatureProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureProviding.swift; sourceTree = "<group>"; };
@@ -136,8 +137,7 @@
 		F38A61992109A36D0027F1D5 /* TextSpacingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpacingTestCase.swift; sourceTree = "<group>"; };
 		F38A619B2109A4670027F1D5 /* FractionTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractionTestCase.swift; sourceTree = "<group>"; };
 		F3A9422E210C9E34001D9CE3 /* ColorTextStyleTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTextStyleTestCase.swift; sourceTree = "<group>"; };
-		F3A94235210D8674001D9CE3 /* StyleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleProviding.swift; sourceTree = "<group>"; };
-		F3A94237210D868B001D9CE3 /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
+		F3A94237210D868B001D9CE3 /* ProductConsuming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductConsuming.swift; sourceTree = "<group>"; };
 		F3A9423A210D86BF001D9CE3 /* AttributedTextStyleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextStyleProviding.swift; sourceTree = "<group>"; };
 		F3B11F3320FC1E33001990D0 /* FontFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeature.swift; sourceTree = "<group>"; };
 		F3B11F3520FC1E6B001990D0 /* FontFeatureInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureInspector.swift; sourceTree = "<group>"; };
@@ -371,8 +371,8 @@
 		F3A94234210D8644001D9CE3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				F3A94235210D8674001D9CE3 /* StyleProviding.swift */,
-				F3A94237210D868B001D9CE3 /* Stylable.swift */,
+				F33A24F4210DD41D003AD407 /* Provider.swift */,
+				F3A94237210D868B001D9CE3 /* ProductConsuming.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -539,6 +539,7 @@
 				F33A24F1210D8E9D003AD407 /* AdjustmentAttributedTextStyle.swift in Sources */,
 				F33A24F3210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift in Sources */,
 				F387D51220F7002E00FF9333 /* CustomFontRepresentable.swift in Sources */,
+				F33A24F5210DD41E003AD407 /* Provider.swift in Sources */,
 				F360A0FA2101A1DC00EFFCF7 /* FontFeatureProviding.swift in Sources */,
 				F33A24EF210D8882003AD407 /* PopularAttributedTextStylable.swift in Sources */,
 				F33A24EC210D884A003AD407 /* PopularAttributedTextStyle.swift in Sources */,
@@ -547,10 +548,9 @@
 				F3A9423B210D86BF001D9CE3 /* AttributedTextStyleProviding.swift in Sources */,
 				F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */,
 				F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */,
-				F3A94236210D8674001D9CE3 /* StyleProviding.swift in Sources */,
 				F360A1062102BBFA00EFFCF7 /* TextSpacing.swift in Sources */,
 				F33A24E9210D8807003AD407 /* AttributedTextStylable.swift in Sources */,
-				F3A94238210D868B001D9CE3 /* Stylable.swift in Sources */,
+				F3A94238210D868B001D9CE3 /* ProductConsuming.swift in Sources */,
 				F3D8559E20F705C100FBEC4C /* FontTrait.swift in Sources */,
 				F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */,
 				F3D855A220F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift in Sources */,
