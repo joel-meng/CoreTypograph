@@ -25,7 +25,7 @@
 		F32E670921097A9100F6BC0D /* UppercaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E670821097A9100F6BC0D /* UppercaseTestCase.swift */; };
 		F33A24E7210D87F1003AD407 /* AttributedStringAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24E6210D87F1003AD407 /* AttributedStringAttributes.swift */; };
 		F33A24EC210D884A003AD407 /* PopularAttributedStringStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24EB210D884A003AD407 /* PopularAttributedStringStyleProvider.swift */; };
-		F33A24EF210D8882003AD407 /* PopularAttributedTextStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24EE210D8882003AD407 /* PopularAttributedTextStylable.swift */; };
+		F33A24EF210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24EE210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift */; };
 		F33A24F1210D8E9D003AD407 /* AdjustmentAttributedStringStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F0210D8E9D003AD407 /* AdjustmentAttributedStringStyleProvider.swift */; };
 		F33A24F3210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F2210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift */; };
 		F33A24F5210DD41E003AD407 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F4210DD41D003AD407 /* Provider.swift */; };
@@ -104,7 +104,7 @@
 		F32E670821097A9100F6BC0D /* UppercaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercaseTestCase.swift; sourceTree = "<group>"; };
 		F33A24E6210D87F1003AD407 /* AttributedStringAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringAttributes.swift; sourceTree = "<group>"; };
 		F33A24EB210D884A003AD407 /* PopularAttributedStringStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAttributedStringStyleProvider.swift; sourceTree = "<group>"; };
-		F33A24EE210D8882003AD407 /* PopularAttributedTextStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAttributedTextStylable.swift; sourceTree = "<group>"; };
+		F33A24EE210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAttributedStringAttributesProviderConsumer.swift; sourceTree = "<group>"; };
 		F33A24F0210D8E9D003AD407 /* AdjustmentAttributedStringStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentAttributedStringStyleProvider.swift; sourceTree = "<group>"; };
 		F33A24F2210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentAttributedTextStylable.swift; sourceTree = "<group>"; };
 		F33A24F4210DD41D003AD407 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
@@ -276,7 +276,7 @@
 		F33A24ED210D8871003AD407 /* AttributedStringStyleConsumer */ = {
 			isa = PBXGroup;
 			children = (
-				F33A24EE210D8882003AD407 /* PopularAttributedTextStylable.swift */,
+				F33A24EE210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift */,
 				F33A24F2210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift */,
 			);
 			path = AttributedStringStyleConsumer;
@@ -536,7 +536,7 @@
 				F387D51220F7002E00FF9333 /* CustomFontRepresentable.swift in Sources */,
 				F33A24F5210DD41E003AD407 /* Provider.swift in Sources */,
 				F360A0FA2101A1DC00EFFCF7 /* FontFeatureProviding.swift in Sources */,
-				F33A24EF210D8882003AD407 /* PopularAttributedTextStylable.swift in Sources */,
+				F33A24EF210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift in Sources */,
 				F33A24EC210D884A003AD407 /* PopularAttributedStringStyleProvider.swift in Sources */,
 				F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */,
 				F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */,

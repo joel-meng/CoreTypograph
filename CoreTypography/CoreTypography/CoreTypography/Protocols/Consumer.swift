@@ -12,9 +12,9 @@ public protocol Consumer {
     
     associatedtype ProductProvider: Provider
     
-//    func consume<T>(productFrom provider: AnyProvider<AttributedStringAttributes>) -> T where T: Consumer
-    
     func consume<T>(productFrom provider: ProductProvider) -> T where T: Consumer, T.ProductProvider == ProductProvider
+    
+    func consume<T>(productsFrom providers: [ProductProvider]) -> T where T: Consumer, T.ProductProvider == ProductProvider
 }
 
 class _AnyConsumerBase<P: Provider>: Consumer {
@@ -26,6 +26,10 @@ class _AnyConsumerBase<P: Provider>: Consumer {
     }
     
     func consume<T>(productFrom provider: P) -> T where T: Consumer, T.ProductProvider == P {
+        fatalError()
+    }
+    
+    func consume<T>(productsFrom providers: [P]) -> T where T : Consumer, P == T.ProductProvider {
         fatalError()
     }
 }
@@ -44,7 +48,7 @@ fileprivate final class _AnyConsumerBox<Base: Consumer>: _AnyConsumerBase<Base.P
 }
 
 public final class AnyConsumer<P: Provider>: Consumer {
-
+    
     private let box: _AnyConsumerBase<P>
     
     init<Base: Consumer>(base: Base) where Base.ProductProvider == P  {
@@ -53,5 +57,9 @@ public final class AnyConsumer<P: Provider>: Consumer {
     
     public func consume<T>(productFrom provider: P) -> T where T: Consumer, T.ProductProvider == P {
         return box.consume(productFrom: provider)
+    }
+    
+    public func consume<T>(productsFrom providers: [P]) -> T where T : Consumer, P == T.ProductProvider {
+        return box.consume(productsFrom: providers)
     }
 }

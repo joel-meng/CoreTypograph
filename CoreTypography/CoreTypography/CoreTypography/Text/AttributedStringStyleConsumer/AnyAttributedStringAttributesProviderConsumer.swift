@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PopularAttributedStringStyleConsumer: Consumer {
+public struct AnyAttributedStringAttributesProviderConsumer: Consumer {
     
     public let attributes: AttributedStringAttributes
     
@@ -17,7 +17,13 @@ public struct PopularAttributedStringStyleConsumer: Consumer {
     }
     
     public func consume<T>(productFrom provider: AnyProvider<AttributedStringAttributes>) -> T where T : Consumer, AnyProvider<AttributedStringAttributes> == T.ProductProvider {
-        return PopularAttributedStringStyleConsumer(attributes.merging(provider.product) { $1 }) as! T
+        return AnyAttributedStringAttributesProviderConsumer(attributes.merging(provider.product) { $1 }) as! T
+    }
+    
+    public func consume<T>(productsFrom providers: [AnyProvider<AttributedStringAttributes>]) -> T where T : Consumer, AnyProvider<AttributedStringAttributes> == T.ProductProvider {
+        return providers.reduce(AnyAttributedStringAttributesProviderConsumer()) { (result, provider) in
+            result.consume(productFrom: provider)
+        } as! T
     }
 }
 

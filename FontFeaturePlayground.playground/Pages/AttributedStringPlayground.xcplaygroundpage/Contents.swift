@@ -96,11 +96,17 @@ let providers: [AnyProvider<AttributedStringAttributes>] = [
 
 AnyProvider(PopularAttributedStringStyleProvider.textColor(.red)).product[NSAttributedStringKey.foregroundColor]
 
-let consumer = PopularAttributedStringStyleConsumer()
+let consumer = AnyAttributedStringAttributesProviderConsumer()
+/*
 let result: PopularAttributedStringStyleConsumer = consumer.consume(productFrom: AnyProvider(PopularAttributedStringStyleProvider.textColor(.red)))
 result.attributes[NSAttributedStringKey.foregroundColor]
+*/
 
+let results: AnyAttributedStringAttributesProviderConsumer = consumer.consume(productsFrom: providers)
 
+results.attributes[NSAttributedStringKey.foregroundColor]
+results.attributes[NSAttributedStringKey.backgroundColor]
+results.attributes[NSAttributedStringKey.kern]
 
 //let consumer = PopularAttributedStringStyleConsumer()
 

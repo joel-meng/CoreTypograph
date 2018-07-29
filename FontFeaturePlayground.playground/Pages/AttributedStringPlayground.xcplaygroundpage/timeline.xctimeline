@@ -3,12 +3,17 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/AttributedStringPlayground.xcplaygroundpage#CharacterRangeLen=5&amp;CharacterRangeLoc=2094&amp;EndingColumnNumber=10&amp;EndingLineNumber=88&amp;StartingColumnNumber=5&amp;StartingLineNumber=88&amp;Timestamp=554562403.507322"
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/AttributedStringPlayground.xcplaygroundpage#CharacterRangeLen=5&amp;CharacterRangeLoc=2094&amp;EndingColumnNumber=10&amp;EndingLineNumber=88&amp;StartingColumnNumber=5&amp;StartingLineNumber=88&amp;Timestamp=554563515.894842"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/AttributedStringPlayground.xcplaygroundpage#CharacterRangeLen=0&amp;CharacterRangeLoc=2418&amp;EndingColumnNumber=1&amp;EndingLineNumber=94&amp;StartingColumnNumber=1&amp;StartingLineNumber=94&amp;Timestamp=554562403.507506"
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/AttributedStringPlayground.xcplaygroundpage#CharacterRangeLen=0&amp;CharacterRangeLoc=2418&amp;EndingColumnNumber=1&amp;EndingLineNumber=94&amp;StartingColumnNumber=1&amp;StartingLineNumber=94&amp;Timestamp=554563515.895027"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/AttributedStringPlayground.xcplaygroundpage#CharacterRangeLen=7&amp;CharacterRangeLoc=2814&amp;EndingColumnNumber=12&amp;EndingLineNumber=104&amp;StartingColumnNumber=5&amp;StartingLineNumber=104&amp;Timestamp=554563515.895166"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
