@@ -16,7 +16,7 @@ public enum AdjustmentAttributedStringStyleProvider {
 
 extension AdjustmentAttributedStringStyleProvider: Provider {
     
-    var product: AttributedStringAttributes {
+    public var product: AttributedStringAttributes {
         switch self {
         case .kern(let points):
             return [NSAttributedStringKey.kern: points]

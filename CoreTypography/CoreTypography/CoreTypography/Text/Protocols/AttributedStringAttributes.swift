@@ -8,4 +8,4 @@
 
 import Foundation
 
-typealias AttributedStringAttributes = [NSAttributedStringKey : Any]
+public typealias AttributedStringAttributes = [NSAttributedStringKey : Any]

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Provider {
+public protocol Provider {
     
     associatedtype Product
     
@@ -41,15 +41,15 @@ fileprivate final class _AnyProductBox<Base: Provider>: _AnyProviderBase<Base.Pr
     }
 }
 
-final class AnyProvider<Product>: Provider {
+public final class AnyProvider<Product>: Provider {
     
     private let box: _AnyProviderBase<Product>
     
-    init<Base: Provider>(_ base: Base) where Base.Product == Product {
+    public init<Base: Provider>(_ base: Base) where Base.Product == Product {
         box = _AnyProductBox(base: base)
     }
     
-    var product: Product {
+    public var product: Product {
         return box.product
     }
 }

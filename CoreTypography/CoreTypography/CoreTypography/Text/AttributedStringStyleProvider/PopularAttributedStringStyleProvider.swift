@@ -20,7 +20,7 @@ public enum PopularAttributedStringStyleProvider {
 
 extension PopularAttributedStringStyleProvider: Provider {
     
-    var product: AttributedStringAttributes {
+    public var product: AttributedStringAttributes {
         switch self {
         case .textColor(let color):
             return [NSAttributedStringKey.foregroundColor: color]

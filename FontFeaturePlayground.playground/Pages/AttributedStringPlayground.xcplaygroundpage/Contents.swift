@@ -2,8 +2,9 @@
 
 import UIKit
 import PlaygroundSupport
+import CoreTypography
 
-
+/*
 protocol Stylable {
     
     associatedtype StyleProvider: StyleProviding
@@ -86,6 +87,23 @@ let textColorProviding: AnyStyleProviding = AnyStyleProviding(base: ColorStylePr
 let backgroundColorProviding: AnyStyleProviding = AnyStyleProviding(base: ColorStyleProvider.backgroundColor(UIColor.lightGray))
 let kernProviding: AnyStyleProviding = AnyStyleProviding(base: NumberStyleProvider.kern(3.2))
 let group: [AnyStyleProviding<[NSAttributedStringKey: Any]>] = [textColorProviding, backgroundColorProviding, kernProviding]
+*/
+
+let providers: [AnyProvider<AttributedStringAttributes>] = [
+    AnyProvider(PopularAttributedStringStyleProvider.textColor(.red)),
+    AnyProvider(AdjustmentAttributedStringStyleProvider.kern(12)),
+]
+
+AnyProvider(PopularAttributedStringStyleProvider.textColor(.red)).product[NSAttributedStringKey.foregroundColor]
+
+let consumer = PopularAttributedStringStyleConsumer()
+let result: PopularAttributedStringStyleConsumer = consumer.consume(productFrom: AnyProvider(PopularAttributedStringStyleProvider.textColor(.red)))
+result.attributes[NSAttributedStringKey.foregroundColor]
+
+
+
+//let consumer = PopularAttributedStringStyleConsumer()
+
 
 
 //: [Next](@next)
