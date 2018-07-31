@@ -33,4 +33,3 @@ public struct PopularAttributedStringAttributesConsumer: Consumer {
         return PopularAttributedStringAttributesConsumer(attributes.merging(provider.product) { $1 }) as! T
     }
 }
-

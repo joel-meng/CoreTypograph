@@ -89,6 +89,7 @@ let kernProviding: AnyStyleProviding = AnyStyleProviding(base: NumberStyleProvid
 let group: [AnyStyleProviding<[NSAttributedStringKey: Any]>] = [textColorProviding, backgroundColorProviding, kernProviding]
 */
 
+/*
 let providers: [AnyProvider<AttributedStringAttributes>] = [
     AnyProvider(PopularAttributedStringStyleProvider.textColor(.red)),
     AnyProvider(AdjustmentAttributedStringStyleProvider.kern(12)),
@@ -109,6 +110,8 @@ results.attributes[NSAttributedStringKey.backgroundColor]
 results.attributes[NSAttributedStringKey.kern]
 
 //let consumer = PopularAttributedStringStyleConsumer()
+*/
+
 
 
 

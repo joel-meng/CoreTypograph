@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-public typealias Font = UIFont
-public typealias Color = UIColor
+public typealias PlatformFont = UIFont
+public typealias PlatformColor = UIColor
 
 public enum PopularAttributedStringStyleProvider {
-    case font(Font)
-    case textColor(Color)
-    case backgroundColor(Color)
+    case font(PlatformFont)
+    case textColor(PlatformColor)
+    case backgroundColor(PlatformColor)
 }
 
 extension PopularAttributedStringStyleProvider: Provider {
@@ -31,4 +31,3 @@ extension PopularAttributedStringStyleProvider: Provider {
         }
     }
 }
-

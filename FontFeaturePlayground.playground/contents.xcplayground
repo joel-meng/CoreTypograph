@@ -10,5 +10,6 @@
         <page name='Fraction'/>
         <page name='NumberSpace'/>
         <page name='NumberCase'/>
+        <page name='FunctionalAttributedString'/>
     </pages>
 </playground>

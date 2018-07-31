@@ -24,11 +24,12 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-//        let font = UIFont(descriptor: fontDescriptor(fromFontDescribing: fontBook, withTextStyle: .body), size: fontBook.)
         
-//        DispatchQueue.global(qos: .default).async {
-//            self.configureLabel()
-//        }
+        let styler = Text.color(.darkGray)
+        let style: [NSAttributedStringKey: Any] = styler([:])
+        
+        let styledText = NSAttributedString(string: "Attributed String", attributes: style)
+        label1.attributedText = styledText
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
 //        DispatchQueue.global(qos: .default).async {
 //            self.configureLabel()
 //        }
-        configureBuildinFont()
+//        configureBuildinFont()
     }
     
     func configureBuildinFont() {

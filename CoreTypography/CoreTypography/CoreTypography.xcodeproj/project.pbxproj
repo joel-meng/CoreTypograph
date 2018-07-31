@@ -61,6 +61,12 @@
 		F3D855A220F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A120F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift */; };
 		F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A320F70A9200FBEC4C /* CustomFont.swift */; };
 		F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A520F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift */; };
+		F3F1C731210F4582008F5C1B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1C730210F4582008F5C1B /* Font.swift */; };
+		F3F1C733210F4605008F5C1B /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1C732210F4605008F5C1B /* Number.swift */; };
+		F3F5E170210F42850019C253 /* TextStyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E16F210F42850019C253 /* TextStyler.swift */; };
+		F3F5E172210F42B30019C253 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E171210F42B30019C253 /* Color.swift */; };
+		F3F5E174210F42E10019C253 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E173210F42E10019C253 /* Operation.swift */; };
+		F3F5E178210F439D0019C253 /* NSAttributedString+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E177210F439D0019C253 /* NSAttributedString+Attributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +149,12 @@
 		F3D855A120F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " FontContentSizeCategoryAware.swift"; sourceTree = "<group>"; };
 		F3D855A320F70A9200FBEC4C /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		F3D855A520F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontContentSizeCategoryAware.swift; sourceTree = "<group>"; };
+		F3F1C730210F4582008F5C1B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		F3F1C732210F4605008F5C1B /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		F3F5E16F210F42850019C253 /* TextStyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyler.swift; sourceTree = "<group>"; };
+		F3F5E171210F42B30019C253 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F3F5E173210F42E10019C253 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		F3F5E177210F439D0019C253 /* NSAttributedString+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Attributes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,9 +361,11 @@
 		F3A9422A210C9A78001D9CE3 /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				F3F5E176210F435A0019C253 /* Extension */,
+				F3F5E16E210F42650019C253 /* Functions */,
 				F33A24ED210D8871003AD407 /* AttributedStringStyleConsumer */,
 				F33A24EA210D881D003AD407 /* AttributedStringStyleProvider */,
-				F3A94239210D86AD001D9CE3 /* Protocols */,
+				F3A94239210D86AD001D9CE3 /* Types */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -373,12 +387,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		F3A94239210D86AD001D9CE3 /* Protocols */ = {
+		F3A94239210D86AD001D9CE3 /* Types */ = {
 			isa = PBXGroup;
 			children = (
 				F33A24E6210D87F1003AD407 /* AttributedStringAttributes.swift */,
+				F3F5E16F210F42850019C253 /* TextStyler.swift */,
 			);
-			path = Protocols;
+			path = Types;
 			sourceTree = "<group>";
 		};
 		F3B11F3220FC1DDF001990D0 /* FontFeature */ = {
@@ -409,6 +424,25 @@
 				F3D855A120F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F3F5E16E210F42650019C253 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				F3F5E171210F42B30019C253 /* Color.swift */,
+				F3F5E173210F42E10019C253 /* Operation.swift */,
+				F3F1C730210F4582008F5C1B /* Font.swift */,
+				F3F1C732210F4605008F5C1B /* Number.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		F3F5E176210F435A0019C253 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F3F5E177210F439D0019C253 /* NSAttributedString+Attributes.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,8 +558,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F33A24F7210DDAFE003AD407 /* Consumer.swift in Sources */,
+				F3F5E170210F42850019C253 /* TextStyler.swift in Sources */,
 				F360A10A2102C21C00EFFCF7 /* SmartSwash.swift in Sources */,
 				F33A24E7210D87F1003AD407 /* AttributedStringAttributes.swift in Sources */,
+				F3F1C731210F4582008F5C1B /* Font.swift in Sources */,
 				F360A1002101A38400EFFCF7 /* VerticalPosition.swift in Sources */,
 				F360A1082102C0DB00EFFCF7 /* Fraction.swift in Sources */,
 				F360A10C2102C8F100EFFCF7 /* LowerCase.swift in Sources */,
@@ -539,17 +575,21 @@
 				F33A24EF210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift in Sources */,
 				F33A24EC210D884A003AD407 /* PopularAttributedStringStyleProvider.swift in Sources */,
 				F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */,
+				F3F5E178210F439D0019C253 /* NSAttributedString+Attributes.swift in Sources */,
 				F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */,
 				F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */,
 				F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */,
+				F3F5E172210F42B30019C253 /* Color.swift in Sources */,
 				F360A1062102BBFA00EFFCF7 /* TextSpacing.swift in Sources */,
 				F3D8559E20F705C100FBEC4C /* FontTrait.swift in Sources */,
 				F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */,
+				F3F5E174210F42E10019C253 /* Operation.swift in Sources */,
 				F3D855A220F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift in Sources */,
 				F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */,
 				F360A0FC2101A24E00EFFCF7 /* Ligature.swift in Sources */,
 				F360A10E2102D62200EFFCF7 /* Diacritic.swift in Sources */,
 				F3D8559C20F705B000FBEC4C /* FontFace.swift in Sources */,
+				F3F1C733210F4605008F5C1B /* Number.swift in Sources */,
 				F360A1042101A41900EFFCF7 /* FontFeatureAttribute.swift in Sources */,
 				F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */,
 				F360A0FE2101A36D00EFFCF7 /* NumberSpacing.swift in Sources */,
