@@ -93,31 +93,68 @@ extension Font {
     ///
     /// - Parameter value: `Float` number, in points
     /// - Returns: A new `TextStyler`
-    public static func kern(_ value: Float) -> TextStyler {
+    public static func kern(_ distance: Bidirectional<Float>) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.kern: value])
+            return attributes.aggressivelyMerging([.kern: distance.rawValue])
         }
     }
 }
 
-
-public enum Paragraph {
-    
+public enum Paragraph {}
+extension Paragraph {
     public static func align(_ value: NSTextAlignment) -> TextStyler {
         return { attributes in
-            let existingParagraphStyle = attributes[.paragraphStyle] as? NSMutableParagraphStyle
+            let existingParagraphStyle: AttributedStringParagraphStyle = paragraphStyle(fromAttributedStringAttributes: attributes)
             return attributes.aggressivelyMerging([.paragraphStyle: align(value)(existingParagraphStyle)])
         }
     }
     
     public static func align(_ value: NSTextAlignment) -> ParagraphyStyler {
         return { paragraphStyler in
-            let paragraphStyler = paragraphStyler ?? NSMutableParagraphStyle()
             paragraphStyler.alignment = value
             return paragraphStyler
         }
     }
 }
+
+func paragraphStyle(fromAttributedStringAttributes attributes: AttributedStringAttributes) -> AttributedStringParagraphStyle {
+    return (attributes[NSAttributedStringKey.paragraphStyle] as? NSMutableParagraphStyle) ?? NSMutableParagraphStyle()
+}
+
+extension Paragraph {
+    public static func firstlineIndent(_ value: DisplayUnit<Float>) -> TextStyler {
+        return { attributes in
+            let existingParagraphStyle: AttributedStringParagraphStyle = paragraphStyle(fromAttributedStringAttributes: attributes)
+            return attributes.aggressivelyMerging([.paragraphStyle: firstlineIndent(value)(existingParagraphStyle)])
+        }
+    }
+    
+    public static func firstlineIndent(_ distance: DisplayUnit<Float>) -> ParagraphyStyler {
+        return { paragraphStyler in
+            paragraphStyler.firstLineHeadIndent = distance.rawValue
+            return paragraphStyler
+        }
+    }
+}
+
+extension Paragraph {
+    
+    public static func lineBreakMode(_ value: NSLineBreakMode) -> TextStyler {
+        return { attributes in
+            let existingParagraphStyle: AttributedStringParagraphStyle = paragraphStyle(fromAttributedStringAttributes: attributes)
+            return attributes.aggressivelyMerging([.paragraphStyle: lineBreakMode(value)(existingParagraphStyle)])
+        }
+    }
+    
+    public static func lineBreakMode(_ value: NSLineBreakMode) -> ParagraphyStyler {
+        return { paragraphStyler in
+            paragraphStyler.lineBreakMode = value
+            return paragraphStyler
+        }
+    }
+}
+
+
 
 
 

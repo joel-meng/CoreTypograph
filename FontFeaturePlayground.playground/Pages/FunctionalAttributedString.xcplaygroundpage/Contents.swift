@@ -5,13 +5,29 @@ import CoreTypography
 import UIKit
 import PlaygroundSupport
 
-let styler = Text.color(.red) + Font.kern(3) + Canvas.background(.lightText) + Font.ligature(.essential) + Stroke.width(3) + Stroke.color(.black) + Paragraph.align(.center)
+let colorStyle = Text.color(.red)
+let strokeStyle = Stroke.width(3) + Stroke.color(.black)
+let paragraphyStyle = Paragraph.align(.justified) + Paragraph.lineBreakMode(.byWordWrapping) + Paragraph.firstlineIndent(.points(10))
+let fontStyle = Font.kern(.natural(3)) + Font.ligature(.all)
+let canvasStyle =  Canvas.background(.lightText)
 
+let styler = fontStyle + canvasStyle + colorStyle + paragraphyStyle
 
 let style: [NSAttributedStringKey: Any] = styler([:])
 
-let styledText = NSAttributedString(string: "ffi fl Attributed String", attributes: style)
-let showCaseLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
+let showcaseText = """
+This is first line.This is going to be a paragraphy.
+This is 2nd line.
+ff fi fl for testing ligature.
+"""
+
+let codeText = """
+fontStyle + canvasStyle + colorStyle + paragraphyStyle
+"""
+
+let styledText = NSAttributedString(string: showcaseText, attributes: style)
+let showCaseLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 160))
+showCaseLabel.numberOfLines = 0
 showCaseLabel.backgroundColor = .white
 showCaseLabel.attributedText = styledText
 showCaseLabel

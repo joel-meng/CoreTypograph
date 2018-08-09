@@ -10,4 +10,6 @@ import Foundation
 
 public typealias TextStyler = (AttributedStringAttributes) -> AttributedStringAttributes
 
-public typealias ParagraphyStyler = (NSMutableParagraphStyle?) -> NSMutableParagraphStyle
+public typealias ParagraphyStyler = (AttributedStringParagraphStyle) -> AttributedStringParagraphStyle
+
+typealias ParagraphyStylerExtractor = (AttributedStringAttributes) -> AttributedStringParagraphStyle
