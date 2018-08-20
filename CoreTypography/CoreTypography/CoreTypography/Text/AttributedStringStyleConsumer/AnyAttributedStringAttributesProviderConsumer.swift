@@ -23,9 +23,9 @@ public struct AnyAttributedStringAttributesProviderConsumer: Consumer {
 
 public struct PopularAttributedStringAttributesConsumer: Consumer {
 
-    public let attributes: [NSAttributedStringKey: Any]
+    public let attributes: [NSAttributedString.Key: Any]
 
-    public init(_ attributes: [NSAttributedStringKey: Any] = [:]) {
+    public init(_ attributes: [NSAttributedString.Key: Any] = [:]) {
         self.attributes = attributes
     }
 

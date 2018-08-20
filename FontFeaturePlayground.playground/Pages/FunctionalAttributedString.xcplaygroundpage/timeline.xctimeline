@@ -3,17 +3,22 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/FunctionalAttributedString.xcplaygroundpage#CharacterRangeLen=549&amp;CharacterRangeLoc=511&amp;EndingColumnNumber=0&amp;EndingLineNumber=34&amp;StartingColumnNumber=0&amp;StartingLineNumber=15&amp;Timestamp=554710976.847327"
+         documentLocation = "file:///Users/joel/development/AppCore/FontFeaturePlayground.playground/Pages/FunctionalAttributedString.xcplaygroundpage#CharacterRangeLen=550&amp;CharacterRangeLoc=511&amp;EndingColumnNumber=0&amp;EndingLineNumber=34&amp;StartingColumnNumber=0&amp;StartingLineNumber=15&amp;Timestamp=556416234.299812"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/FunctionalAttributedString.xcplaygroundpage#CharacterRangeLen=495&amp;CharacterRangeLoc=565&amp;EndingColumnNumber=0&amp;EndingLineNumber=34&amp;StartingColumnNumber=0&amp;StartingLineNumber=16&amp;Timestamp=554710976.847455"
+         documentLocation = "file:///Users/joel/development/AppCore/FontFeaturePlayground.playground/Pages/FunctionalAttributedString.xcplaygroundpage#CharacterRangeLen=495&amp;CharacterRangeLoc=566&amp;EndingColumnNumber=0&amp;EndingLineNumber=34&amp;StartingColumnNumber=0&amp;StartingLineNumber=16&amp;Timestamp=556416234.300001"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/u203657/exp/AppCore/FontFeaturePlayground.playground/Pages/FunctionalAttributedString.xcplaygroundpage#CharacterRangeLen=13&amp;CharacterRangeLoc=1046&amp;EndingColumnNumber=0&amp;EndingLineNumber=33&amp;StartingColumnNumber=1&amp;StartingLineNumber=32&amp;Timestamp=554710976.847546"
+         documentLocation = "file:///Users/joel/development/AppCore/FontFeaturePlayground.playground/Pages/FunctionalAttributedString.xcplaygroundpage#CharacterRangeLen=13&amp;CharacterRangeLoc=1047&amp;EndingColumnNumber=0&amp;EndingLineNumber=33&amp;StartingColumnNumber=1&amp;StartingLineNumber=32&amp;Timestamp=556416234.300153"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/joel/development/AppCore/FontFeaturePlayground.playground/Pages/FunctionalAttributedString.xcplaygroundpage#CharacterRangeLen=8&amp;CharacterRangeLoc=702&amp;EndingColumnNumber=13&amp;EndingLineNumber=23&amp;StartingColumnNumber=5&amp;StartingLineNumber=23&amp;Timestamp=556416234.300315"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

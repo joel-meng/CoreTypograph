@@ -17,12 +17,12 @@ public protocol CustomFontContentSizeCategoryAware: CustomFontRepresentable, Fon
     ///   - textStyle: `UITextStyle` that custom font resolved by.
     ///   - contentSizeCategory: `UIContentSizeCategory` that custom font resolved by.
     /// - Returns: Custom font.
-    func font(forTextStyle textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> UIFont
+    func font(forTextStyle textStyle: UIFont.TextStyle, contentSizeCategory: UIContentSizeCategory) -> UIFont
 }
 
 public extension CustomFontContentSizeCategoryAware {
     
-    func font(forTextStyle textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> UIFont {
+    func font(forTextStyle textStyle: UIFont.TextStyle, contentSizeCategory: UIContentSizeCategory) -> UIFont {
         let fontFace = face(forTextStyle: textStyle)
         let fontTrait = trait(forTextStyle: textStyle)
         let fontSize = fontPointSize(forTextStyle: textStyle, contentSizeCategory: contentSizeCategory)

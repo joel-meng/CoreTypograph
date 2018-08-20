@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Dictionary where Key == NSAttributedStringKey, Value == Any {
+extension Dictionary where Key == NSAttributedString.Key, Value == Any {
     
     func aggressivelyMerging(_ attribute: AttributedStringAttributes) -> Dictionary {
         return merging(attribute) { origin, new in

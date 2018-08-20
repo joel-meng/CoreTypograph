@@ -45,7 +45,7 @@ fileprivate func fontFeatureOptions(from fontFeatureDictionary: (FontFeatureDict
         return []
     }
     
-    return options.flatMap({ (option) -> FontFeature.Option? in
+    return options.compactMap({ (option) -> FontFeature.Option? in
         guard let name = option[kCTFontFeatureSelectorNameKey as String] as? String else {
             print("unable to get font feature option key")
             return nil
@@ -66,7 +66,7 @@ public func availableFontFeatures(forFont fontName: String) -> [FontFeature]? {
 }
 
 public func availableFontFeatures(forFont font: UIFont) -> [FontFeature] {
-    return availableFeatures(forFont: font).flatMap { (fontFeatureDictionary) -> FontFeature? in
+    return availableFeatures(forFont: font).compactMap { (fontFeatureDictionary) -> FontFeature? in
         guard let featureName = fontFeatureName(from: fontFeatureDictionary) else {
             print("Unable to extract feature name from font \(font)")
             return nil

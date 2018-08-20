@@ -17,5 +17,5 @@ public protocol FontContentSizeCategoryAware: FontTextStyleAware {
     ///   - textStyle: `UITextStyle` to be used for resolving font point size.
     ///   - contentSizeCategory: `UICotentSizeCategory` to be used for resolving font point size.
     /// - Returns: Custom font point size in `CGFloat`
-    func fontPointSize(forTextStyle textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> CGFloat
+    func fontPointSize(forTextStyle textStyle: UIFont.TextStyle, contentSizeCategory: UIContentSizeCategory) -> CGFloat
 }

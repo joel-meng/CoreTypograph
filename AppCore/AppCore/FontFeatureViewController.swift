@@ -122,7 +122,7 @@ typealias FontFeatureAttribute = [UIFontDescriptor.FeatureKey: Int]
 fileprivate var defaultFontFeatures: [(featureIdentifier: Int, optionIdentifier: Int)] = []
 
 fileprivate func fontFeaturesWithDefaultOptions(fromFontFeatures fontFeatures: [FontFeature]) -> [(featureIdentifier: Int, optionIdentifier: Int)] {
-    let fontFeatureWithDefaultOptions = fontFeatures.flatMap { (fontFeature) -> (Int, Int) in
+    let fontFeatureWithDefaultOptions = fontFeatures.compactMap { (fontFeature) -> (Int, Int) in
         (featureIdentifier: fontFeature.featureIdentifier, optionIdentifier: fontFeature.options.first!.identifier)
     }
     return fontFeatureWithDefaultOptions

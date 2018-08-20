@@ -23,11 +23,11 @@ extension PopularAttributedStringStyleProvider: Provider {
     public var product: AttributedStringAttributes {
         switch self {
         case .textColor(let color):
-            return [NSAttributedStringKey.foregroundColor: color]
+            return [NSAttributedString.Key.foregroundColor: color]
         case .backgroundColor(let color):
-            return [NSAttributedStringKey.backgroundColor: color]
+            return [NSAttributedString.Key.backgroundColor: color]
         case .font(let font):
-            return [NSAttributedStringKey.font: font]
+            return [NSAttributedString.Key.font: font]
         }
     }
 }

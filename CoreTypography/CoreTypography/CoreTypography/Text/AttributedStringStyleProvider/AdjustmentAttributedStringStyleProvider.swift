@@ -19,7 +19,7 @@ extension AdjustmentAttributedStringStyleProvider: Provider {
     public var product: AttributedStringAttributes {
         switch self {
         case .kern(let points):
-            return [NSAttributedStringKey.kern: points]
+            return [NSAttributedString.Key.kern: points]
         }
     }
 }

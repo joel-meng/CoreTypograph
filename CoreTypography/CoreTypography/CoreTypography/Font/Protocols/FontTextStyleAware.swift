@@ -15,11 +15,11 @@ public protocol FontTextStyleAware {
     ///
     /// - Parameter textStyle: Text style of type `UIFontTextStyle`
     /// - Returns: Required font face for text style
-    func face(forTextStyle textStyle: UIFontTextStyle) -> FontFace
+    func face(forTextStyle textStyle: UIFont.TextStyle) -> FontFace
     
     /// Provides font trait by provided `UIFontTextStyle`, override this variable to provide font trait implementation.
     ///
     /// - Parameter textStyle: Text style of type `UIFontTextStyle`
     /// - Returns: Required font trait for text style
-    func trait(forTextStyle textStyle: UIFontTextStyle) -> FontTrait?
+    func trait(forTextStyle textStyle: UIFont.TextStyle) -> FontTrait?
 }

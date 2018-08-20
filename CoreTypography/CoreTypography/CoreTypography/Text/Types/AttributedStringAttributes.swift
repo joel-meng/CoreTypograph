@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias AttributedStringAttributes = [NSAttributedStringKey : Any]
+public typealias AttributedStringAttributes = [NSAttributedString.Key : Any]
 
 public typealias AttributedStringParagraphStyle = NSMutableParagraphStyle
 

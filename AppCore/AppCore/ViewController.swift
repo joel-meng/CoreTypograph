@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
         
         let styler = Text.color(.darkGray)
-        let style: [NSAttributedStringKey: Any] = styler([:])
+        let style: [NSAttributedString.Key: Any] = styler([:])
         
         let styledText = NSAttributedString(string: "Attributed String", attributes: style)
         label1.attributedText = styledText

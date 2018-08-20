@@ -13,7 +13,7 @@ let canvasStyle =  Canvas.background(.lightText)
 
 let styler = fontStyle + canvasStyle + colorStyle + paragraphyStyle
 
-let style: [NSAttributedStringKey: Any] = styler([:])
+let style: [NSAttributedString.Key: Any] = styler([:])
 
 let showcaseText = """
 This is first line.This is going to be a paragraphy.
