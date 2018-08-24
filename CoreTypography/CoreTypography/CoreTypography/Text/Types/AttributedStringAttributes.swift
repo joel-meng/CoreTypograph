@@ -49,3 +49,48 @@ extension DisplayUnit {
         }
     }
 }
+
+public protocol FloatingUnit: RawRepresentable {
+    
+    associatedtype T: BinaryFloatingPoint
+    
+    var rawValue: T { get }
+}
+
+public struct ScreenPoint<T: BinaryFloatingPoint>: FloatingUnit {
+    
+    private(set) public var rawValue: T
+    
+    public init(rawValue: T) {
+        self.rawValue = rawValue
+    }
+    
+    public init(_ value: T) {
+        self.rawValue = value
+    }
+}
+
+public extension BinaryFloatingPoint {
+    public var points: ScreenPoint<Self> {
+        return ScreenPoint(rawValue: self)
+    }
+}
+
+public extension Int {
+    public var points: ScreenPoint<CGFloat> {
+        return ScreenPoint(rawValue: CGFloat(self))
+    }
+}
+
+public struct Factor<T: BinaryFloatingPoint> : FloatingUnit {
+    
+    private(set) public var rawValue: T
+    
+    public init(rawValue: T) {
+        self.rawValue = rawValue
+    }
+    
+    public init(_ value: T) {
+        self.rawValue = value
+    }
+}

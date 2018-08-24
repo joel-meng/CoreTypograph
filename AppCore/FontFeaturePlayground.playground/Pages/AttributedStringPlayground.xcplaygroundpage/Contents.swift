@@ -4,6 +4,8 @@ import UIKit
 import PlaygroundSupport
 import CoreTypography
 
+
+let indent = Paragraph.firstlineIndent(PointUnit(rawValue: 12))
 /*
 protocol Stylable {
     
