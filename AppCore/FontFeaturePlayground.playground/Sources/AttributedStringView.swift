@@ -12,7 +12,7 @@ public func showCaseStyler(_ styler: TextStyler) -> UILabel {
     return attributedStringLabel(text: styledText)
 }
 
-public func attributedStringLabel(text: NSAttributedString, numberOfLines: Int = 0, size: CGSize = CGSize(width: 300, height: 160)) -> UILabel {
+func attributedStringLabel(text: NSAttributedString, numberOfLines: Int = 0, size: CGSize = CGSize(width: 300, height: 160)) -> UILabel {
     let showCaseLabel = UILabel(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
     showCaseLabel.numberOfLines = 0
     showCaseLabel.backgroundColor = .white

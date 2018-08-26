@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
 
         
-        let styler = Text.color(.darkGray)
+        let styler = Text.color(.darkGray) + Strikethrough.color(.red) + Strikethrough.style([.double, .byWord])
         let style: [NSAttributedString.Key: Any] = styler([:])
         
         let styledText = NSAttributedString(string: "Attributed String", attributes: style)
@@ -35,59 +35,6 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-//        for family in UIFont.familyNames.sorted() {
-//            let names = UIFont.fontNames(forFamilyName: family)
-//            print("Family: \(family) Font names: \(names)")
-//        }
-//        DispatchQueue.global(qos: .default).async {
-//            self.configureLabel()
-//        }
-//        configureBuildinFont()
-    }
-    
-    func configureBuildinFont() {
-        let fontAttributes: [UIFontDescriptor.AttributeName: Any] = [
-            UIFontDescriptor.AttributeName.family: "Helvetica Neue",
-//            UIFontDescriptor.AttributeName.traits: UIFontDescriptorSymbolicTraits.traitBold,
-        ]
-        let fontDescriptor = UIFontDescriptor(fontAttributes: fontAttributes)
-        let availableFonts = fontDescriptor.matchingFontDescriptors(withMandatoryKeys: nil)
-
-        
-        let timeFeaturesSetting = [
-            [
-                UIFontDescriptor.FeatureKey.featureIdentifier: kNumberSpacingType,
-                UIFontDescriptor.FeatureKey.typeIdentifier: kProportionalNumbersSelector
-            ],
-            [
-                UIFontDescriptor.FeatureKey.featureIdentifier: kCharacterAlternativesType,
-                UIFontDescriptor.FeatureKey.typeIdentifier: 2
-            ],
-            [
-                UIFontDescriptor.FeatureKey.featureIdentifier: kCaseSensitiveLayoutType,
-                UIFontDescriptor.FeatureKey.typeIdentifier: kCaseSensitiveLayoutOnSelector
-            ],
-        ]
-        
-        print(availableFonts)
-        let theFont = UIFont(descriptor: fontDescriptor, size: 16)
-        let fontCopyFeatures =
-        print("Features \(CTFontCopyFeatures(theFont))")
-        print("char set \(CTFontCopyCharacterSet(theFont))")
-        print("descriptor \(CTFontCopyFontDescriptor(theFont))")
-        print("char set \(CTFontCopySupportedLanguages(theFont))")
-        
-        label1.font = UIFont(descriptor: fontDescriptor, size: 16)
-        label1.text = "Helvetica Neue, 111111111111111111111111111111111234567890"
-        
-        label2.font = UIFont(descriptor: fontDescriptor.addingAttributes([
-            UIFontDescriptor.AttributeName.featureSettings: timeFeaturesSetting
-        ]), size: 16)
-        label2.text = "Helvetica Neue, 111111111111111111111111111111111234567890"
     }
     
     private func configureLabel() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D4711BC212A375F00A71C06 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4711BB212A375F00A71C06 /* Paragraph.swift */; };
+		5DA4115321327CCC001C6443 /* Strikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4115221327CCC001C6443 /* Strikethrough.swift */; };
 		F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF252106B3DB0077B88A /* FontDemoView.swift */; };
 		F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */; };
 		F318E3BC20F712ED00DD75FF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E3BA20F712ED00DD75FF /* Quick.framework */; };
@@ -96,6 +97,7 @@
 
 /* Begin PBXFileReference section */
 		5D4711BB212A375F00A71C06 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
+		5DA4115221327CCC001C6443 /* Strikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strikethrough.swift; sourceTree = "<group>"; };
 		F306AF252106B3DB0077B88A /* FontDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDemoView.swift; sourceTree = "<group>"; };
 		F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontLoader.swift; sourceTree = "<group>"; };
 		F318E3BA20F712ED00DD75FF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 				F3F1C730210F4582008F5C1B /* Font.swift */,
 				F3F1C732210F4605008F5C1B /* Number.swift */,
 				5D4711BB212A375F00A71C06 /* Paragraph.swift */,
+				5DA4115221327CCC001C6443 /* Strikethrough.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				F33A24EC210D884A003AD407 /* PopularAttributedStringStyleProvider.swift in Sources */,
 				F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */,
 				F3F5E178210F439D0019C253 /* NSAttributedString+Attributes.swift in Sources */,
+				5DA4115321327CCC001C6443 /* Strikethrough.swift in Sources */,
 				F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */,
 				F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */,
 				F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */,

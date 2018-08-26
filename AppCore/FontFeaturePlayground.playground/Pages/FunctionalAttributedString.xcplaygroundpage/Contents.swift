@@ -11,9 +11,10 @@ let strokeStyle = Stroke.width(3) + Stroke.color(.black)
 let paragraphStyle = Paragraph.firstlineIndent(100.points) + Paragraph.lineBreakMode(.byWordWrapping) + Paragraph.align(.left)
 let fontStyle = Font.kern(.natural(3)) + Font.ligature(.all)
 let canvasStyle =  Canvas.background(.lightText)
+let strikethrough = Strikethrough.color(.blue) + Strikethrough.style([.single, .patternDashDotDot, .byWord])
 
 
-let styler = fontStyle + canvasStyle + colorStyle + paragraphStyle
+let styler = fontStyle + canvasStyle + colorStyle + paragraphStyle + strikethrough
 
 let style: [NSAttributedString.Key: Any] = styler([:])
 
