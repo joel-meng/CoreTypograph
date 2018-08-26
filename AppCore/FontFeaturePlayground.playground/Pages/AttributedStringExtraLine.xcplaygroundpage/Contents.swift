@@ -11,5 +11,10 @@ let strikethroughStyler = Strikethrough.color(.red)
 
 showCaseStyler(strikethroughStyler)
 
+let underlineStyler = Underline.color(.red)
+    + Underline.style([.single, .byWord])
+
+showCaseStyler(underlineStyler)
+
 
 //: [Next](@next)

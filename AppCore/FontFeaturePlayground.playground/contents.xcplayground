@@ -12,6 +12,6 @@
         <page name='NumberCase'/>
         <page name='FunctionalAttributedString'/>
         <page name='AttributedStringParagraph'/>
-        <page name='AttributedStringStrikethrough'/>
+        <page name='AttributedStringExtraLine'/>
     </pages>
 </playground>

@@ -12,11 +12,13 @@ let paragraphStyle = Paragraph.firstlineIndent(100.points) + Paragraph.lineBreak
 let fontStyle = Font.kern(.natural(3)) + Font.ligature(.all)
 let canvasStyle =  Canvas.background(.lightText)
 let strikethrough = Strikethrough.color(.blue) + Strikethrough.style([.single, .patternDashDotDot, .byWord])
+let underline = Underline.color(.blue) + Underline.style([.single, .patternDashDotDot, .byWord])
+
 let effect = Text.effect(.letterpressStyle)
 
 
 //let styler = fontStyle + canvasStyle + colorStyle + paragraphStyle + strikethrough
-let styler = effect
+let styler = underline
 
 let style: [NSAttributedString.Key: Any] = styler([:])
 

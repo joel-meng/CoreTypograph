@@ -1,5 +1,5 @@
 //
-//  Strike.swift
+//  Underline.swift
 //  CoreTypography
 //
 //  Created by Joel on 26/8/18.
@@ -8,32 +8,31 @@
 
 import Foundation
 
-public enum Strikethrough {}
+public enum Underline {}
 
-
-extension Strikethrough {
+extension Underline {
     
     public typealias Style = NSUnderlineStyle
     
-    /// Will return a TextStyler that set strike through line color. If not set, default to nil,
+    /// Will return a TextStyler that set under line color. If not set, default to nil,
     /// indicating same as foreground color.
     ///
     /// - Parameter value: Platform Color
     /// - Returns: A new `TextStyler` with given functionality.
     public static func color(_ value: PlatformColor) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.strikethroughColor: value])
+            return attributes.aggressivelyMerging([.underlineColor: value])
         }
     }
     
-    /// Will return a `TextStyler` that set strike through line styles with one of
+    /// Will return a `TextStyler` that set under line styles with one of
     /// the constants described in Style. The default value for this attribute is styleNone.
     ///
-    /// - Parameter value: OptionSet, `Strikethrough.Style`
+    /// - Parameter value: OptionSet, `Underline.Style`
     /// - Returns: A new `TextStyler` with given functionality.
     public static func style(_ value: Style) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.strikethroughStyle: value.rawValue])
+            return attributes.aggressivelyMerging([.underlineStyle: value.rawValue])
         }
     }
 }
