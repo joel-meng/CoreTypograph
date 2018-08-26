@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
 
         
-        let styler = Text.color(.darkGray) + Strikethrough.color(.red) + Strikethrough.style([.double, .byWord])
+        let styler = Text.color(.darkGray) + Text.effect(.letterpressStyle) // + Strikethrough.color(.red) + Strikethrough.style([.double, .byWord])
         let style: [NSAttributedString.Key: Any] = styler([:])
         
         let styledText = NSAttributedString(string: "Attributed String", attributes: style)
