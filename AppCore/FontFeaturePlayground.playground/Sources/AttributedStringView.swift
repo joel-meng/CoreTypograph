@@ -17,5 +17,6 @@ public func attributedStringLabel(text: NSAttributedString, numberOfLines: Int =
     showCaseLabel.numberOfLines = 0
     showCaseLabel.backgroundColor = .white
     showCaseLabel.attributedText = text
+    showCaseLabel.sizeToFit()
     return showCaseLabel
 }

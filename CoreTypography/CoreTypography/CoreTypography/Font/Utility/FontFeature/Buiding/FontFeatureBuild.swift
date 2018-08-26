@@ -23,9 +23,9 @@ public final class FontBuilder {
         building(builder)
     }
     
-    public func build() -> UIFont {
+    public func build(_ size: CGFloat = 20) -> UIFont {
         let fontDescriptor = UIFontDescriptor(fontAttributes: builder.build())
-        return UIFont(descriptor: fontDescriptor, size: 20)
+        return UIFont(descriptor: fontDescriptor, size: size)
     }
 }
 

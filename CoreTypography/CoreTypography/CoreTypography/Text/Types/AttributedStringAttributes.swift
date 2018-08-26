@@ -71,8 +71,8 @@ public struct ScreenPoint<T: BinaryFloatingPoint>: FloatingUnit {
 }
 
 public extension BinaryFloatingPoint {
-    public var points: ScreenPoint<Self> {
-        return ScreenPoint(rawValue: self)
+    public var points: ScreenPoint<CGFloat> {
+        return ScreenPoint(rawValue: CGFloat(floatLiteral: CGFloat.NativeType(self)))
     }
 }
 
