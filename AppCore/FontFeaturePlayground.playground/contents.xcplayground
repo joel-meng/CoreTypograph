@@ -11,5 +11,6 @@
         <page name='NumberSpace'/>
         <page name='NumberCase'/>
         <page name='FunctionalAttributedString'/>
+        <page name='AttributedStringParagraph'/>
     </pages>
 </playground>
