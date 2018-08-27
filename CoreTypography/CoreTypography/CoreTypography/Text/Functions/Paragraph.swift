@@ -14,9 +14,9 @@ public enum Paragraph {}
 
 /// Return obtained paragraph style from given attributes, or new `NSMutableParagraphStyle` object if not exits.
 ///
-/// - Parameter attributes: The `AttributedStringAttributes` from which the `AttributedStringParagraphStyle` to obtain from.
-/// - Returns: `AttributedStringParagraphStyle` that defined in `AttributedStringAttributes`
-func paragraphStyle(fromAttributes attributes: AttributedStringAttributes) -> AttributedStringParagraphStyle {
+/// - Parameter attributes: The `AttributedStringAttributes` from which the `ParagraphStyle` to obtain from.
+/// - Returns: `ParagraphStyle` that defined in `AttributedStringAttributes`
+func paragraphStyle(fromAttributes attributes: Attributes) -> ParagraphStyle {
     return (attributes[NSAttributedString.Key.paragraphStyle] as? NSMutableParagraphStyle) ?? NSMutableParagraphStyle()
 }
 
@@ -42,7 +42,7 @@ func assignValue<Value: RawRepresentable, ValueType, Target>(_ value: Value,
 ///   - keyPath: The paragraph attribute property.
 /// - Returns: `TextStyler` who puts paragraph attribute value onto the property and adds to text attributes.
 func textParagraphStyler<Value: RawRepresentable, ValueType>(withValue value: Value,
-                                                             onKeyPath keyPath: ReferenceWritableKeyPath<AttributedStringParagraphStyle, ValueType>)
+                                                             onKeyPath keyPath: ReferenceWritableKeyPath<ParagraphStyle, ValueType>)
     -> TextStyler where Value.RawValue == ValueType {
     return { attributes in
         let existingParagraphStyle = paragraphStyle(fromAttributes: attributes)
@@ -58,7 +58,7 @@ func textParagraphStyler<Value: RawRepresentable, ValueType>(withValue value: Va
 ///   - keyPath: The paragraph attribute property.
 /// - Returns: `TextStyler` who puts paragraph attribute value onto the property and adds to text attributes.
 func textParagraphStyler<ValueType>(withValue value: ValueType,
-                                    onKeyPath keyPath: ReferenceWritableKeyPath<AttributedStringParagraphStyle, ValueType>) -> TextStyler {
+                                    onKeyPath keyPath: ReferenceWritableKeyPath<ParagraphStyle, ValueType>) -> TextStyler {
     return { attributes in
         let existingParagraphStyle = paragraphStyle(fromAttributes: attributes)
         existingParagraphStyle[keyPath: keyPath] = value
@@ -77,7 +77,7 @@ extension Paragraph {
     /// - Parameter value: The display unit for `firstLineIndent`.
     /// - Returns: `TextStyler` who sets text attributes.
     public static func firstlineIndent<Unit: RawRepresentable>(_ value: Unit) -> TextStyler where Unit.RawValue == CGFloat {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.firstLineHeadIndent)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.firstLineHeadIndent)
     }
     
     /// Will align text with given `TextAlignment`.
@@ -85,7 +85,7 @@ extension Paragraph {
     /// - Parameter value: `TextAligment` object, which could be `left`, `center`, `right`, `justified`, `natural`
     /// - Returns: The `TextStyler`
     public static func align(_ value: TextAlignment) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.alignment)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.alignment)
     }
     
     /// Will add head intent to given attributes by given value `DisplayUnit`.
@@ -93,7 +93,7 @@ extension Paragraph {
     /// - Parameter value: The indent value by points.
     /// - Returns: The `TextStyler`.
     public static func headIndent(_ value: ScreenPoint<CGFloat>) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.headIndent)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.headIndent)
     }
 
     /// Will return an `TextStyler` that can override given attributes's paragraph setting by the new value.
@@ -101,7 +101,7 @@ extension Paragraph {
     /// - Parameter value: The display unit in points that overrides current setting.
     /// - Returns: A `TextStyler`
     public static func tailIndent(_ value: ScreenPoint<CGFloat>) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.tailIndent)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.tailIndent)
     }
     
     /// Will return an `TextStyler` that can override given attributes's paragraph setting by the new value.
@@ -109,7 +109,7 @@ extension Paragraph {
     /// - Parameter value: The line height multiple.
     /// - Returns: A `TextStyler`.
     public static func lineHeightMultiple(_ value: ScreenPoint<CGFloat>) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.lineHeightMultiple)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.lineHeightMultiple)
     }
     
     /// Will return an `TextStyler` that can override given attributes's paragraph setting by the new value.
@@ -117,7 +117,7 @@ extension Paragraph {
     /// - Parameter value: The maximum line height value, in points.
     /// - Returns: A `TextStyler`.
     public static func maximumLineHeight(_ value: ScreenPoint<CGFloat>) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.maximumLineHeight)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.maximumLineHeight)
     }
     
     /// Will return an `TextStyler` that can override given attributes's paragraph `minimumLineHeight` by the new value.
@@ -125,7 +125,7 @@ extension Paragraph {
     /// - Parameter value: The minimum line height value, in points.
     /// - Returns: A `TextStyler`.
     public static func minimumLineHeight(_ value: ScreenPoint<CGFloat>) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.minimumLineHeight)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.minimumLineHeight)
     }
     
     /// Will return an `TextStyler` that can override given attributes's paragraph `lineSpace` setting
@@ -134,7 +134,7 @@ extension Paragraph {
     /// - Parameter value: `Linespacing` value, in points.
     /// - Returns: A `TextStyler`.
     public static func lineSpacing(_ value: ScreenPoint<CGFloat>) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.lineSpacing)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.lineSpacing)
     }
 
     /// Will return an `TextStyler` that can override given attributes's paragraph `paragraphSpacing` setting
@@ -143,7 +143,7 @@ extension Paragraph {
     /// - Parameter value: `ParagraphSpacing` value, in points. The space after the end of the paragraph.
     /// - Returns: A `TextStyler`.
     public static func paragraphSpacing(_ value: ScreenPoint<CGFloat>) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.paragraphSpacing)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.paragraphSpacing)
     }
     
     /// Will return an `TextStyler` that can override given attributes's paragraph setting which is the mode that should be used
@@ -152,6 +152,6 @@ extension Paragraph {
     /// - Parameter value: `LineBreakMode`, which is just a alias of `NSLineBreakMode`.
     /// - Returns: The `TextStyler`.
     public static func lineBreakMode(_ value: LineBreakMode) -> TextStyler {
-        return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.lineBreakMode)
+        return textParagraphStyler(withValue: value, onKeyPath: \ParagraphStyle.lineBreakMode)
     }
 }

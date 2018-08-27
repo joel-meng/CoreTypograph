@@ -10,13 +10,13 @@ import Foundation
 
 public struct AnyAttributedStringAttributesProviderConsumer: Consumer {
     
-    public let attributes: AttributedStringAttributes
+    public let attributes: Attributes
     
-    public init(_ attributes: AttributedStringAttributes = [:]) {
+    public init(_ attributes: Attributes = [:]) {
         self.attributes = attributes
     }
     
-    public func consume<T>(productFrom provider: AnyProvider<AttributedStringAttributes>) -> T where T : Consumer, AnyProvider<AttributedStringAttributes> == T.ProductProvider {
+    public func consume<T>(productFrom provider: AnyProvider<Attributes>) -> T where T : Consumer, AnyProvider<Attributes> == T.ProductProvider {
         return AnyAttributedStringAttributesProviderConsumer(attributes.merging(provider.product) { $1 }) as! T
     }
 }
