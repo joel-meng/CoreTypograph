@@ -76,12 +76,24 @@ extension Text {
     /// Will return an `TextStyler` that can override given attributes's text link setting
     /// by the given parameter.
     ///
-    ///
     /// - Parameter value: The `URL` type that this link to.
     /// - Returns: A new `TextStyler` applying given shadow.
     public static func link(to value: NSURL) -> TextStyler {
         return { attributes in
             attributes.aggressivelyMerging([.link: value])
+        }
+    }
+}
+
+extension Text {
+    /// Will return an `TextStyler` that can override given attributes's text link setting
+    /// by the given parameter.
+    ///
+    /// - Parameter points: The value in screen points that the baseline offset for.
+    /// - Returns: A new `TextStyler` applying given baseline offset.
+    public static func offset(by points: ScreenPoint<CGFloat>) -> TextStyler {
+        return { attributes in
+            attributes.aggressivelyMerging([.baselineOffset: points.rawValue])
         }
     }
 }

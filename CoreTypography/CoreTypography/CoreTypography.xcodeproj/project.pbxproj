@@ -70,7 +70,7 @@
 		F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A520F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift */; };
 		F3F1C731210F4582008F5C1B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1C730210F4582008F5C1B /* Font.swift */; };
 		F3F5E170210F42850019C253 /* FunctionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E16F210F42850019C253 /* FunctionType.swift */; };
-		F3F5E172210F42B30019C253 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E171210F42B30019C253 /* Color.swift */; };
+		F3F5E172210F42B30019C253 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E171210F42B30019C253 /* Text.swift */; };
 		F3F5E174210F42E10019C253 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E173210F42E10019C253 /* Operation.swift */; };
 		F3F5E178210F439D0019C253 /* NSAttributedString+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E177210F439D0019C253 /* NSAttributedString+Attributes.swift */; };
 /* End PBXBuildFile section */
@@ -164,7 +164,7 @@
 		F3D855A520F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontContentSizeCategoryAware.swift; sourceTree = "<group>"; };
 		F3F1C730210F4582008F5C1B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		F3F5E16F210F42850019C253 /* FunctionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionType.swift; sourceTree = "<group>"; };
-		F3F5E171210F42B30019C253 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F3F5E171210F42B30019C253 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		F3F5E173210F42E10019C253 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		F3F5E177210F439D0019C253 /* NSAttributedString+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Attributes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -468,7 +468,7 @@
 		F3F5E16E210F42650019C253 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				F3F5E171210F42B30019C253 /* Color.swift */,
+				F3F5E171210F42B30019C253 /* Text.swift */,
 				5DA411562132A0AC001C6443 /* Background.swift */,
 				5DA411582132A0CB001C6443 /* Stroke.swift */,
 				F3F1C730210F4582008F5C1B /* Font.swift */,
@@ -623,7 +623,7 @@
 				F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */,
 				F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */,
 				F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */,
-				F3F5E172210F42B30019C253 /* Color.swift in Sources */,
+				F3F5E172210F42B30019C253 /* Text.swift in Sources */,
 				F360A1062102BBFA00EFFCF7 /* TextSpacing.swift in Sources */,
 				F3D8559E20F705C100FBEC4C /* FontTrait.swift in Sources */,
 				F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */,

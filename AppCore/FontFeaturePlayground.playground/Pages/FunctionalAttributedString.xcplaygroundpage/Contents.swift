@@ -18,8 +18,10 @@ let effect = Text.effect(.letterpressStyle)
 let url = NSURL(string: "https://www.google.com")!
 let link = Text.link(to: url)
 
+let baselineOffsetStyler = Text.offset(by: 3.points)
+
 // let styler = fontStyle + canvasStyle + colorStyle + paragraphStyle + strikethrough
-let styler = link
+let styler = Text.color(.black)
 
 let style: [NSAttributedString.Key: Any] = styler([:])
 
