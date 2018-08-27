@@ -14,23 +14,8 @@ public enum Paragraph {}
 ///
 /// - Parameter attributes: The `AttributedStringAttributes` from which the `ParagraphStyle` to obtain from.
 /// - Returns: `ParagraphStyle` that defined in `AttributedStringAttributes`
-func paragraphStyle(fromAttributes attributes: Attributes) -> ParagraphStyle {
+fileprivate func paragraphStyle(fromAttributes attributes: Attributes) -> ParagraphStyle {
     return (attributes[NSAttributedString.Key.paragraphStyle] as? NSMutableParagraphStyle) ?? NSMutableParagraphStyle()
-}
-
-/// A generic function that applies value to keyPath on given target. In this case, target must be reference type.
-///
-/// - Parameters:
-///   - value: The value to assign to target.
-///   - keyPath: The property to assign value to.
-///   - target: The target to assign value to.
-/// - Returns: The reference type target that with updated value.
-@discardableResult
-func assignValue<Value: RawRepresentable, ValueType, Target>(_ value: Value,
-                                                             toKeyPath keyPath: ReferenceWritableKeyPath<Target, ValueType>,
-                                                             onTarget target: Target) -> Target where Value.RawValue == ValueType {
-    target[keyPath: keyPath] = value.rawValue
-    return target
 }
 
 /// Will return a `TextStyler` who applies paragraph attributed value onto text attributes(overriding existing one).
@@ -39,12 +24,12 @@ func assignValue<Value: RawRepresentable, ValueType, Target>(_ value: Value,
 ///   - value: The paragraph attribute value which must be `RawRepresentable`.
 ///   - keyPath: The paragraph attribute property.
 /// - Returns: `TextStyler` who puts paragraph attribute value onto the property and adds to text attributes.
-func textParagraphStyler<Value: RawRepresentable, ValueType>(withValue value: Value,
-                                                             onKeyPath keyPath: ReferenceWritableKeyPath<ParagraphStyle, ValueType>)
+fileprivate func textParagraphStyler<Value: RawRepresentable, ValueType>(withValue value: Value,
+                                                                         onKeyPath keyPath: ReferenceWritableKeyPath<ParagraphStyle, ValueType>)
     -> TextStyler where Value.RawValue == ValueType {
     return { attributes in
         let existingParagraphStyle = paragraphStyle(fromAttributes: attributes)
-        let updatedParagraphStyle = assignValue(value, toKeyPath: keyPath, onTarget: existingParagraphStyle)
+        let updatedParagraphStyle = Assign.onTarget(existingParagraphStyle, toKeyPath: keyPath, withValue: value)
         return attributes.aggressivelyMerging([.paragraphStyle: updatedParagraphStyle])
     }
 }
@@ -55,8 +40,8 @@ func textParagraphStyler<Value: RawRepresentable, ValueType>(withValue value: Va
 ///   - value: The paragraph attribute value.
 ///   - keyPath: The paragraph attribute property.
 /// - Returns: `TextStyler` who puts paragraph attribute value onto the property and adds to text attributes.
-func textParagraphStyler<ValueType>(withValue value: ValueType,
-                                    onKeyPath keyPath: ReferenceWritableKeyPath<ParagraphStyle, ValueType>) -> TextStyler {
+fileprivate func textParagraphStyler<ValueType>(withValue value: ValueType,
+                                                onKeyPath keyPath: ReferenceWritableKeyPath<ParagraphStyle, ValueType>) -> TextStyler {
     return { attributes in
         let existingParagraphStyle = paragraphStyle(fromAttributes: attributes)
         existingParagraphStyle[keyPath: keyPath] = value

@@ -8,8 +8,7 @@
 
 import Foundation
 
-public enum Font {}
-extension Font {
+extension Text {
     /// Will return an `TextStyler` that can override given attributes's text font setting
     /// by the given parameter.
     ///

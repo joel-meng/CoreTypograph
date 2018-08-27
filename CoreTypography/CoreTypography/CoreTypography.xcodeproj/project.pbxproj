@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D4711BC212A375F00A71C06 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4711BB212A375F00A71C06 /* Paragraph.swift */; };
+		5D96EF822133D95100237D34 /* Assign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96EF812133D95100237D34 /* Assign.swift */; };
 		5DA4115321327CCC001C6443 /* Strikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4115221327CCC001C6443 /* Strikethrough.swift */; };
 		5DA4115521329C48001C6443 /* Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4115421329C48001C6443 /* Underline.swift */; };
 		5DA411572132A0AC001C6443 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA411562132A0AC001C6443 /* Background.swift */; };
@@ -101,6 +102,7 @@
 
 /* Begin PBXFileReference section */
 		5D4711BB212A375F00A71C06 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
+		5D96EF812133D95100237D34 /* Assign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assign.swift; sourceTree = "<group>"; };
 		5DA4115221327CCC001C6443 /* Strikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strikethrough.swift; sourceTree = "<group>"; };
 		5DA4115421329C48001C6443 /* Underline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Underline.swift; sourceTree = "<group>"; };
 		5DA411562132A0AC001C6443 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -190,9 +192,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D96EF802133D93900237D34 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				5D96EF812133D95100237D34 /* Assign.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		5DA4115A213382DC001C6443 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				5D96EF802133D93900237D34 /* Functions */,
 				5DA4115B213382E6001C6443 /* Operator */,
 				F3F5E176210F435A0019C253 /* Extension */,
 			);
@@ -637,6 +648,7 @@
 				5DA4115521329C48001C6443 /* Underline.swift in Sources */,
 				5DA411572132A0AC001C6443 /* Background.swift in Sources */,
 				F360A1042101A41900EFFCF7 /* FontFeatureAttribute.swift in Sources */,
+				5D96EF822133D95100237D34 /* Assign.swift in Sources */,
 				F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */,
 				F360A0FE2101A36D00EFFCF7 /* NumberSpacing.swift in Sources */,
 				F344AD332107F65A00CBCC41 /* ContextualAlternates.swift in Sources */,

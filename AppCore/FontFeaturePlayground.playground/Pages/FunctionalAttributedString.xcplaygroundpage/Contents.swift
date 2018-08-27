@@ -9,7 +9,7 @@ let colorStyle = Text.color(.red)
 let strokeStyle = Stroke.width(3) + Stroke.color(.black)
 // let paragraphyStyle = Paragraph.first // Paragraph.align(.justified) + Paragraph.lineBreakMode(.byWordWrapping)
 let paragraphStyle = Paragraph.firstlineIndent(100.points) + Paragraph.lineBreakMode(.byWordWrapping) + Paragraph.align(.left)
-let fontStyle = Font.ligature(.all) + Font.kerning(30.points)
+let fontStyle = Text.ligature(.all) + Text.kerning(30.points)
 let canvasStyle = Background.color(.lightText)
 let strikethrough = Strikethrough.color(.blue) + Strikethrough.style([.single, .patternDashDotDot, .byWord])
 let underline = Underline.color(.blue) + Underline.style([.single, .patternDashDotDot, .byWord])
@@ -25,7 +25,7 @@ let customFont = FontBuilder { builder in
 let baselineOffsetStyler = Text.offset(by: 3.points)
 
 // let styler = fontStyle + canvasStyle + colorStyle + paragraphStyle + strikethrough
-let styler = Text.oblique(by: (-0.2).points) + Text.color(.blue) + Text.color(.red) + paragraphStyle + Font.font(customFont)
+let styler = Text.oblique(by: (-0.2).points) + Text.color(.blue) + Text.color(.red) + paragraphStyle + Text.font(customFont)
 
 let style: [NSAttributedString.Key: Any] = styler([:])
 
