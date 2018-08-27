@@ -1,8 +1,8 @@
 //: [Previous](@previous)
 
 import CoreTypography
-import UIKit
 import PlaygroundSupport
+import UIKit
 
 let success = registerFont(withName: "InputSans-Regular")
 
@@ -20,9 +20,7 @@ let normalTextSpacingOff = FontBuilder { builder in
     builder.name(normalTextSpacingFontName)
 }.build()
 
-
 let normalTextSpacingView = textComparisonView(text: normalTextSpacingText, font1: normalTextSpacingOn, font2: normalTextSpacingOff, title: normalTextSpacingTitle)
-
 
 //: #####  Mono Text Spacing
 
@@ -38,9 +36,7 @@ let monoTextSpacingOff = FontBuilder { builder in
     builder.name(monoTextSpacingFontName)
 }.build()
 
-
 let monoTextSpacingView = textComparisonView(text: monoTextSpacingText, font1: monoTextSpacingOn, font2: monoTextSpacingOff, title: monoTextSpacingTitle)
-
 
 //: #####  Half Text Spacing
 
@@ -59,9 +55,7 @@ let halfTextSpacingOff = FontBuilder { builder in
     builder.name(halfTextSpacingFontName)
 }.build()
 
-
 let halfTextSpacingView = textComparisonView(text: halfTextSpacingText, font1: halfTextSpacingOn, font2: halfTextSpacingOff, title: halfTextSpacingTitle)
-
 
 //: #####  Third Text Spacing
 
@@ -80,9 +74,7 @@ let thirdWidthTextSpacingOff = FontBuilder { builder in
     builder.name(thirdWidthTextSpacingFontName)
 }.build()
 
-
 let thirdWidthTextSpacingView = textComparisonView(text: thirdWidthTextSpacingText, font1: thirdWidthTextSpacingOn, font2: thirdWidthTextSpacingOff, title: thirdWidthTextSpacingTitle)
-
 
 //: #####  Quarter Text Spacing
 
@@ -100,9 +92,7 @@ let quarterWidthTextSpacingOff = FontBuilder { builder in
     builder.name(quarterWidthTextSpacingFontName)
 }.build()
 
-
 textComparisonView(text: quarterWidthTextSpacingText, font1: quarterWidthTextSpacingOn, font2: quarterWidthTextSpacingOff, title: quarterWidthTextSpacingTitle)
-
 
 //: #####  Alternate Proportional Width Text Spacing
 
@@ -120,9 +110,7 @@ let alternateProportionalWidthTextSpacingOff = FontBuilder { builder in
     builder.name(alternateProportionalWidthTextSpacingFontName)
 }.build()
 
-
 textComparisonView(text: alternateProportionalWidthTextSpacingText, font1: alternateProportionalWidthTextSpacingOn, font2: alternateProportionalWidthTextSpacingOff, title: alternateProportionalWidthTextSpacingTitle)
-
 
 //: #####  Alternate Half Width Text Spacing
 
@@ -139,7 +127,6 @@ let alternateHalfWidthTextSpacingOn = FontBuilder { builder in
 let alternateHalfWidthTextSpacingOff = FontBuilder { builder in
     builder.name(alternateHalfWidthTextSpacingFontName)
 }.build()
-
 
 textComparisonView(text: alternateHalfWidthTextSpacingText, font1: alternateHalfWidthTextSpacingOn, font2: alternateHalfWidthTextSpacingOff, title: alternateHalfWidthTextSpacingTitle)
 

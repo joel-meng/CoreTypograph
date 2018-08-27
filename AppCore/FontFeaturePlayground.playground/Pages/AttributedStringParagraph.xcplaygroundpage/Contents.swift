@@ -1,11 +1,11 @@
 //: [Previous](@previous)
 
-import Foundation
 import CoreTypography
-import UIKit
+import Foundation
 import PlaygroundSupport
+import UIKit
 
-//:Firstline Indent
+//: Firstline Indent
 let firstline = showCaseStyler(Paragraph.firstlineIndent(20.points))
 
 //: Line Break Mode
@@ -36,4 +36,3 @@ let minLineFont = FontBuilder { builder in
     builder.name("Baskerville")
 }.build(10)
 let minLineSpacing = showCaseStyler(Font.font(minLineFont) + Paragraph.minimumLineHeight(20.points))
-

@@ -1,8 +1,8 @@
 //: [Previous](@previous)
 
 import CoreTypography
-import UIKit
 import PlaygroundSupport
+import UIKit
 
 let success = registerFont(withName: "InputSans-Regular")
 
@@ -19,7 +19,6 @@ let fractionOn = FontBuilder { builder in
 let fractionOff = FontBuilder { builder in
     builder.name(fractionFontName)
 }.build()
-
 
 let fractionView = textComparisonView(text: fractionText, font1: fractionOn, font2: fractionOff, title: fractionTitle)
 

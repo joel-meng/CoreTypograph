@@ -1,8 +1,8 @@
 //: [Previous](@previous)
 
 import CoreTypography
-import UIKit
 import PlaygroundSupport
+import UIKit
 
 let successfulRegisterInputSans = registerFont(withName: "InputSans-Regular")
 let successfulRegisterSourceCodePro = registerFont(withName: "SourceCodePro-Regular")
@@ -22,7 +22,6 @@ let normalVerticalPositionNormalOff = FontBuilder { builder in
 }.build()
 
 let normalVerticalPositionView = textComparisonView(text: normalVerticalPositionText, font1: normalVerticalPositionNormalOn, font2: normalVerticalPositionNormalOff, title: normalVerticalPositionTitle)
-
 
 //: ##### Superior Vertical Position
 
@@ -44,7 +43,6 @@ superVerticalPositionOn.fontName
 
 let superVerticalPositionView = textComparisonView(text: superiorVerticalPositionText, font1: superVerticalPositionOn, font2: superVerticalPositionOff, title: superiorVerticalPositionTitle)
 
-
 //: ##### Inferious Vertical Position
 
 let inferiousVerticalPositionTitle = "Inferious Vertical Position"
@@ -58,14 +56,11 @@ let inferiousVerticalPositionOn = FontBuilder { builder in
     builder.verticalPosition(VerticalPosition.inferior).name(inferiousVerticalPositionFontName)
 }.build()
 
-
 let inferiousVerticalPositionOff = FontBuilder { builder in
     builder.name(inferiousVerticalPositionFontName)
 }.build()
 
 let inferiousVerticalPositionView = textComparisonView(text: inferiousVerticalPositionText, font1: inferiousVerticalPositionOn, font2: inferiousVerticalPositionOff, title: inferiousVerticalPositionTitle)
-
-
 
 //: ##### Ordinal Vertical Position
 
@@ -87,7 +82,6 @@ let ordinalVerticalPositionOff = FontBuilder { builder in
 
 let ordinalVerticalPositionView = textComparisonView(text: ordinalVerticalPositionText, font1: ordinalVerticalPositionOn, font2: ordinalVerticalPositionOff, title: ordinalVerticalPositionTitle)
 
-
 //: ##### Scentific Vertical Position
 
 let scentificVerticalPositionTitle = "Scentific Vertical Position"
@@ -103,10 +97,8 @@ let scentificVerticalPositionOn = FontBuilder { builder in
     builder.verticalPosition(VerticalPosition.scientificInferior).name(scentificVerticalPositionFontName)
 }.build()
 
-
 let scentificVerticalPositionOff = FontBuilder { builder in
     builder.name(scentificVerticalPositionFontName)
 }.build()
 
 let scentificVerticalPositionView = textComparisonView(text: scentificVerticalPositionText, font1: scentificVerticalPositionOn, font2: scentificVerticalPositionOff, title: scentificVerticalPositionTitle)
-

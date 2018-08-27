@@ -1,8 +1,8 @@
 //: [Previous](@previous)
 
 import CoreTypography
-import UIKit
 import PlaygroundSupport
+import UIKit
 
 let successfulRegisterInputSans = registerFont(withName: "SourceSansPro-Regular")
 
@@ -22,7 +22,6 @@ let lowerCaseSmallCapsNormalOff = FontBuilder { builder in
 
 let lowerCaseSmallCapsView = textComparisonView(text: lowerCaseSmallCapsText, font1: lowerCaseSmallCapsNormalOn, font2: lowerCaseSmallCapsNormalOff, title: lowerCaseSmallCapsTitle)
 
-
 //: ##### Upper Case Small Caps
 
 let upperCaseSmallCapsTitle = "Upper Case Small Caps"
@@ -38,6 +37,5 @@ let upperCaseSmallCapsNormalOff = FontBuilder { builder in
 }.build()
 
 let upperCaseSmallCapsView = textComparisonView(text: upperCaseSmallCapsText, font1: upperCaseSmallCapsNormalOn, font2: upperCaseSmallCapsNormalOff, title: upperCaseSmallCapsTitle)
-
 
 //: [Next](@next)

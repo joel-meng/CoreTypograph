@@ -1,10 +1,9 @@
 //: [Previous](@previous)
 
-import Foundation
 import CoreTypography
-import UIKit
+import Foundation
 import PlaygroundSupport
-
+import UIKit
 
 let strikethroughStyler = Strikethrough.color(.red)
     + Strikethrough.style([.single, .byWord, .patternDash])
@@ -15,6 +14,5 @@ let underlineStyler = Underline.color(.red)
     + Underline.style([.single, .byWord])
 
 showCaseStyler(underlineStyler)
-
 
 //: [Next](@next)

@@ -9,22 +9,20 @@
 import UIKit
 
 class FontTableViewController: UITableViewController {
-    
     struct FontFamily {
         let familyName: String
         let fontFaces: [FontFace]
     }
-    
+
     struct FontFace {
         let faceName: String
     }
-    
+
     private var fonts: [FontFamily] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         print(UIFont.familyNames.sorted().count)
         fonts = UIFont.familyNames.sorted().map { family in
             let faceNames = UIFont.fontNames(forFamilyName: family).map({ (faceName) -> FontFace in
@@ -41,11 +39,11 @@ class FontTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in _: UITableView) -> Int {
         return fonts.count
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fonts[section].fontFaces.count
     }
 
@@ -57,15 +55,15 @@ class FontTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_: UITableView, titleForHeaderInSection section: Int) -> String? {
         return fonts[section].familyName
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let font = fonts[indexPath.section].fontFaces[indexPath.row]
         performSegue(withIdentifier: "inspectFont", sender: font)
     }
-    
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -76,5 +74,4 @@ class FontTableViewController: UITableViewController {
             }
         }
     }
-
 }

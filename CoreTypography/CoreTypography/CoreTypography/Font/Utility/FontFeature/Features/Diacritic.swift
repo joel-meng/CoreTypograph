@@ -15,7 +15,6 @@ import UIKit
 /// where the same text can be shown with vowels for one reading audience and without vowels for another.
 /// - decompose: Show the diacritics, but rather than attaching them to their baseforms, show them inline with the rest of the text.
 public enum Diacritic: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
         case .show:
@@ -26,7 +25,7 @@ public enum Diacritic: FontFeatureProviding {
             return attribute(feature: kDiacriticsType, selector: kDecomposeDiacriticsSelector)
         }
     }
-    
+
     case show
     case hide
     case decompose

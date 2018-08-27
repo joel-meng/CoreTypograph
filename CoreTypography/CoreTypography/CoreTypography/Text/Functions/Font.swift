@@ -10,7 +10,6 @@ import Foundation
 
 public enum Font {}
 extension Font {
-    
     /// Will return an `TextStyler` that can override given attributes's text font setting
     /// by the given parameter.
     ///
@@ -18,10 +17,10 @@ extension Font {
     /// - Returns: A new `TextStyler` with applying text font.
     public static func font(_ value: PlatformFont) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.font: value])
+            attributes.aggressivelyMerging([.font: value])
         }
     }
-    
+
     /// The type of ligatures to use. Arabic text, for example, requires ligatures for many character sequences but has a rich set of
     /// additional ligatures that combine characters. English text has no essential ligatures, and typically has only two standard ligatures,
     /// those for "fi" and "fl"—all others are considered more advanced or fancy.
@@ -30,11 +29,11 @@ extension Font {
     /// - standard:  Standard ligatures should be used.
     /// - all: All available ligatures should be used
     public enum LigatureStyle: Int {
-        case essential  = 0
-        case standard   = 1
-        case all        = 2
+        case essential = 0
+        case standard = 1
+        case all = 2
     }
-    
+
     /// Will return an `TextStyler` that can override given attributes's text font ligature setting
     /// by the given parameter.
     ///
@@ -42,10 +41,10 @@ extension Font {
     /// - Returns: A new `TextStyler` who can could apply font ligature style distance.
     public static func ligature(_ value: LigatureStyle) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.ligature: value.rawValue])
+            attributes.aggressivelyMerging([.ligature: value.rawValue])
         }
     }
-    
+
     /// Will return an `TextStyler` that can override given attributes's text font kerning setting
     /// by the given parameter.
     ///

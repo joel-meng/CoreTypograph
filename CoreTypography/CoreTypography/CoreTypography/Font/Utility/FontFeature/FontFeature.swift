@@ -21,22 +21,22 @@ public struct FontFeature {
         self.exclusive = exclusive
         self.options = options
     }
-    
+
     public func setting(forOption option: Option) -> [UIFontDescriptor.FeatureKey: Int] {
         return [
             UIFontDescriptor.FeatureKey.featureIdentifier: featureIdentifier,
             UIFontDescriptor.FeatureKey.typeIdentifier: option.identifier,
         ]
     }
-    
+
     public struct Option {
         public let name: String
         public let identifier: Int
         public let isDefault: Bool
-        
+
         public init(key: String, value: Int, isDefault: Bool) {
-            self.name = key
-            self.identifier = value
+            name = key
+            identifier = value
             self.isDefault = isDefault
         }
     }

@@ -10,7 +10,6 @@ import Foundation
 
 public enum Stroke {}
 extension Stroke {
- 
     /// Will return an `TextStyler` that can override given attributes's text stroke width by the given parameter.
     ///
     /// - Parameter value: Interpreted as a percentage of font point size. This interpreted as a percentage
@@ -21,17 +20,17 @@ extension Stroke {
     /// - Returns: A new `TextStyler` that fullfilled the functionality of setting stroke width.
     public static func width(_ value: Float) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.strokeWidth: value])
+            attributes.aggressivelyMerging([.strokeWidth: value])
         }
     }
-    
+
     /// Will return an `TextStyler` that can override given attributes's text stroke color by the given parameter.
     ///
     /// - Parameter value: The `PlatformColor` type of stroke color.
     /// - Returns: A new `TextStyler` that fullfilled the functionality of setting stroke color.
     public static func color(_ value: PlatformColor) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.strokeColor: value])
+            attributes.aggressivelyMerging([.strokeColor: value])
         }
     }
 }

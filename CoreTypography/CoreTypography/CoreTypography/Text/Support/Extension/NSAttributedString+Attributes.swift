@@ -9,16 +9,15 @@
 import Foundation
 
 extension Dictionary where Key == NSAttributedString.Key, Value == Any {
-    
     func aggressivelyMerging(_ attribute: Attributes) -> Dictionary {
-        return merging(attribute) { origin, new in
-            return new
+        return merging(attribute) { _, new in
+            new
         }
     }
-    
+
     func defensivelyMerging(_ attribute: Attributes) -> Dictionary {
-        return merging(attribute) { origin, new in
-            return origin
+        return merging(attribute) { origin, _ in
+            origin
         }
     }
 }

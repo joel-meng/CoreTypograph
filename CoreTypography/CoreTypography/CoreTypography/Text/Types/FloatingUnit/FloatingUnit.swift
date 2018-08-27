@@ -10,8 +10,7 @@ import Foundation
 
 /// A unit type that accepting floating numbers used in defining attributes.
 public protocol FloatingUnit: RawRepresentable {
-    
     associatedtype T: BinaryFloatingPoint
-    
+
     var rawValue: T { get }
 }

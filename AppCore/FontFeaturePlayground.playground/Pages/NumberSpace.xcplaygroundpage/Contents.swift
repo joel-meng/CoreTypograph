@@ -1,8 +1,8 @@
 //: [Previous](@previous)
 
 import CoreTypography
-import UIKit
 import PlaygroundSupport
+import UIKit
 
 let success = registerFont(withName: "InputSans-Regular")
 

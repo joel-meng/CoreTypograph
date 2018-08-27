@@ -13,13 +13,12 @@ import UIKit
 /// This is a non-exclusive feature type
 
 public struct SmartSwash: OptionSet {
-    
     public var rawValue: Int
-    
+
     public init(rawValue: Int) {
         self.rawValue = rawValue
     }
-    
+
     public static let wordInitialOn = SmartSwash(rawValue: 1 << 0)
     public static let wordInitialOff = SmartSwash(rawValue: 1 << 1)
     public static let wordFinalOn = SmartSwash(rawValue: 1 << 2)
@@ -35,47 +34,47 @@ public struct SmartSwash: OptionSet {
 extension SmartSwash: FontFeaturesProviding {
     func fontFeatures() -> [FontFeatureAttribute] {
         var fontFeatureAttributes: [FontFeatureAttribute] = []
-        
+
         if contains(.wordInitialOn) {
             fontFeatureAttributes.append(WordInitial.on.fontFeature())
         }
-        
+
         if contains(.wordInitialOff) {
             fontFeatureAttributes.append(WordInitial.off.fontFeature())
         }
-        
+
         if contains(.wordFinalOn) {
             fontFeatureAttributes.append(WordFinal.on.fontFeature())
         }
-        
+
         if contains(.wordFinalOff) {
             fontFeatureAttributes.append(WordFinal.off.fontFeature())
         }
-        
+
         if contains(.lineInitialOn) {
             fontFeatureAttributes.append(LineInitial.on.fontFeature())
         }
-        
+
         if contains(.lineInitialOff) {
             fontFeatureAttributes.append(LineInitial.off.fontFeature())
         }
-        
+
         if contains(.lineFinalOn) {
             fontFeatureAttributes.append(LineFinal.on.fontFeature())
         }
-        
+
         if contains(.lineFinalOff) {
             fontFeatureAttributes.append(LineFinal.off.fontFeature())
         }
-        
+
         if contains(.nonFinalOn) {
             fontFeatureAttributes.append(NonFinal.on.fontFeature())
         }
-        
+
         if contains(.nonFinalOff) {
             fontFeatureAttributes.append(NonFinal.off.fontFeature())
         }
-        
+
         return fontFeatureAttributes
     }
 }
@@ -85,7 +84,6 @@ extension SmartSwash: FontFeaturesProviding {
 /// - on: Word initial SmartSwash on.
 /// - off: Word initial SmartSwash off.
 public enum WordInitial: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
         case .on:
@@ -94,7 +92,7 @@ public enum WordInitial: FontFeatureProviding {
             return attribute(feature: kSmartSwashType, selector: kWordInitialSwashesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -112,7 +110,7 @@ public enum WordFinal: FontFeatureProviding {
             return attribute(feature: kSmartSwashType, selector: kWordFinalSwashesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -130,7 +128,7 @@ public enum LineInitial: FontFeatureProviding {
             return attribute(feature: kSmartSwashType, selector: kLineInitialSwashesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -148,7 +146,7 @@ public enum LineFinal: FontFeatureProviding {
             return attribute(feature: kSmartSwashType, selector: kLineFinalSwashesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -167,6 +165,7 @@ public enum NonFinal: FontFeatureProviding {
             return attribute(feature: kSmartSwashType, selector: kNonFinalSwashesOffSelector)
         }
     }
+
     case on
     case off
 }

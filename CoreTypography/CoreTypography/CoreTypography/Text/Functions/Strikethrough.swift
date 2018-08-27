@@ -10,11 +10,9 @@ import Foundation
 
 public enum Strikethrough {}
 
-
 extension Strikethrough {
-    
     public typealias Style = NSUnderlineStyle
-    
+
     /// Will return a TextStyler that set strike through line color. If not set, default to nil,
     /// indicating same as foreground color.
     ///
@@ -22,10 +20,10 @@ extension Strikethrough {
     /// - Returns: A new `TextStyler` with given functionality.
     public static func color(_ value: PlatformColor) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.strikethroughColor: value])
+            attributes.aggressivelyMerging([.strikethroughColor: value])
         }
     }
-    
+
     /// Will return a `TextStyler` that set strike through line styles with one of
     /// the constants described in Style. The default value for this attribute is styleNone.
     ///
@@ -33,7 +31,7 @@ extension Strikethrough {
     /// - Returns: A new `TextStyler` with given functionality.
     public static func style(_ value: Style) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.strikethroughStyle: value.rawValue])
+            attributes.aggressivelyMerging([.strikethroughStyle: value.rawValue])
         }
     }
 }

@@ -1,9 +1,8 @@
 //: [Previous](@previous)
 
-
 import CoreTypography
-import UIKit
 import PlaygroundSupport
+import UIKit
 
 //: #####
 
@@ -20,6 +19,5 @@ let smallCapsOff = FontBuilder { builder in
 }.build()
 
 let smallCapsView = textComparisonView(text: smallCapsText, font1: smallCapsOn, font2: smallCapsOff, title: smallCapsTitle)
-
 
 //: [Next](@next)

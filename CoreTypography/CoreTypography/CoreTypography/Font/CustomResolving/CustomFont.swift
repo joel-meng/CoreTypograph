@@ -10,7 +10,6 @@ import Foundation
 
 /// A protocol that used for customing font which will resolve font by font family name.
 public protocol CustomFont: CustomFontRepresentable {
-    
     /// Will resolve a font by provided font family name and point size
     ///
     /// - Parameter pointSize: Font point size of type `CGFloat`.

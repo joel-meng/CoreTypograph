@@ -20,10 +20,9 @@ import Foundation
 /// - smallCaps: Display lower-case glyphs as small caps. (This is the most common way of displaying small caps.)
 /// - petite: Display lower-case glyphs as petite caps
 public enum LowerCase: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
-        case .`default`:
+        case .default:
             return attribute(feature: kLowerCaseType, selector: kDefaultLowerCaseSelector)
         case .smallCaps:
             return attribute(feature: kLowerCaseType, selector: kLowerCaseSmallCapsSelector)
@@ -31,7 +30,7 @@ public enum LowerCase: FontFeatureProviding {
             return attribute(feature: kLowerCaseType, selector: kLowerCasePetiteCapsSelector)
         }
     }
-    
+
     case `default`
     case smallCaps
     case petite

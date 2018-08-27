@@ -10,7 +10,6 @@ import Foundation
 
 /// A protocol to be used by custom font to acquire an font object by `UIFontTextStyle` and `UICotentSizeCategory`
 public protocol CustomFontContentSizeCategoryAware: CustomFontRepresentable, FontContentSizeCategoryAware {
-    
     /// Will resolve a font by `FontFace`, `FontTrait` by given `UITextStyle` and size by given `UICotentSizeCategory`
     ///
     /// - Parameters:
@@ -21,7 +20,6 @@ public protocol CustomFontContentSizeCategoryAware: CustomFontRepresentable, Fon
 }
 
 public extension CustomFontContentSizeCategoryAware {
-    
     func font(forTextStyle textStyle: UIFont.TextStyle, contentSizeCategory: UIContentSizeCategory) -> UIFont {
         let fontFace = face(forTextStyle: textStyle)
         let fontTrait = trait(forTextStyle: textStyle)

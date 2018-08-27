@@ -20,10 +20,9 @@ import UIKit
 /// See: https://typography.guru/term/petite-caps-r156/
 
 public enum UpperCase: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
-        case .`default`:
+        case .default:
             return FontFeatureAttribute(featureIdentifier: kUpperCaseType, selectorIdentifier: kDefaultUpperCaseSelector)
         case .smallCaps:
             return FontFeatureAttribute(featureIdentifier: kUpperCaseType, selectorIdentifier: kUpperCaseSmallCapsSelector)
@@ -31,7 +30,7 @@ public enum UpperCase: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kUpperCaseType, selectorIdentifier: kUpperCasePetiteCapsSelector)
         }
     }
-    
+
     case `default`
     case smallCaps
     case petiteCaps

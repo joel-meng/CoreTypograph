@@ -10,10 +10,9 @@ import Foundation
 
 /// A protocol that is used to define custom font
 public protocol CustomFontRepresentable {
-
     /// A `String` type which represents font family name. Override this variable to provide a family name for custom font.
     var familyName: String { get }
-    
+
     /// Will return a `String` type font name, which is used to resolve font for `UIFont`. Usually custom font will resolve a font name to
     /// provided font. For example, `Taviraj` regular will resolve to font `Taviraj-Regular`, `Taviraj` bold will resolve to font `Taviraj-Bold`, etc.
     /// Override this function to provide your own font name resolving with font face and font trait, or leave the default implemetation,
@@ -29,13 +28,12 @@ public protocol CustomFontRepresentable {
 }
 
 public extension CustomFontRepresentable {
-    
     func name(forFace fontFace: FontFace, trait: FontTrait?) -> String {
         let defaultFontName = "\(familyName)-\(fontFace.rawValue)"
         guard let trait = trait else {
             return defaultFontName
         }
-        
+
         if fontFace == .regular {
             return "\(familyName)-\(trait.rawValue)"
         }

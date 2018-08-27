@@ -9,7 +9,6 @@
 import Foundation
 
 public enum Background {
-    
     /// Will return an `TextStyler` that can override given attributes's text background color
     /// by the given parameter.
     ///
@@ -17,7 +16,7 @@ public enum Background {
     /// - Returns: A new `TextStyler` with applying text effect.
     public static func color(_ value: PlatformColor) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.backgroundColor: value])
+            attributes.aggressivelyMerging([.backgroundColor: value])
         }
     }
 }

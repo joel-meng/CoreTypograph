@@ -11,9 +11,8 @@ import Foundation
 public enum Underline {}
 
 extension Underline {
-    
     public typealias Style = NSUnderlineStyle
-    
+
     /// Will return a TextStyler that set under line color. If not set, default to nil,
     /// indicating same as foreground color.
     ///
@@ -21,10 +20,10 @@ extension Underline {
     /// - Returns: A new `TextStyler` with given functionality.
     public static func color(_ value: PlatformColor) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.underlineColor: value])
+            attributes.aggressivelyMerging([.underlineColor: value])
         }
     }
-    
+
     /// Will return a `TextStyler` that set under line styles with one of
     /// the constants described in Style. The default value for this attribute is styleNone.
     ///
@@ -32,7 +31,7 @@ extension Underline {
     /// - Returns: A new `TextStyler` with given functionality.
     public static func style(_ value: Style) -> TextStyler {
         return { attributes in
-            return attributes.aggressivelyMerging([.underlineStyle: value.rawValue])
+            attributes.aggressivelyMerging([.underlineStyle: value.rawValue])
         }
     }
 }

@@ -1,8 +1,8 @@
 //: [Previous](@previous)
 
 import CoreTypography
-import UIKit
 import PlaygroundSupport
+import UIKit
 
 let success = registerFont(withName: "SourceSansPro-Regular")
 
@@ -21,6 +21,5 @@ let lowerNumberCaseOff = FontBuilder { builder in
 }.build()
 
 textComparisonView(text: lowerNumberCaseText, font1: lowerNumberCaseOn, font2: lowerNumberCaseOff, title: lowerNumberCaseTitle)
-
 
 //: [Next](@next)

@@ -10,7 +10,6 @@ import Foundation
 
 /// A protocol which is used to custom font.
 public protocol FontContentSizeCategoryAware: FontTextStyleAware {
-    
     /// Resolve custom font size by given `UIFontTextStyle` and `UIContentSizeCategory`
     ///
     /// - Parameters:

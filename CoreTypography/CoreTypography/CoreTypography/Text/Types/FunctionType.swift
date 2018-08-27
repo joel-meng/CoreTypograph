@@ -8,9 +8,8 @@
 
 import Foundation
 
-
 /// Attributed string attributes. Basically, it is a dictionary of settings.
-public typealias Attributes = [NSAttributedString.Key : Any]
+public typealias Attributes = [NSAttributedString.Key: Any]
 
 /// `TextStyler` is an function object that takes `Attributes` in, make corresponding changes and returns `Attributes`.
 public typealias TextStyler = (Attributes) -> Attributes
@@ -20,4 +19,3 @@ public typealias ParagraphStyle = NSMutableParagraphStyle
 
 /// `ParagraphStyler` is an function object that takes `ParagraphStyle` in, make corresponding changes and returns `ParagraphStyle`.
 public typealias ParagraphyStyler = (ParagraphStyle) -> ParagraphStyle
-
