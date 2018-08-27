@@ -35,4 +35,20 @@ extension Text {
             return attributes.aggressivelyMerging([.textEffect: value.rawValue])
         }
     }
+    
+    typealias Offset = CGSize
+    public static func shadow(offsetX: ScreenPoint<CGFloat>,
+                              offsetY: ScreenPoint<CGFloat>,
+                              blurRadius: ScreenPoint<CGFloat>,
+                              color: PlatformColor? = nil) -> TextStyler {
+        return { attributes in
+            let shadow = NSShadow()
+            shadow.shadowOffset = CGSize(width: offsetX.rawValue, height: offsetY.rawValue)
+            shadow.shadowBlurRadius = blurRadius.rawValue
+            if let color = color {
+                shadow.shadowColor = color
+            }
+            return attributes.aggressivelyMerging([.shadow: shadow])
+        }
+    }
 }

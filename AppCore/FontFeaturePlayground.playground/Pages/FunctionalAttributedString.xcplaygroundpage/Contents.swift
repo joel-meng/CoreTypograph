@@ -15,10 +15,8 @@ let strikethrough = Strikethrough.color(.blue) + Strikethrough.style([.single, .
 let underline = Underline.color(.blue) + Underline.style([.single, .patternDashDotDot, .byWord])
 let effect = Text.effect(.letterpressStyle)
 
-
-
 //let styler = fontStyle + canvasStyle + colorStyle + paragraphStyle + strikethrough
-let styler = underline
+let styler = Text.shadow(offsetX: 3.points, offsetY: 3.points, blurRadius: 3.points)
 
 let style: [NSAttributedString.Key: Any] = styler([:])
 
