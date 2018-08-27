@@ -68,6 +68,10 @@ func textParagraphStyler<ValueType>(withValue value: ValueType,
 
 extension Paragraph {
     
+    public typealias LineBreakMode = NSLineBreakMode
+    
+    public typealias TextAlignment = NSTextAlignment
+    
     /// Will return a `TextStyler` who sets text attributes' `FirstLineIndent` with given value.
     ///
     /// - Parameter value: The display unit for `firstLineIndent`.
@@ -75,8 +79,6 @@ extension Paragraph {
     public static func firstlineIndent<Unit: RawRepresentable>(_ value: Unit) -> TextStyler where Unit.RawValue == CGFloat {
         return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.firstLineHeadIndent)
     }
-    
-    public typealias TextAlignment = NSTextAlignment
     
     /// Will align text with given `TextAlignment`.
     ///
@@ -118,7 +120,7 @@ extension Paragraph {
         return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.maximumLineHeight)
     }
     
-    /// Will return an `TextStyler` that can override given attributes's paragraph setting by the new value.
+    /// Will return an `TextStyler` that can override given attributes's paragraph `minimumLineHeight` by the new value.
     ///
     /// - Parameter value: The minimum line height value, in points.
     /// - Returns: A `TextStyler`.
@@ -126,8 +128,8 @@ extension Paragraph {
         return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.minimumLineHeight)
     }
     
-    /// Will return an `TextStyler` that can override given attributes's paragraph setting which is the distance between the paragraph’s top and
-    /// the beginning of its text content by the new value.
+    /// Will return an `TextStyler` that can override given attributes's paragraph `lineSpace` setting
+    /// which is the distance between the paragraph’s top and the beginning of its text content by the new value.
     ///
     /// - Parameter value: `Linespacing` value, in points.
     /// - Returns: A `TextStyler`.
@@ -135,15 +137,14 @@ extension Paragraph {
         return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.lineSpacing)
     }
 
-    /// Will return an `TextStyler` that can override given attributes's paragraph setting which is the space after the end of the paragraph by the new value.
+    /// Will return an `TextStyler` that can override given attributes's paragraph `paragraphSpacing` setting
+    /// which is the space after the end of the paragraph by the new value.
     ///
     /// - Parameter value: `ParagraphSpacing` value, in points. The space after the end of the paragraph.
     /// - Returns: A `TextStyler`.
     public static func paragraphSpacing(_ value: ScreenPoint<CGFloat>) -> TextStyler {
         return textParagraphStyler(withValue: value, onKeyPath: \AttributedStringParagraphStyle.paragraphSpacing)
     }
-    
-    public typealias LineBreakMode = NSLineBreakMode
     
     /// Will return an `TextStyler` that can override given attributes's paragraph setting which is the mode that should be used
     /// to break lines in the paragraph, by the new value.

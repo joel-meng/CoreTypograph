@@ -67,7 +67,6 @@
 		F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A320F70A9200FBEC4C /* CustomFont.swift */; };
 		F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A520F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift */; };
 		F3F1C731210F4582008F5C1B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1C730210F4582008F5C1B /* Font.swift */; };
-		F3F1C733210F4605008F5C1B /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1C732210F4605008F5C1B /* Number.swift */; };
 		F3F5E170210F42850019C253 /* TextStyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E16F210F42850019C253 /* TextStyler.swift */; };
 		F3F5E172210F42B30019C253 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E171210F42B30019C253 /* Color.swift */; };
 		F3F5E174210F42E10019C253 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E173210F42E10019C253 /* Operation.swift */; };
@@ -160,7 +159,6 @@
 		F3D855A320F70A9200FBEC4C /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		F3D855A520F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontContentSizeCategoryAware.swift; sourceTree = "<group>"; };
 		F3F1C730210F4582008F5C1B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		F3F1C732210F4605008F5C1B /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		F3F5E16F210F42850019C253 /* TextStyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyler.swift; sourceTree = "<group>"; };
 		F3F5E171210F42B30019C253 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F3F5E173210F42E10019C253 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
@@ -188,6 +186,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DA4115A213382DC001C6443 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5DA4115B213382E6001C6443 /* Operator */,
+				F3F5E176210F435A0019C253 /* Extension */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		5DA4115B213382E6001C6443 /* Operator */ = {
+			isa = PBXGroup;
+			children = (
+				F3F5E173210F42E10019C253 /* Operation.swift */,
+			);
+			path = Operator;
+			sourceTree = "<group>";
+		};
 		F306AF242106B3C00077B88A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,7 +386,7 @@
 		F3A9422A210C9A78001D9CE3 /* Text */ = {
 			isa = PBXGroup;
 			children = (
-				F3F5E176210F435A0019C253 /* Extension */,
+				5DA4115A213382DC001C6443 /* Support */,
 				F3F5E16E210F42650019C253 /* Functions */,
 				F33A24ED210D8871003AD407 /* AttributedStringStyleConsumer */,
 				F33A24EA210D881D003AD407 /* AttributedStringStyleProvider */,
@@ -442,9 +457,7 @@
 				F3F5E171210F42B30019C253 /* Color.swift */,
 				5DA411562132A0AC001C6443 /* Background.swift */,
 				5DA411582132A0CB001C6443 /* Stroke.swift */,
-				F3F5E173210F42E10019C253 /* Operation.swift */,
 				F3F1C730210F4582008F5C1B /* Font.swift */,
-				F3F1C732210F4605008F5C1B /* Number.swift */,
 				5D4711BB212A375F00A71C06 /* Paragraph.swift */,
 				5DA4115221327CCC001C6443 /* Strikethrough.swift */,
 				5DA4115421329C48001C6443 /* Underline.swift */,
@@ -609,7 +622,6 @@
 				5D4711BC212A375F00A71C06 /* Paragraph.swift in Sources */,
 				5DA4115521329C48001C6443 /* Underline.swift in Sources */,
 				5DA411572132A0AC001C6443 /* Background.swift in Sources */,
-				F3F1C733210F4605008F5C1B /* Number.swift in Sources */,
 				F360A1042101A41900EFFCF7 /* FontFeatureAttribute.swift in Sources */,
 				F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */,
 				F360A0FE2101A36D00EFFCF7 /* NumberSpacing.swift in Sources */,

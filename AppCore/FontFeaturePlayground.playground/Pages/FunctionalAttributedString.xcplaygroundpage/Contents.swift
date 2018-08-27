@@ -40,16 +40,5 @@ showCaseLabel.attributedText = styledText
 showCaseLabel
 
 
-//let styler = compose(textStyler1: textColor(.red), textStyler2: backgroundColor(.blue))
-//let result = styler([:])
-//result[NSAttributedStringKey.backgroundColor]
-//result[NSAttributedStringKey.foregroundColor]
-//
-//let styler2 = textColor(.blue) <> backgroundColor(.red)
-//let result2 = styler2([:])
-//result2[NSAttributedStringKey.backgroundColor]
-//result2[NSAttributedStringKey.foregroundColor]
-
-
 
 //: [Next](@next)
