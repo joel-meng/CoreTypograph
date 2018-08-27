@@ -10,9 +10,13 @@ import Foundation
 
 public enum Text {}
 
+// MARK: - Type Definition
+
 extension Text {
     public typealias TextEffect = NSAttributedString.TextEffectStyle
+}
 
+extension Text {
     /// Will return an `TextStyler` that can override given attributes's text color setting
     /// by the given parameter.
     ///
@@ -34,8 +38,19 @@ extension Text {
             attributes.aggressivelyMerging([.textEffect: value.rawValue])
         }
     }
+}
 
-    typealias Offset = CGSize
+extension Text {
+    /// Will return an `TextStyler` that can override given attributes's text shadow setting
+    /// by the given parameter.
+    ///
+    ///
+    /// - Parameters:
+    ///   - offsetX: Offset in points for X of shadow.
+    ///   - offsetY: Offset in points for Y of shadow.
+    ///   - blurRadius: Blur radius of the shadow.
+    ///   - color: Color of shadow.
+    /// - Returns: A new `TextStyler` applying given shadow.
     public static func shadow(offsetX: ScreenPoint<CGFloat>,
                               offsetY: ScreenPoint<CGFloat>,
                               blurRadius: ScreenPoint<CGFloat>,
@@ -44,6 +59,8 @@ extension Text {
             let shadow = NSShadow()
             shadow.shadowOffset = CGSize(width: offsetX.rawValue, height: offsetY.rawValue)
             shadow.shadowBlurRadius = blurRadius.rawValue
+
+            // Only apply color while color is non-nil.
             if let color = color {
                 shadow.shadowColor = color
             }
