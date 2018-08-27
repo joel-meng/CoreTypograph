@@ -15,8 +15,11 @@ let strikethrough = Strikethrough.color(.blue) + Strikethrough.style([.single, .
 let underline = Underline.color(.blue) + Underline.style([.single, .patternDashDotDot, .byWord])
 let effect = Text.effect(.letterpressStyle)
 
+let url = NSURL(string: "https://www.google.com")!
+let link = Text.link(to: url)
+
 // let styler = fontStyle + canvasStyle + colorStyle + paragraphStyle + strikethrough
-let styler = Text.shadow(offsetX: 3.points, offsetY: 3.points, blurRadius: 3.points)
+let styler = link
 
 let style: [NSAttributedString.Key: Any] = styler([:])
 

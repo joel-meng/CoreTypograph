@@ -13,7 +13,11 @@ public enum Text {}
 // MARK: - Type Definition
 
 extension Text {
+    /// The `TextEffect` parameter used for `effect` function.
     public typealias TextEffect = NSAttributedString.TextEffectStyle
+
+    /// The URL used for `link` function that is adding link to attributed string.
+    public typealias URL = NSURL
 }
 
 extension Text {
@@ -44,7 +48,6 @@ extension Text {
     /// Will return an `TextStyler` that can override given attributes's text shadow setting
     /// by the given parameter.
     ///
-    ///
     /// - Parameters:
     ///   - offsetX: Offset in points for X of shadow.
     ///   - offsetY: Offset in points for Y of shadow.
@@ -65,6 +68,20 @@ extension Text {
                 shadow.shadowColor = color
             }
             return attributes.aggressivelyMerging([.shadow: shadow])
+        }
+    }
+}
+
+extension Text {
+    /// Will return an `TextStyler` that can override given attributes's text link setting
+    /// by the given parameter.
+    ///
+    ///
+    /// - Parameter value: The `URL` type that this link to.
+    /// - Returns: A new `TextStyler` applying given shadow.
+    public static func link(to value: NSURL) -> TextStyler {
+        return { attributes in
+            attributes.aggressivelyMerging([.link: value])
         }
     }
 }

@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        let styler = Text.color(.darkGray) + Text.shadow(offsetX: 3.points, offsetY: 3.points, blurRadius: 3.points) // + Text.effect(.letterpressStyle) + Strikethrough.color(.red) + Strikethrough.style([.double, .byWord])
+        let url = NSURL(string: "https://www.google.com")!
+        let styler = Text.color(.darkGray) + Text.shadow(offsetX: 3.points, offsetY: 3.points, blurRadius: 3.points) + Text.link(to: url) // + Text.effect(.letterpressStyle) + Strikethrough.color(.red) + Strikethrough.style([.double, .byWord])
         let style: [NSAttributedString.Key: Any] = styler([:])
 
         let styledText = NSAttributedString(string: "Attributed String", attributes: style)
