@@ -31,7 +31,11 @@ extension Text {
             attributes.aggressivelyMerging([.foregroundColor: value])
         }
     }
+}
 
+// MARK: - Text Effect
+
+extension Text {
     /// Will return an `TextStyler` that can override given attributes's text effect setting
     /// by the given parameter.
     ///
@@ -43,6 +47,8 @@ extension Text {
         }
     }
 }
+
+// MARK: - Shadow
 
 extension Text {
     /// Will return an `TextStyler` that can override given attributes's text shadow setting
@@ -72,6 +78,8 @@ extension Text {
     }
 }
 
+// MARK: - Link
+
 extension Text {
     /// Will return an `TextStyler` that can override given attributes's text link setting
     /// by the given parameter.
@@ -85,6 +93,8 @@ extension Text {
     }
 }
 
+// MARK: - Offset
+
 extension Text {
     /// Will return an `TextStyler` that can override given attributes's text link setting
     /// by the given parameter.
@@ -94,6 +104,21 @@ extension Text {
     public static func offset(by points: ScreenPoint<CGFloat>) -> TextStyler {
         return { attributes in
             attributes.aggressivelyMerging([.baselineOffset: points.rawValue])
+        }
+    }
+}
+
+// MARK: - Obliqueness
+
+extension Text {
+    /// Will return an `TextStyler` that can override given attributes's text link setting
+    /// by the given parameter.
+    ///
+    /// - Parameter points: The value in screen points that the obliqueness by.
+    /// - Returns: A new `TextStyler` applying given obliqueness in points.
+    public static func oblique(by points: ScreenPoint<CGFloat>) -> TextStyler {
+        return { attributes in
+            attributes.aggressivelyMerging([.obliqueness: points.rawValue])
         }
     }
 }

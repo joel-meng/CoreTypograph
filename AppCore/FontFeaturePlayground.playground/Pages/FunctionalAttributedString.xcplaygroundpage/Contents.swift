@@ -18,10 +18,14 @@ let effect = Text.effect(.letterpressStyle)
 let url = NSURL(string: "https://www.google.com")!
 let link = Text.link(to: url)
 
+let customFont = FontBuilder { builder in
+    builder.lowerCase(LowerCase.smallCaps).name("Baskerville")
+}.build()
+
 let baselineOffsetStyler = Text.offset(by: 3.points)
 
 // let styler = fontStyle + canvasStyle + colorStyle + paragraphStyle + strikethrough
-let styler = Text.color(.black)
+let styler = Text.oblique(by: (-0.2).points) + Text.color(.blue) + Text.color(.red) + paragraphStyle + Font.font(customFont)
 
 let style: [NSAttributedString.Key: Any] = styler([:])
 
