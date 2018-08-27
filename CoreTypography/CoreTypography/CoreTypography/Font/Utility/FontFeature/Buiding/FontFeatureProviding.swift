@@ -10,7 +10,6 @@ import Foundation
 
 /// A protocol type that makes object/structs providing `FontFeatureAttribute`.
 protocol FontFeatureProviding {
-    
     /// Will return a `FontFeatureAttribute` struct value.
     ///
     /// - Returns: `FontFeatureAttribute` type, which can generate font feature setting.
@@ -19,7 +18,6 @@ protocol FontFeatureProviding {
 
 /// A protocol type that makes object/structs providing `FontFeatureAttribute`.
 protocol FontFeaturesProviding {
-    
     /// Will return a `FontFeatureAttribute` struct value.
     ///
     /// - Returns: `FontFeatureAttribute` type, which can generate font feature setting.

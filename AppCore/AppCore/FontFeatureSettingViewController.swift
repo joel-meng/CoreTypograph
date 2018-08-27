@@ -6,11 +6,10 @@
 //  Copyright © 2018 MENG, Joel. All rights reserved.
 //
 
-import UIKit
 import CoreTypography
+import UIKit
 
 class FontFeatureSettingViewController: UIViewController {
-
     @IBOutlet var textView: UITextView! {
         didSet {
             textView.text = """
@@ -23,7 +22,7 @@ class FontFeatureSettingViewController: UIViewController {
             """
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //        textView.font = generateFontFeature()
@@ -34,7 +33,7 @@ class FontFeatureSettingViewController: UIViewController {
 
 // MARK: - Pure functions
 
-//fileprivate func generateFontFeature() -> UIFont {
+// fileprivate func generateFontFeature() -> UIFont {
 //    let featureSetting = FontFeatureBuilder { (builder) in
 //        builder.numberSpacing(.mono)
 //            .upperCase(.smallCaps)
@@ -56,5 +55,4 @@ class FontFeatureSettingViewController: UIViewController {
 //
 //    let font = UIFont(descriptor: descriptor, size: 16)
 //    return font
-//}
-
+// }

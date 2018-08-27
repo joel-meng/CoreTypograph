@@ -13,19 +13,17 @@ typealias FeatureSelectorIdentifier = Int
 typealias FontFeatureSetting = [UIFontDescriptor.FeatureKey: Int]
 typealias FontAttributes = [UIFontDescriptor.AttributeName: Any]
 
-
 /// A font builder that creates a `UIFont` object from `FontFeatureBuilder`'s result which is an array of `FontAttribute`.
 public final class FontBuilder {
-    
     private var builder: Builder = Builder()
-    
+
     public init(building: (Builder) -> Void) {
         building(builder)
     }
-    
-    public func build() -> UIFont {
+
+    public func build(_ size: CGFloat = 20) -> UIFont {
         let fontDescriptor = UIFontDescriptor(fontAttributes: builder.build())
-        return UIFont(descriptor: fontDescriptor, size: 20)
+        return UIFont(descriptor: fontDescriptor, size: size)
     }
 }
 
@@ -33,19 +31,18 @@ public final class FontBuilder {
 /// See https://helpx.adobe.com/typekit/using/open-type-syntax.html
 /// https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html
 public final class Builder {
-    
     /// Storing an array of `FontFeatureAttribute` that passing into current builder.
     private var fontFeatureAttributes: [FontFeatureAttribute] = []
-    
+
     /// Storing an optional `String` of font name
     private var name: String?
-    
+
     /// Storing an optional `String` of font face
     private var face: String?
-    
+
     /// Storing an optional `String` of font family
     private var family: String?
-    
+
     /// Will put `String` type font name into consideration of creating a `UIFont`
     ///
     /// - Parameter name: `String` type font name
@@ -55,7 +52,7 @@ public final class Builder {
         self.name = name
         return self
     }
-    
+
     /// Will put `String` type font face into consideration of creating a `UIFont`
     ///
     /// - Parameter name: `String` type font face
@@ -65,7 +62,7 @@ public final class Builder {
         self.face = face
         return self
     }
-    
+
     /// Will put `String` type font family into consideration of creating a `UIFont`
     ///
     /// - Parameter name: `String` type font family
@@ -75,7 +72,7 @@ public final class Builder {
         self.family = family
         return self
     }
-    
+
     /// Text spacing font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter textSpacing: Text spacing type.
@@ -85,7 +82,7 @@ public final class Builder {
         fontFeatureAttributes.append(textSpacing.fontFeature())
         return self
     }
-    
+
     /// Number spacing font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter numberSpacing: Number spacing type.
@@ -95,7 +92,7 @@ public final class Builder {
         fontFeatureAttributes.append(numberSpacing.fontFeature())
         return self
     }
-    
+
     /// Number case font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter numberCase: Number case type.
@@ -105,7 +102,7 @@ public final class Builder {
         fontFeatureAttributes.append(numberCase.fontFeature())
         return self
     }
-    
+
     /// Upper case font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter upperCase: Upper case type.
@@ -115,7 +112,7 @@ public final class Builder {
         fontFeatureAttributes.append(upperCase.fontFeature())
         return self
     }
-    
+
     /// Lower case font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter lowerCase: Lower case type.
@@ -125,7 +122,7 @@ public final class Builder {
         fontFeatureAttributes.append(lowerCase.fontFeature())
         return self
     }
-    
+
     /// Fraction font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter fraction: Fraction type.
@@ -135,7 +132,7 @@ public final class Builder {
         fontFeatureAttributes.append(fraction.fontFeature())
         return self
     }
-    
+
     /// Vertical position font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter verticalPosition: VerticalPosition type.
@@ -145,7 +142,7 @@ public final class Builder {
         fontFeatureAttributes.append(verticalPosition.fontFeature())
         return self
     }
-    
+
     /// Ligatures font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter ligatures: Ligature type.
@@ -155,7 +152,7 @@ public final class Builder {
         fontFeatureAttributes += ligatures.fontFeatures()
         return self
     }
-    
+
     /// SmartSwash font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter swash: SmartSwash type.
@@ -165,7 +162,7 @@ public final class Builder {
         fontFeatureAttributes += swash.fontFeatures()
         return self
     }
-    
+
     /// ContextualAlternates font feature setting, if font supports, otherwise, current setting takes no effect.
     ///
     /// - Parameter contextualAlternates: ContextualAlternates type.
@@ -175,58 +172,58 @@ public final class Builder {
         fontFeatureAttributes += contextualAlternates.fontFeatures()
         return self
     }
-    
+
     // MARK: - Building
-    
+
     private func buildFeatures() -> [UIFontDescriptor.AttributeName: Any]? {
         let fontFeatures = fontFeatureAttributes.map { (attribute) -> FontFeatureSetting in
             attribute.featureSetting()
         }
-        
+
         guard !fontFeatures.isEmpty else {
             return nil
         }
         return [UIFontDescriptor.AttributeName.featureSettings: fontFeatures]
     }
-    
+
     private func familyAttribute() -> [UIFontDescriptor.AttributeName: String]? {
         return buildAttribute(with: UIFontDescriptor.AttributeName.family, value: family)
     }
-    
+
     private func faceAttribute() -> [UIFontDescriptor.AttributeName: String]? {
         return buildAttribute(with: UIFontDescriptor.AttributeName.face, value: face)
     }
-    
+
     private func nameAttribute() -> [UIFontDescriptor.AttributeName: String]? {
         return buildAttribute(with: UIFontDescriptor.AttributeName.name, value: name)
     }
-    
+
     private func buildAttribute(with key: UIFontDescriptor.AttributeName, value: String?) -> [UIFontDescriptor.AttributeName: String]? {
         guard let value = value else {
             return nil
         }
         return [key: value]
     }
-    
+
     fileprivate func build() -> FontAttributes {
         var composingResult: [UIFontDescriptor.AttributeName: Any] = [:]
-        
+
         if let fontFeatures = buildFeatures() {
-            composingResult = composingResult.merging(fontFeatures){ (current, new) in current }
+            composingResult = composingResult.merging(fontFeatures) { current, _ in current }
         }
-        
+
         if let nameAttribute = nameAttribute() {
             composingResult = composingResult.merging(nameAttribute) { current, _ in current }
         }
-        
+
         if let faceAttribute = faceAttribute() {
             composingResult = composingResult.merging(faceAttribute) { current, _ in current }
         }
-        
+
         if let familyAttribute = familyAttribute() {
             composingResult = composingResult.merging(familyAttribute) { current, _ in current }
         }
-        
+
         return composingResult
     }
 }

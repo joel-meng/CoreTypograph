@@ -6,15 +6,14 @@
 //  Copyright © 2018 MENG, Joel. All rights reserved.
 //
 
+import CoreTypography
 import Foundation
 import UIKit
-import CoreTypography
 
 struct Taviraj: CustomFontContentSizeCategoryAware {
-    
     var familyName: String { return "Taviraj" }
-    
-    func face(forTextStyle textStyle: UIFontTextStyle) -> FontFace {
+
+    func face(forTextStyle textStyle: UIFont.TextStyle) -> FontFace {
         switch textStyle {
         case .headline:
             return .bold
@@ -24,8 +23,8 @@ struct Taviraj: CustomFontContentSizeCategoryAware {
             return .regular
         }
     }
-    
-    func trait(forTextStyle textStyle: UIFontTextStyle) -> FontTrait? {
+
+    func trait(forTextStyle textStyle: UIFont.TextStyle) -> FontTrait? {
         switch textStyle {
         case .callout, .headline:
             return .italic
@@ -33,14 +32,14 @@ struct Taviraj: CustomFontContentSizeCategoryAware {
             return nil
         }
     }
-    
-    func fontPointSize(forTextStyle textStyle: UIFontTextStyle, contentSizeCategory: UIContentSizeCategory) -> CGFloat {
+
+    func fontPointSize(forTextStyle textStyle: UIFont.TextStyle, contentSizeCategory: UIContentSizeCategory) -> CGFloat {
         return Taviraj.fontMetrics[textStyle]!.fontPointSize(forCategory: contentSizeCategory)
     }
-    
-    private static var fontMetrics: [UIFontTextStyle: FontMetrics] = [
+
+    private static var fontMetrics: [UIFont.TextStyle: FontMetrics] = [
         .body: FontMetrics(baseSize: 17, minimumPointSize: 14, maximumPointSize: 53, maximumFontScale: 200),
         .callout: FontMetrics(baseSize: 16, minimumPointSize: 13, maximumPointSize: 51, maximumFontScale: 200),
         .headline: FontMetrics(baseSize: 17, minimumPointSize: 14, maximumPointSize: 53, maximumFontScale: 200),
-        ]
+    ]
 }

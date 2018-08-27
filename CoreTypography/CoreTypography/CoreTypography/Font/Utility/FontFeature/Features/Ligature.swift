@@ -10,13 +10,12 @@ import UIKit
 
 /// The Ligatures feature type permits selection from different kinds of ligatures. It is a non-exclusive feature type.
 public struct Ligature: OptionSet {
-    
     public var rawValue: Int
-    
+
     public init(rawValue: Int) {
         self.rawValue = rawValue
     }
-    
+
     public static let requiredOn = Ligature(rawValue: 1 << 0)
     public static let requiredOff = Ligature(rawValue: 1 << 1)
     public static let commonOn = Ligature(rawValue: 1 << 2)
@@ -28,42 +27,41 @@ public struct Ligature: OptionSet {
 }
 
 extension Ligature: FontFeaturesProviding {
-    
     func fontFeatures() -> [FontFeatureAttribute] {
         var fontFeatureAttributes: [FontFeatureAttribute] = []
-        
+
         if contains(.requiredOn) {
             fontFeatureAttributes.append(RequiredLigatures.on.fontFeature())
         }
-        
+
         if contains(.requiredOff) {
             fontFeatureAttributes.append(RequiredLigatures.off.fontFeature())
         }
-        
+
         if contains(.commonOn) {
             fontFeatureAttributes.append(CommonLigatures.on.fontFeature())
         }
-        
+
         if contains(.commonOff) {
             fontFeatureAttributes.append(CommonLigatures.off.fontFeature())
         }
-        
+
         if contains(.rareOn) {
             fontFeatureAttributes.append(RareLigatures.on.fontFeature())
         }
-        
+
         if contains(.rareOff) {
             fontFeatureAttributes.append(RareLigatures.off.fontFeature())
         }
-        
+
         if contains(.historicalOn) {
             fontFeatureAttributes.append(HistoricalLigatures.on.fontFeature())
         }
-        
+
         if contains(.historicalOff) {
             fontFeatureAttributes.append(HistoricalLigatures.off.fontFeature())
         }
-        
+
         return fontFeatureAttributes
     }
 }
@@ -82,7 +80,7 @@ public enum RequiredLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kRequiredLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -101,11 +99,10 @@ public enum CommonLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kCommonLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
-
 
 /// Ligatures in a font that are less common than those included in the Common category, for instance an "fj" ligature.
 /// (Note that such ligatures may be serpately encoded within Unicode, but only as compatibility characters.)
@@ -121,7 +118,7 @@ public enum RareLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kRareLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -139,7 +136,7 @@ public enum RebusPictures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kRebusPicturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -157,7 +154,7 @@ public enum DiphthongLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kDiphthongLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -176,7 +173,7 @@ public enum SquaredLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kSquaredLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -194,7 +191,7 @@ public enum AbbreviatedSquaredLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kAbbrevSquaredLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -212,7 +209,7 @@ public enum SymbolLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kSymbolLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -230,7 +227,7 @@ public enum ContextualLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kContextualLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -248,7 +245,7 @@ public enum HistoricalLigatures: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kLigaturesType, selectorIdentifier: kHistoricalLigaturesOffSelector)
         }
     }
-    
+
     case on
     case off
 }

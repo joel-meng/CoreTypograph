@@ -22,7 +22,6 @@ import UIKit
 /// - altProportional: Selects alternate proportional forms of letters.
 /// - altHalfWidth: Selects alternate half-width forms of letters.
 public enum TextSpacing: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
         case .proportional:
@@ -41,7 +40,7 @@ public enum TextSpacing: FontFeatureProviding {
             return attribute(feature: kTextSpacingType, selector: kAltHalfWidthTextSelector)
         }
     }
-    
+
     case proportional
     case mono
     case halfWidth

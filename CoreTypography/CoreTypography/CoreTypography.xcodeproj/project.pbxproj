@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D4711BC212A375F00A71C06 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4711BB212A375F00A71C06 /* Paragraph.swift */; };
+		5D96EF822133D95100237D34 /* Assign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96EF812133D95100237D34 /* Assign.swift */; };
+		5DA4115321327CCC001C6443 /* Strikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4115221327CCC001C6443 /* Strikethrough.swift */; };
+		5DA4115521329C48001C6443 /* Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4115421329C48001C6443 /* Underline.swift */; };
+		5DA411572132A0AC001C6443 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA411562132A0AC001C6443 /* Background.swift */; };
+		5DA411592132A0CB001C6443 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA411582132A0CB001C6443 /* Stroke.swift */; };
+		5DC184D82133918200797D70 /* ScreenPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC184D72133918200797D70 /* ScreenPoint.swift */; };
+		5DC184DA2133919D00797D70 /* Factor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC184D92133919D00797D70 /* Factor.swift */; };
 		F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF252106B3DB0077B88A /* FontDemoView.swift */; };
 		F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */; };
 		F318E3BC20F712ED00DD75FF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E3BA20F712ED00DD75FF /* Quick.framework */; };
@@ -23,6 +31,13 @@
 		F32C3F3F2109EC5F00D5B899 /* SmartSwashTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32C3F3E2109EC5F00D5B899 /* SmartSwashTestCase.swift */; };
 		F32C3F412109EE2800D5B899 /* ContextualAlternatesTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32C3F402109EE2800D5B899 /* ContextualAlternatesTestCase.swift */; };
 		F32E670921097A9100F6BC0D /* UppercaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E670821097A9100F6BC0D /* UppercaseTestCase.swift */; };
+		F33A24E7210D87F1003AD407 /* FloatingUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24E6210D87F1003AD407 /* FloatingUnit.swift */; };
+		F33A24EC210D884A003AD407 /* PopularAttributedStringStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24EB210D884A003AD407 /* PopularAttributedStringStyleProvider.swift */; };
+		F33A24EF210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24EE210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift */; };
+		F33A24F1210D8E9D003AD407 /* AdjustmentAttributedStringStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F0210D8E9D003AD407 /* AdjustmentAttributedStringStyleProvider.swift */; };
+		F33A24F3210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F2210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift */; };
+		F33A24F5210DD41E003AD407 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F4210DD41D003AD407 /* Provider.swift */; };
+		F33A24F7210DDAFE003AD407 /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A24F6210DDAFD003AD407 /* Consumer.swift */; };
 		F344AD332107F65A00CBCC41 /* ContextualAlternates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */; };
 		F360A0F52100AE1C00EFFCF7 /* FontFeatureBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */; };
 		F360A0FA2101A1DC00EFFCF7 /* FontFeatureProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360A0F92101A1DC00EFFCF7 /* FontFeatureProviding.swift */; };
@@ -45,6 +60,7 @@
 		F38A61982109A1CB0027F1D5 /* NumberSpacingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A61972109A1CB0027F1D5 /* NumberSpacingTestCase.swift */; };
 		F38A619A2109A36D0027F1D5 /* TextSpacingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A61992109A36D0027F1D5 /* TextSpacingTestCase.swift */; };
 		F38A619C2109A4670027F1D5 /* FractionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A619B2109A4670027F1D5 /* FractionTestCase.swift */; };
+		F3A9422F210C9E34001D9CE3 /* ColorTextStyleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9422E210C9E34001D9CE3 /* ColorTextStyleTestCase.swift */; };
 		F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B11F3320FC1E33001990D0 /* FontFeature.swift */; };
 		F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B11F3520FC1E6B001990D0 /* FontFeatureInspector.swift */; };
 		F3D8559C20F705B000FBEC4C /* FontFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8559B20F705B000FBEC4C /* FontFace.swift */; };
@@ -53,6 +69,11 @@
 		F3D855A220F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A120F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift */; };
 		F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A320F70A9200FBEC4C /* CustomFont.swift */; };
 		F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D855A520F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift */; };
+		F3F1C731210F4582008F5C1B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1C730210F4582008F5C1B /* Font.swift */; };
+		F3F5E170210F42850019C253 /* FunctionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E16F210F42850019C253 /* FunctionType.swift */; };
+		F3F5E172210F42B30019C253 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E171210F42B30019C253 /* Text.swift */; };
+		F3F5E174210F42E10019C253 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E173210F42E10019C253 /* Operation.swift */; };
+		F3F5E178210F439D0019C253 /* NSAttributedString+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5E177210F439D0019C253 /* NSAttributedString+Attributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +101,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D4711BB212A375F00A71C06 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
+		5D96EF812133D95100237D34 /* Assign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assign.swift; sourceTree = "<group>"; };
+		5DA4115221327CCC001C6443 /* Strikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strikethrough.swift; sourceTree = "<group>"; };
+		5DA4115421329C48001C6443 /* Underline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Underline.swift; sourceTree = "<group>"; };
+		5DA411562132A0AC001C6443 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		5DA411582132A0CB001C6443 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		5DC184D72133918200797D70 /* ScreenPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPoint.swift; sourceTree = "<group>"; };
+		5DC184D92133919D00797D70 /* Factor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factor.swift; sourceTree = "<group>"; };
 		F306AF252106B3DB0077B88A /* FontDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDemoView.swift; sourceTree = "<group>"; };
 		F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontLoader.swift; sourceTree = "<group>"; };
 		F318E3BA20F712ED00DD75FF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -94,6 +123,13 @@
 		F32C3F3E2109EC5F00D5B899 /* SmartSwashTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSwashTestCase.swift; sourceTree = "<group>"; };
 		F32C3F402109EE2800D5B899 /* ContextualAlternatesTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualAlternatesTestCase.swift; sourceTree = "<group>"; };
 		F32E670821097A9100F6BC0D /* UppercaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercaseTestCase.swift; sourceTree = "<group>"; };
+		F33A24E6210D87F1003AD407 /* FloatingUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingUnit.swift; sourceTree = "<group>"; };
+		F33A24EB210D884A003AD407 /* PopularAttributedStringStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAttributedStringStyleProvider.swift; sourceTree = "<group>"; };
+		F33A24EE210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAttributedStringAttributesProviderConsumer.swift; sourceTree = "<group>"; };
+		F33A24F0210D8E9D003AD407 /* AdjustmentAttributedStringStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentAttributedStringStyleProvider.swift; sourceTree = "<group>"; };
+		F33A24F2210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentAttributedTextStylable.swift; sourceTree = "<group>"; };
+		F33A24F4210DD41D003AD407 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		F33A24F6210DDAFD003AD407 /* Consumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consumer.swift; sourceTree = "<group>"; };
 		F344AD322107F65A00CBCC41 /* ContextualAlternates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualAlternates.swift; sourceTree = "<group>"; };
 		F360A0F42100AE1C00EFFCF7 /* FontFeatureBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureBuild.swift; sourceTree = "<group>"; };
 		F360A0F92101A1DC00EFFCF7 /* FontFeatureProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureProviding.swift; sourceTree = "<group>"; };
@@ -119,6 +155,7 @@
 		F38A61972109A1CB0027F1D5 /* NumberSpacingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSpacingTestCase.swift; sourceTree = "<group>"; };
 		F38A61992109A36D0027F1D5 /* TextSpacingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpacingTestCase.swift; sourceTree = "<group>"; };
 		F38A619B2109A4670027F1D5 /* FractionTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractionTestCase.swift; sourceTree = "<group>"; };
+		F3A9422E210C9E34001D9CE3 /* ColorTextStyleTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTextStyleTestCase.swift; sourceTree = "<group>"; };
 		F3B11F3320FC1E33001990D0 /* FontFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeature.swift; sourceTree = "<group>"; };
 		F3B11F3520FC1E6B001990D0 /* FontFeatureInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFeatureInspector.swift; sourceTree = "<group>"; };
 		F3D8559B20F705B000FBEC4C /* FontFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFace.swift; sourceTree = "<group>"; };
@@ -127,6 +164,11 @@
 		F3D855A120F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " FontContentSizeCategoryAware.swift"; sourceTree = "<group>"; };
 		F3D855A320F70A9200FBEC4C /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		F3D855A520F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontContentSizeCategoryAware.swift; sourceTree = "<group>"; };
+		F3F1C730210F4582008F5C1B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		F3F5E16F210F42850019C253 /* FunctionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionType.swift; sourceTree = "<group>"; };
+		F3F5E171210F42B30019C253 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		F3F5E173210F42E10019C253 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		F3F5E177210F439D0019C253 /* NSAttributedString+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Attributes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +192,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D96EF802133D93900237D34 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				5D96EF812133D95100237D34 /* Assign.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		5DA4115A213382DC001C6443 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5D96EF802133D93900237D34 /* Functions */,
+				5DA4115B213382E6001C6443 /* Operator */,
+				F3F5E176210F435A0019C253 /* Extension */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		5DA4115B213382E6001C6443 /* Operator */ = {
+			isa = PBXGroup;
+			children = (
+				F3F5E173210F42E10019C253 /* Operation.swift */,
+			);
+			path = Operator;
+			sourceTree = "<group>";
+		};
+		5DC184DB2133933000797D70 /* FloatingUnit */ = {
+			isa = PBXGroup;
+			children = (
+				F33A24E6210D87F1003AD407 /* FloatingUnit.swift */,
+				5DC184D92133919D00797D70 /* Factor.swift */,
+				5DC184D72133918200797D70 /* ScreenPoint.swift */,
+			);
+			path = FloatingUnit;
+			sourceTree = "<group>";
+		};
 		F306AF242106B3C00077B88A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,11 +326,22 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		F356194320F72A6B000D20CD /* Text */ = {
+		F33A24EA210D881D003AD407 /* AttributedStringStyleProvider */ = {
 			isa = PBXGroup;
 			children = (
+				F33A24EB210D884A003AD407 /* PopularAttributedStringStyleProvider.swift */,
+				F33A24F0210D8E9D003AD407 /* AdjustmentAttributedStringStyleProvider.swift */,
 			);
-			path = Text;
+			path = AttributedStringStyleProvider;
+			sourceTree = "<group>";
+		};
+		F33A24ED210D8871003AD407 /* AttributedStringStyleConsumer */ = {
+			isa = PBXGroup;
+			children = (
+				F33A24EE210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift */,
+				F33A24F2210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift */,
+			);
+			path = AttributedStringStyleConsumer;
 			sourceTree = "<group>";
 		};
 		F360A0F82101A14300EFFCF7 /* Buiding */ = {
@@ -287,7 +376,8 @@
 		F3618E4120E9FCE100B95F5B /* CoreTypography */ = {
 			isa = PBXGroup;
 			children = (
-				F356194320F72A6B000D20CD /* Text */,
+				F3A94234210D8644001D9CE3 /* Protocols */,
+				F3A9422A210C9A78001D9CE3 /* Text */,
 				F387D51020F7002400FF9333 /* Font */,
 				F3618E4220E9FCE100B95F5B /* CoreTypography.h */,
 				F3618E4320E9FCE100B95F5B /* Info.plist */,
@@ -298,6 +388,7 @@
 		F3618E4C20E9FCE100B95F5B /* CoreTypographyTests */ = {
 			isa = PBXGroup;
 			children = (
+				F3A9422D210C9E24001D9CE3 /* Text */,
 				F32E670221097A2300F6BC0D /* Font */,
 				F3618E4D20E9FCE100B95F5B /* CoreTypographyTests.swift */,
 				F3618E4F20E9FCE100B95F5B /* Info.plist */,
@@ -315,6 +406,44 @@
 				F3D855A720F70B8300FBEC4C /* CustomResolving */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		F3A9422A210C9A78001D9CE3 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				5DA4115A213382DC001C6443 /* Support */,
+				F3F5E16E210F42650019C253 /* Functions */,
+				F33A24ED210D8871003AD407 /* AttributedStringStyleConsumer */,
+				F33A24EA210D881D003AD407 /* AttributedStringStyleProvider */,
+				F3A94239210D86AD001D9CE3 /* Types */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		F3A9422D210C9E24001D9CE3 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9422E210C9E34001D9CE3 /* ColorTextStyleTestCase.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		F3A94234210D8644001D9CE3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F33A24F6210DDAFD003AD407 /* Consumer.swift */,
+				F33A24F4210DD41D003AD407 /* Provider.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F3A94239210D86AD001D9CE3 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				5DC184DB2133933000797D70 /* FloatingUnit */,
+				F3F5E16F210F42850019C253 /* FunctionType.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		F3B11F3220FC1DDF001990D0 /* FontFeature */ = {
@@ -345,6 +474,28 @@
 				F3D855A120F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F3F5E16E210F42650019C253 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				F3F5E171210F42B30019C253 /* Text.swift */,
+				5DA411562132A0AC001C6443 /* Background.swift */,
+				5DA411582132A0CB001C6443 /* Stroke.swift */,
+				F3F1C730210F4582008F5C1B /* Font.swift */,
+				5D4711BB212A375F00A71C06 /* Paragraph.swift */,
+				5DA4115221327CCC001C6443 /* Strikethrough.swift */,
+				5DA4115421329C48001C6443 /* Underline.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		F3F5E176210F435A0019C253 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F3F5E177210F439D0019C253 /* NSAttributedString+Attributes.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,7 +561,7 @@
 				TargetAttributes = {
 					F3618E3E20E9FCE100B95F5B = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					F3618E4720E9FCE100B95F5B = {
@@ -459,32 +610,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33A24F7210DDAFE003AD407 /* Consumer.swift in Sources */,
+				F3F5E170210F42850019C253 /* FunctionType.swift in Sources */,
 				F360A10A2102C21C00EFFCF7 /* SmartSwash.swift in Sources */,
+				F33A24E7210D87F1003AD407 /* FloatingUnit.swift in Sources */,
+				F3F1C731210F4582008F5C1B /* Font.swift in Sources */,
 				F360A1002101A38400EFFCF7 /* VerticalPosition.swift in Sources */,
 				F360A1082102C0DB00EFFCF7 /* Fraction.swift in Sources */,
 				F360A10C2102C8F100EFFCF7 /* LowerCase.swift in Sources */,
 				F3D855A020F708CD00FBEC4C /* FontTextStyleAware.swift in Sources */,
 				F360A1022101A3E900EFFCF7 /* UpperCase.swift in Sources */,
+				F33A24F1210D8E9D003AD407 /* AdjustmentAttributedStringStyleProvider.swift in Sources */,
+				F33A24F3210D8F86003AD407 /* AdjustmentAttributedTextStylable.swift in Sources */,
 				F387D51220F7002E00FF9333 /* CustomFontRepresentable.swift in Sources */,
+				F33A24F5210DD41E003AD407 /* Provider.swift in Sources */,
 				F360A0FA2101A1DC00EFFCF7 /* FontFeatureProviding.swift in Sources */,
+				5DA411592132A0CB001C6443 /* Stroke.swift in Sources */,
+				F33A24EF210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift in Sources */,
+				F33A24EC210D884A003AD407 /* PopularAttributedStringStyleProvider.swift in Sources */,
 				F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */,
+				F3F5E178210F439D0019C253 /* NSAttributedString+Attributes.swift in Sources */,
+				5DA4115321327CCC001C6443 /* Strikethrough.swift in Sources */,
 				F3B11F3620FC1E6B001990D0 /* FontFeatureInspector.swift in Sources */,
 				F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */,
 				F3B11F3420FC1E33001990D0 /* FontFeature.swift in Sources */,
+				F3F5E172210F42B30019C253 /* Text.swift in Sources */,
 				F360A1062102BBFA00EFFCF7 /* TextSpacing.swift in Sources */,
 				F3D8559E20F705C100FBEC4C /* FontTrait.swift in Sources */,
 				F3D855A420F70A9200FBEC4C /* CustomFont.swift in Sources */,
+				F3F5E174210F42E10019C253 /* Operation.swift in Sources */,
 				F3D855A220F709BA00FBEC4C /*  FontContentSizeCategoryAware.swift in Sources */,
 				F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */,
 				F360A0FC2101A24E00EFFCF7 /* Ligature.swift in Sources */,
 				F360A10E2102D62200EFFCF7 /* Diacritic.swift in Sources */,
 				F3D8559C20F705B000FBEC4C /* FontFace.swift in Sources */,
+				5D4711BC212A375F00A71C06 /* Paragraph.swift in Sources */,
+				5DA4115521329C48001C6443 /* Underline.swift in Sources */,
+				5DA411572132A0AC001C6443 /* Background.swift in Sources */,
 				F360A1042101A41900EFFCF7 /* FontFeatureAttribute.swift in Sources */,
+				5D96EF822133D95100237D34 /* Assign.swift in Sources */,
 				F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */,
 				F360A0FE2101A36D00EFFCF7 /* NumberSpacing.swift in Sources */,
 				F344AD332107F65A00CBCC41 /* ContextualAlternates.swift in Sources */,
 				F36779682109516B009AE6F4 /* NumberCase.swift in Sources */,
+				5DC184D82133918200797D70 /* ScreenPoint.swift in Sources */,
 				F360A0F52100AE1C00EFFCF7 /* FontFeatureBuild.swift in Sources */,
+				5DC184DA2133919D00797D70 /* Factor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +671,7 @@
 				F32C3F352109A51600D5B899 /* LowerCaseTestCase.swift in Sources */,
 				F318E3BF20F713C500DD75FF /* FontTextStyleAwareSpec.swift in Sources */,
 				F38A61982109A1CB0027F1D5 /* NumberSpacingTestCase.swift in Sources */,
+				F3A9422F210C9E34001D9CE3 /* ColorTextStyleTestCase.swift in Sources */,
 				F3618E4E20E9FCE100B95F5B /* CoreTypographyTests.swift in Sources */,
 				F32C3F412109EE2800D5B899 /* ContextualAlternatesTestCase.swift in Sources */,
 				F32C3F3F2109EC5F00D5B899 /* SmartSwashTestCase.swift in Sources */,
@@ -651,7 +823,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -673,7 +845,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.at.joel.mong.au.CoreTypography;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

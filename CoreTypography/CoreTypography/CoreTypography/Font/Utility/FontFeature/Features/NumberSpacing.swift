@@ -15,7 +15,6 @@ import Foundation
 /// - thirdWidth: Thin numerals.
 /// - quarterWidth: Very thin numerals.
 public enum NumberSpacing: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
         case .mono:
@@ -28,7 +27,7 @@ public enum NumberSpacing: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kNumberSpacingType, selectorIdentifier: kQuarterWidthNumbersSelector)
         }
     }
-    
+
     case mono
     case proportional
     case thirdWidth

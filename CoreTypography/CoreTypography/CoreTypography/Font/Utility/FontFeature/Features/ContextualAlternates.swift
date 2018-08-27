@@ -8,16 +8,14 @@
 
 import UIKit
 
-
 /// The Ligatures feature type permits selection from different kinds of ligatures. It is a non-exclusive feature type.
 public struct ContextualAlternates: OptionSet {
-    
     public var rawValue: Int
-    
+
     public init(rawValue: Int) {
         self.rawValue = rawValue
     }
-    
+
     public static let contextualOn = ContextualAlternates(rawValue: 1 << 0)
     public static let contextualOff = ContextualAlternates(rawValue: 1 << 1)
     public static let swashOn = ContextualAlternates(rawValue: 1 << 2)
@@ -27,34 +25,33 @@ public struct ContextualAlternates: OptionSet {
 }
 
 extension ContextualAlternates: FontFeaturesProviding {
-    
     func fontFeatures() -> [FontFeatureAttribute] {
         var fontFeatureAttributes: [FontFeatureAttribute] = []
-        
+
         if contains(.contextualOn) {
             fontFeatureAttributes.append(AlternatesContextual.on.fontFeature())
         }
-        
+
         if contains(.contextualOff) {
             fontFeatureAttributes.append(AlternatesContextual.off.fontFeature())
         }
-        
+
         if contains(.swashOn) {
             fontFeatureAttributes.append(AlternatesSwash.on.fontFeature())
         }
-        
+
         if contains(.swashOff) {
             fontFeatureAttributes.append(AlternatesSwash.off.fontFeature())
         }
-        
+
         if contains(.contextualSwashOn) {
             fontFeatureAttributes.append(AlternatesContextualSwash.on.fontFeature())
         }
-        
+
         if contains(.contextualSwashOff) {
             fontFeatureAttributes.append(AlternatesContextualSwash.off.fontFeature())
         }
-        
+
         return fontFeatureAttributes
     }
 }
@@ -64,7 +61,6 @@ extension ContextualAlternates: FontFeaturesProviding {
 /// - on: Alternates on.
 /// - off: Alternates off.
 enum AlternatesContextual: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
         case .on:
@@ -73,7 +69,7 @@ enum AlternatesContextual: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kContextualAlternatesType, selectorIdentifier: kContextualAlternatesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -91,7 +87,7 @@ enum AlternatesSwash: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kContextualAlternatesType, selectorIdentifier: kSwashAlternatesOffSelector)
         }
     }
-    
+
     case on
     case off
 }
@@ -109,7 +105,7 @@ enum AlternatesContextualSwash: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kContextualAlternatesType, selectorIdentifier: kContextualSwashAlternatesOffSelector)
         }
     }
-    
+
     case on
     case off
 }

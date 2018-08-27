@@ -15,22 +15,21 @@ import UIKit
 
 /// A struct that facilitates the sizing rules for a `UIFont` and can return the ideal font point size for a given `UIContentSizeCategory`
 public struct FontMetrics {
-    
     /// The default font point size. This is equal to the `UIContentSizeCategory.large`
     let baseSize: CGFloat
-    
+
     /// The minimum point size the font can be regardless of the scale applied.
     let minimumPointSize: CGFloat
-    
+
     /// The maximum point size the font can be regardless of the scale applied.
     let maximumPointSize: CGFloat?
-    
+
     /// The maximum font scale that can be applied. Default is web `AA` compliant 200%.
     let maximumFontScale: CGFloat
-    
+
     /// Bool whether to round to the nearest value for point sizes. Default is true
     let shouldRoundSizes: Bool
-    
+
     /// Will initialize a new instance for the given text style
     ///
     /// - Parameters:
@@ -39,16 +38,16 @@ public struct FontMetrics {
     ///   - maximumPointSize: The maximum point size the font can be regardless of the scale applied.
     ///   - maximumFontScale: The maximum font scale that can be applied
     public init(baseSize: CGFloat,
-         minimumPointSize: CGFloat = 12,
-         maximumPointSize: CGFloat? = nil,
-         maximumFontScale: CGFloat = 200) {
+                minimumPointSize: CGFloat = 12,
+                maximumPointSize: CGFloat? = nil,
+                maximumFontScale: CGFloat = 200) {
         self.baseSize = baseSize
         self.minimumPointSize = minimumPointSize
         self.maximumPointSize = maximumPointSize
         self.maximumFontScale = maximumFontScale
-        self.shouldRoundSizes = true
+        shouldRoundSizes = true
     }
-    
+
     // swiftlint:disable cyclomatic_complexity
     /// Will return the ideal font point size for the given category
     ///
@@ -91,11 +90,11 @@ public struct FontMetrics {
         }
         return max(minimumPointSize, idealSize)
     }
-    
+
     // swiftlint:enable cyclomatic_complexity
-    
+
     // MARK: - Private helpers
-    
+
     private var increaseStepDelta: CGFloat {
         guard let maximumPointSize = maximumPointSize else {
             return ((maximumFontScale - 100) / 6) / 100
@@ -103,7 +102,7 @@ public struct FontMetrics {
         let calculatedMaximumFontScale = (maximumPointSize / minimumPointSize) * 100
         return ((calculatedMaximumFontScale - 100) / 6) / 100
     }
-    
+
     private var decreaseStepDelta: CGFloat {
         return 0.1
     }

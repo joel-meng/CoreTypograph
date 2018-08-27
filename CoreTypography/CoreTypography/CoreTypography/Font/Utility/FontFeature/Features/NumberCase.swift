@@ -16,7 +16,6 @@ import UIKit
 /// - upper: These forms of numbers do not descend below the baseline. They are sometimes known as "lining" numbers.
 
 public enum NumberCase: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
         case .lower:
@@ -25,7 +24,7 @@ public enum NumberCase: FontFeatureProviding {
             return FontFeatureAttribute(featureIdentifier: kNumberCaseType, selectorIdentifier: kUpperCaseNumbersSelector)
         }
     }
-    
+
     case lower
     case upper
 }

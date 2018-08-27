@@ -16,7 +16,6 @@ import UIKit
 /// - ordinal: Contextually changes certain letters into their superior forms, like in Spanish changing from 1a to 1ª.
 /// - scientificInferior: Changes any characters having them into inferior forms designed for a technical context (as in H2O).
 public enum VerticalPosition: FontFeatureProviding {
-    
     func fontFeature() -> FontFeatureAttribute {
         switch self {
         case .normal:
@@ -36,7 +35,7 @@ public enum VerticalPosition: FontFeatureProviding {
                                         selectorIdentifier: kScientificInferiorsSelector)
         }
     }
-    
+
     case normal
     case superior
     case inferior
