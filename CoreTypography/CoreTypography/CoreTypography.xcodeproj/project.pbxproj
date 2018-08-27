@@ -10,6 +10,8 @@
 		5D4711BC212A375F00A71C06 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4711BB212A375F00A71C06 /* Paragraph.swift */; };
 		5DA4115321327CCC001C6443 /* Strikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4115221327CCC001C6443 /* Strikethrough.swift */; };
 		5DA4115521329C48001C6443 /* Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA4115421329C48001C6443 /* Underline.swift */; };
+		5DA411572132A0AC001C6443 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA411562132A0AC001C6443 /* Background.swift */; };
+		5DA411592132A0CB001C6443 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA411582132A0CB001C6443 /* Stroke.swift */; };
 		F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF252106B3DB0077B88A /* FontDemoView.swift */; };
 		F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */; };
 		F318E3BC20F712ED00DD75FF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E3BA20F712ED00DD75FF /* Quick.framework */; };
@@ -100,6 +102,8 @@
 		5D4711BB212A375F00A71C06 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		5DA4115221327CCC001C6443 /* Strikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strikethrough.swift; sourceTree = "<group>"; };
 		5DA4115421329C48001C6443 /* Underline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Underline.swift; sourceTree = "<group>"; };
+		5DA411562132A0AC001C6443 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		5DA411582132A0CB001C6443 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 		F306AF252106B3DB0077B88A /* FontDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDemoView.swift; sourceTree = "<group>"; };
 		F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontLoader.swift; sourceTree = "<group>"; };
 		F318E3BA20F712ED00DD75FF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -436,6 +440,8 @@
 			isa = PBXGroup;
 			children = (
 				F3F5E171210F42B30019C253 /* Color.swift */,
+				5DA411562132A0AC001C6443 /* Background.swift */,
+				5DA411582132A0CB001C6443 /* Stroke.swift */,
 				F3F5E173210F42E10019C253 /* Operation.swift */,
 				F3F1C730210F4582008F5C1B /* Font.swift */,
 				F3F1C732210F4605008F5C1B /* Number.swift */,
@@ -581,6 +587,7 @@
 				F387D51220F7002E00FF9333 /* CustomFontRepresentable.swift in Sources */,
 				F33A24F5210DD41E003AD407 /* Provider.swift in Sources */,
 				F360A0FA2101A1DC00EFFCF7 /* FontFeatureProviding.swift in Sources */,
+				5DA411592132A0CB001C6443 /* Stroke.swift in Sources */,
 				F33A24EF210D8882003AD407 /* AnyAttributedStringAttributesProviderConsumer.swift in Sources */,
 				F33A24EC210D884A003AD407 /* PopularAttributedStringStyleProvider.swift in Sources */,
 				F321089C20F71AFB008516F7 /* FontMetrics.swift in Sources */,
@@ -601,6 +608,7 @@
 				F3D8559C20F705B000FBEC4C /* FontFace.swift in Sources */,
 				5D4711BC212A375F00A71C06 /* Paragraph.swift in Sources */,
 				5DA4115521329C48001C6443 /* Underline.swift in Sources */,
+				5DA411572132A0AC001C6443 /* Background.swift in Sources */,
 				F3F1C733210F4605008F5C1B /* Number.swift in Sources */,
 				F360A1042101A41900EFFCF7 /* FontFeatureAttribute.swift in Sources */,
 				F3D855A620F70B2600FBEC4C /* CustomFontContentSizeCategoryAware.swift in Sources */,
