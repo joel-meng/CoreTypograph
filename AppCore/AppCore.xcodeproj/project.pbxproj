@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D96EF7F2133B9F900237D34 /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D96EF7E2133B9F900237D34 /* CoreTypography.framework */; };
+		5D3DC2E52138D6E200A22731 /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3DC2E42138D6E200A22731 /* CoreTypography.framework */; };
 		F306AF372106B9100077B88A /* AtlasGrotesk-Regular-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */; };
 		F306AF492106D34C0077B88A /* Taviraj-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */; };
 		F306AF4F2106F6F40077B88A /* InputSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */; };
@@ -49,8 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5D6413E4212D3F0800D4D9FE /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D96EF7E2133B9F900237D34 /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3DC2E42138D6E200A22731 /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Regular-App.ttf"; sourceTree = "<group>"; };
 		F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Regular.ttf"; sourceTree = "<group>"; };
 		F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InputSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -77,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D96EF7F2133B9F900237D34 /* CoreTypography.framework in Frameworks */,
+				5D3DC2E52138D6E200A22731 /* CoreTypography.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3DC2E32138D6E200A22731 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D3DC2E42138D6E200A22731 /* CoreTypography.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F31FE0CF20F85903006ABC52 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +111,10 @@
 		F3618E0820E9FC2C00B95F5B = {
 			isa = PBXGroup;
 			children = (
-				F3618E5D20E9FD5900B95F5B /* Frameworks */,
 				F3618E1320E9FC2C00B95F5B /* AppCore */,
 				F3618E2820E9FC2C00B95F5B /* AppCoreTests */,
 				F3618E1220E9FC2C00B95F5B /* Products */,
+				5D3DC2E32138D6E200A22731 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,15 +150,6 @@
 				F3618E2B20E9FC2C00B95F5B /* Info.plist */,
 			);
 			path = AppCoreTests;
-			sourceTree = "<group>";
-		};
-		F3618E5D20E9FD5900B95F5B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5D96EF7E2133B9F900237D34 /* CoreTypography.framework */,
-				5D6413E4212D3F0800D4D9FE /* CoreTypography.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		F3F4C2CF20F43BD600BD76C8 /* Fonts */ = {
