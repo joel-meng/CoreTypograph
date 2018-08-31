@@ -15,6 +15,7 @@
 		5DA411592132A0CB001C6443 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA411582132A0CB001C6443 /* Stroke.swift */; };
 		5DC184D82133918200797D70 /* ScreenPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC184D72133918200797D70 /* ScreenPoint.swift */; };
 		5DC184DA2133919D00797D70 /* Factor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC184D92133919D00797D70 /* Factor.swift */; };
+		5DEBE1CA2138D38100768447 /* DemoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEBE1C92138D38100768447 /* DemoTextView.swift */; };
 		F306AF262106B3DB0077B88A /* FontDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF252106B3DB0077B88A /* FontDemoView.swift */; };
 		F306AF4D2106DF7B0077B88A /* CustomFontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */; };
 		F318E3BC20F712ED00DD75FF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E3BA20F712ED00DD75FF /* Quick.framework */; };
@@ -109,6 +110,7 @@
 		5DA411582132A0CB001C6443 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 		5DC184D72133918200797D70 /* ScreenPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPoint.swift; sourceTree = "<group>"; };
 		5DC184D92133919D00797D70 /* Factor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factor.swift; sourceTree = "<group>"; };
+		5DEBE1C92138D38100768447 /* DemoTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTextView.swift; sourceTree = "<group>"; };
 		F306AF252106B3DB0077B88A /* FontDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDemoView.swift; sourceTree = "<group>"; };
 		F306AF4C2106DF7B0077B88A /* CustomFontLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontLoader.swift; sourceTree = "<group>"; };
 		F318E3BA20F712ED00DD75FF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -226,6 +228,14 @@
 				5DC184D72133918200797D70 /* ScreenPoint.swift */,
 			);
 			path = FloatingUnit;
+			sourceTree = "<group>";
+		};
+		5DEBE1C82138D36400768447 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DEBE1C92138D38100768447 /* DemoTextView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F306AF242106B3C00077B88A /* View */ = {
@@ -411,6 +421,7 @@
 		F3A9422A210C9A78001D9CE3 /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				5DEBE1C82138D36400768447 /* View */,
 				5DA4115A213382DC001C6443 /* Support */,
 				F3F5E16E210F42650019C253 /* Functions */,
 				F33A24ED210D8871003AD407 /* AttributedStringStyleConsumer */,
@@ -612,6 +623,7 @@
 			files = (
 				F33A24F7210DDAFE003AD407 /* Consumer.swift in Sources */,
 				F3F5E170210F42850019C253 /* FunctionType.swift in Sources */,
+				5DEBE1CA2138D38100768447 /* DemoTextView.swift in Sources */,
 				F360A10A2102C21C00EFFCF7 /* SmartSwash.swift in Sources */,
 				F33A24E7210D87F1003AD407 /* FloatingUnit.swift in Sources */,
 				F3F1C731210F4582008F5C1B /* Font.swift in Sources */,

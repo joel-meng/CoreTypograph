@@ -1,4 +1,11 @@
-import CoreTypography
+//
+//  DemoTextView.swift
+//  CoreTypography
+//
+//  Created by Joel on 31/8/18.
+//  Copyright © 2018 MENG, Joel. All rights reserved.
+//
+
 import Foundation
 import UIKit
 
