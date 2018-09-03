@@ -20,6 +20,7 @@ public protocol CustomFontContentSizeCategoryAware: CustomFontRepresentable, Fon
 }
 
 public extension CustomFontContentSizeCategoryAware {
+
     func font(forTextStyle textStyle: UIFont.TextStyle, contentSizeCategory: UIContentSizeCategory) -> UIFont {
         let fontFace = face(forTextStyle: textStyle)
         let fontTrait = trait(forTextStyle: textStyle)

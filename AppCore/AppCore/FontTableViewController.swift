@@ -70,7 +70,7 @@ class FontTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "inspectFont" {
             if let destinationViewController = segue.destination as? FontFeatureViewController {
-                destinationViewController.font = sender as! FontFace
+                destinationViewController.font = sender as? FontFace
             }
         }
     }

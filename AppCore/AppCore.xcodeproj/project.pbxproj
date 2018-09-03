@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D3DC2E52138D6E200A22731 /* CoreTypography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3DC2E42138D6E200A22731 /* CoreTypography.framework */; };
+		5D753A40213D71A30034785D /* TextStylerTextShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D753A3F213D71A30034785D /* TextStylerTextShowViewController.swift */; };
 		F306AF372106B9100077B88A /* AtlasGrotesk-Regular-App.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */; };
 		F306AF492106D34C0077B88A /* Taviraj-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */; };
 		F306AF4F2106F6F40077B88A /* InputSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		5D3DC2E42138D6E200A22731 /* CoreTypography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreTypography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D753A3F213D71A30034785D /* TextStylerTextShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStylerTextShowViewController.swift; sourceTree = "<group>"; };
 		F306AF2B2106B90A0077B88A /* AtlasGrotesk-Regular-App.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AtlasGrotesk-Regular-App.ttf"; sourceTree = "<group>"; };
 		F306AF442106D34A0077B88A /* Taviraj-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Regular.ttf"; sourceTree = "<group>"; };
 		F306AF4E2106F6F30077B88A /* InputSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InputSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -98,12 +100,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5D753A41213D72B10034785D /* CustomFont */ = {
+			isa = PBXGroup;
+			children = (
+				F356194420F81B4D000D20CD /* Taviraj.swift */,
+			);
+			name = CustomFont;
+			sourceTree = "<group>";
+		};
 		F31FE0CF20F85903006ABC52 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				F354843E20FED5AF005E136C /* FontFeatureViewController.swift */,
 				F360A0F62100BF5500EFFCF7 /* FontFeatureSettingViewController.swift */,
 				F31FE0D020F8592F006ABC52 /* FontTableViewController.swift */,
+				5D753A3F213D71A30034785D /* TextStylerTextShowViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -130,11 +141,11 @@
 		F3618E1320E9FC2C00B95F5B /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
+				5D753A41213D72B10034785D /* CustomFont */,
 				F31FE0CF20F85903006ABC52 /* ViewControllers */,
 				F3F4C2CF20F43BD600BD76C8 /* Fonts */,
 				F3618E1420E9FC2C00B95F5B /* AppDelegate.swift */,
 				F3618E1620E9FC2C00B95F5B /* ViewController.swift */,
-				F356194420F81B4D000D20CD /* Taviraj.swift */,
 				F3618E1820E9FC2C00B95F5B /* Main.storyboard */,
 				F3618E1B20E9FC2C00B95F5B /* Assets.xcassets */,
 				F3618E1D20E9FC2C00B95F5B /* LaunchScreen.storyboard */,
@@ -210,7 +221,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "MENG, Joel";
 				TargetAttributes = {
 					F3618E1020E9FC2C00B95F5B = {
@@ -280,6 +291,7 @@
 				F31FE0D120F8592F006ABC52 /* FontTableViewController.swift in Sources */,
 				F354843F20FED5AF005E136C /* FontFeatureViewController.swift in Sources */,
 				F3618E1520E9FC2C00B95F5B /* AppDelegate.swift in Sources */,
+				5D753A40213D71A30034785D /* TextStylerTextShowViewController.swift in Sources */,
 				F360A0F72100BF5500EFFCF7 /* FontFeatureSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +348,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -343,6 +356,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -393,6 +407,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -400,6 +415,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -437,7 +453,6 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppCore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.at.joel.mong.au.AppCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -454,7 +469,6 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppCore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.at.joel.mong.au.AppCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

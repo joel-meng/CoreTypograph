@@ -26,8 +26,8 @@ class FontFeatureSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        textView.font = generateFontFeature()
-        print(textView.font)
-        print(textView.font?.fontDescriptor.fontAttributes)
+//        print(textView.font)
+//        print(textView.font?.fontDescriptor.fontAttributes)
     }
 }
 
