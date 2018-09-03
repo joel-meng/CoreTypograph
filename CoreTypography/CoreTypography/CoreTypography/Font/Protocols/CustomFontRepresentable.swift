@@ -28,6 +28,7 @@ public protocol CustomFontRepresentable {
 }
 
 public extension CustomFontRepresentable {
+    
     func name(forFace fontFace: FontFace, trait: FontTrait?) -> String {
         let defaultFontName = "\(familyName)-\(fontFace.rawValue)"
         guard let trait = trait else {
