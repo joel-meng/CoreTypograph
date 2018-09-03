@@ -11,7 +11,7 @@ import UIKit
 /**
  A struct that behaves in a similar manner to iOS11's `UIFontMetrics`. Rather then try to accommodate using `UIFontMetrics` if iOS 11
  and trying to duplicate the behavioru if iOS 10 - a standard behaviour was implemented.
- */
+*/
 
 /// A struct that facilitates the sizing rules for a `UIFont` and can return the ideal font point size for a given `UIContentSizeCategory`
 public struct FontMetrics {
