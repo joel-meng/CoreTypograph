@@ -39,7 +39,6 @@ struct Taviraj: CustomFontContentSizeCategoryAware {
     }
 
     private static var fontMetrics: [UIFont.TextStyle: FontMetrics] = [
-        .largeTitle: FontMetrics(baseSize: 34, minimumPointSize: 31, maximumPointSize: 40, maximumFontScale: 200),
         .title1: FontMetrics(baseSize: 28, minimumPointSize: 25, maximumPointSize: 34, maximumFontScale: 200),
         .title2: FontMetrics(baseSize: 22, minimumPointSize: 19, maximumPointSize: 28, maximumFontScale: 200),
         .title3: FontMetrics(baseSize: 20, minimumPointSize: 17, maximumPointSize: 26, maximumFontScale: 200),
